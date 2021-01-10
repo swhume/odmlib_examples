@@ -1,0 +1,4 @@
+OID,Name,Data Type,Dictionary,Version
+CL.AEDICT_F,Adverse Event Dictionary,text,MEDDRA,8.0
+CL.DRUGDICT_F,Drug Dictionary,text,WHODRUG,200204
+CL.ISO3166,ISO3166,text,ISO3166,

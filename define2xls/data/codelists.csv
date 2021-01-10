@@ -1,0 +1,376 @@
+OID,Name,NCI Codelist Code,Data Type,Order,Term,NCI Term Code,Decoded Value
+CL.ACN,Action Taken with Study Treatment,C66767,text,1,DOSE NOT CHANGED,C49504,
+CL.ACN,Action Taken with Study Treatment,C66767,text,2,DOSE REDUCED,C49505,
+CL.ACN,Action Taken with Study Treatment,C66767,text,3,DRUG INTERRUPTED,C49501,
+CL.ACN,Action Taken with Study Treatment,C66767,text,4,DRUG WITHDRAWN,C49502,
+CL.AE.DOMAIN,Domain Abbreviation (AE),C66734,text,,AE,C49562,Adverse Events
+CL.AEENRF,Relation to Reference Period (AEENRF),C66728,text,,AFTER,C38008,
+CL.AEREL,Causality,,text,,NOT RELATED,,
+CL.AEREL,Causality,,text,,POSSIBLY RELATED,,
+CL.AEREL,Causality,,text,,RELATED,,
+CL.AESEV,Severity/Intensity Scale for Adverse Events,C66769,text,,MILD,C41338,Grade 1
+CL.AESEV,Severity/Intensity Scale for Adverse Events,C66769,text,,MODERATE,C41339,Grade 2
+CL.AESEV,Severity/Intensity Scale for Adverse Events,C66769,text,,SEVERE,C41340,Grade 3
+CL.ARM,Description of Planned Arm,,text,,Miracle Drug 10 mg,,
+CL.ARM,Description of Planned Arm,,text,,Miracle Drug 20 mg,,
+CL.ARM,Description of Planned Arm,,text,,Placebo,,
+CL.ARM,Description of Planned Arm,,text,,Screen Failure,,
+CL.ARMCD,Planned Arm Code,,text,3,PLACEBO,,Placebo
+CL.ARMCD,Planned Arm Code,,text,4,SCRNFAIL,,Screen Failure
+CL.ARMCD,Planned Arm Code,,text,1,WONDER10,,Miracle Drug 10 mg
+CL.ARMCD,Planned Arm Code,,text,2,WONDER20,,Miracle Drug 20 mg
+CL.CGIIMP_X,Global Improvement,,integer,,1,,Very much improved
+CL.CGIIMP_X,Global Improvement,,integer,,2,,Much Improved
+CL.CGIIMP_X,Global Improvement,,integer,,3,,Minimally Improved
+CL.CGIIMP_X,Global Improvement,,integer,,4,,No change
+CL.CGIIMP_X,Global Improvement,,integer,,5,,Minimally worse
+CL.CGIIMP_X,Global Improvement,,integer,,6,,Much worse
+CL.CGIIMP_X,Global Improvement,,integer,,7,,Very much worse
+CL.CM.DOMAIN,Domain Abbreviation (CM),C66734,text,,CM,C49568,Concomitant Meds
+CL.CMCAT,Category for Medication,,text,,CONCOMITANT MEDICATIONS,,
+CL.CMCAT,Category for Medication,,text,,PSYCHOTROPHIC DRUG TREATMENT HISTORY,,
+CL.CMENRF,Relation to Reference Period (CMENRF),C66728,text,,AFTER,C38008,
+CL.CMUNIT,Unit (CM),C71620,text,1,CAPSULE,C48480,
+CL.CMUNIT,Unit (CM),C71620,text,2,IU,C48579,
+CL.CMUNIT,Unit (CM),C71620,text,13,Other,,
+CL.CMUNIT,Unit (CM),C71620,text,3,TABLET,C48542,
+CL.CMUNIT,Unit (CM),C71620,text,4,VIAL,C48551,
+CL.CMUNIT,Unit (CM),C71620,text,5,g,C48155,
+CL.CMUNIT,Unit (CM),C71620,text,6,mL,C28254,
+CL.CMUNIT,Unit (CM),C71620,text,7,mL/hr,,
+CL.CMUNIT,Unit (CM),C71620,text,8,mL/kg,C67411,
+CL.CMUNIT,Unit (CM),C71620,text,9,mg,C28253,
+CL.CMUNIT,Unit (CM),C71620,text,10,mg/kg,C67401,
+CL.CMUNIT,Unit (CM),C71620,text,11,ug,C48152,
+CL.CMUNIT,Unit (CM),C71620,text,12,ug/kg,C67396,
+CL.CUE_EXPF_X,CUE_EXPF_X,,integer,,0,,Absent
+CL.CUE_EXPF_X,CUE_EXPF_X,,integer,,1,,Mild or Intermittent
+CL.CUE_EXPF_X,CUE_EXPF_X,,integer,,2,,Severe
+CL.DA.DOMAIN,Domain Abbreviation (DA),C66734,text,,DA,C49578,Drug Accountability
+CL.DATEST,Drug Accountability Test Name,C78731,text,1,Dispensed Amount,C78721,
+CL.DATEST,Drug Accountability Test Name,C78731,text,2,Returned Amount,C78722,
+CL.DATESTCD,Drug Accountability Test Code,C78732,text,,DISPAMT,C78721,Dispensed Amount
+CL.DATESTCD,Drug Accountability Test Code,C78732,text,,RETAMT,C78722,Returned Amount
+CL.DDISCNTF,Reason for Discontinuation,,text,2,ADVERSE EVENT,,
+CL.DDISCNTF,Reason for Discontinuation,,text,3,INSUFFICIENT RESPONSE,,
+CL.DDISCNTF,Reason for Discontinuation,,text,1,ONGOING,,
+CL.DDISCNTF,Reason for Discontinuation,,text,5,OTHER,,
+CL.DDISCNTF,Reason for Discontinuation,,text,4,SATISFACTORY RESPONSE,,
+CL.DM.DOMAIN,Domain Abbreviation (DM),C66734,text,,DM,C49572,Demographics
+CL.DS.DOMAIN,Domain Abbreviation (DS),C66734,text,,DS,C49576,Disposition
+CL.DSCAT,Category for Disposition Event,C74558,text,,DISPOSITION EVENT,C74590,Disposition Event
+CL.DSCAT,Category for Disposition Event,C74558,text,,PROTOCOL MILESTONE,C74588,Protocol Milestone
+CL.EG.DOMAIN,Domain Abbreviation (EG),C66734,text,,EG,C49626,Electrocardiogram
+CL.EGRESU,Unit (EGRESU),C71620,text,,BEATS/MIN,C49673,Beats per Minute
+CL.EGRESU,Unit (EGRESU),C71620,text,,msec,C41140,Millisecond
+CL.EGTEST,ECG Test Name,C71152,text,,Interpretation,C41255,
+CL.EGTEST,ECG Test Name,C71152,text,,QTcB - Bazett's Correction Formula,C62112,
+CL.EGTEST,ECG Test Name,C71152,text,,QTcF - Fridericia's Correction Formula,C62113,
+CL.EGTEST,ECG Test Name,C71152,text,,Summary (Mean) PR Duration,C62086,
+CL.EGTEST,ECG Test Name,C71152,text,,Summary (Mean) QRS Duration,C62087,
+CL.EGTEST,ECG Test Name,C71152,text,,Summary (Mean) QT Duration,C62089,
+CL.EGTEST,ECG Test Name,C71152,text,,Summary (Mean) Ventricular Rate,C62152,
+CL.EGTESTCD,ECG Test Code,C71153,text,,INTP,C41255,Interpretation
+CL.EGTESTCD,ECG Test Code,C71153,text,,PRMEAN,C62086,Summary (Mean) PR Duration
+CL.EGTESTCD,ECG Test Code,C71153,text,,QRSDUR,C62087,Summary (Mean) QRS Duration
+CL.EGTESTCD,ECG Test Code,C71153,text,,QTCB,C62112,QTcB - Bazett's Correction Formula
+CL.EGTESTCD,ECG Test Code,C71153,text,,QTCF,C62113,QTcF - Fridericia's Correction Formula
+CL.EGTESTCD,ECG Test Code,C71153,text,,QTMEAN,C62089,Summary (Mean) QT Duration
+CL.EGTESTCD,ECG Test Code,C71153,text,,VRMEAN,C62152,Summary (Mean) Ventricular Rate
+CL.EPOCH,Epoch,C99079,text,,SCREEN,,
+CL.EPOCH,Epoch,C99079,text,,TREATMENT,C49236,
+CL.ETHNIC,Ethnic Group,C66790,text,,HISPANIC OR LATINO,C17459,
+CL.ETHNIC,Ethnic Group,C66790,text,,NOT HISPANIC OR LATINO,C41222,
+CL.EX.DOMAIN,Domain Abbreviation (EX),C66734,text,,EX,C49587,Exposure
+CL.EXTRT,Treatment,,text,,Miracle Drug,,
+CL.EXTRT,Treatment,,text,,Placebo,,
+CL.FREQ,Frequency,C71113,text,,BID,C64496,BD
+CL.FREQ,Frequency,C71113,text,,ONCE,C64576,Once
+CL.FREQ,Frequency,C71113,text,,OTHER,C17649,Other
+CL.FREQ,Frequency,C71113,text,,PRN,C64499,As needed
+CL.FREQ,Frequency,C71113,text,,Q24H,C64515,Every 24 hours
+CL.FREQ,Frequency,C71113,text,,QID,C64530,4 times per day
+CL.FREQ,Frequency,C71113,text,,QOD,C64525,Every other day
+CL.FREQ,Frequency,C71113,text,,QS,C67069,Every week
+CL.FREQ,Frequency,C71113,text,,TID,C64527,3 times per day
+CL.FRM,Pharmaceutical Dosage Form,C66726,text,,TABLET,C42998,tab
+CL.IE.DOMAIN,Domain Abbreviation (IE),C66734,text,,IE,C61536,Inclusion/Exclusion
+CL.IETEST,IE Tests,,text,,Did not respond to a standard course of medication Abc,,
+CL.IETEST,IE Tests,,text,,Has Xyz disease of at least 10 weeks duration confirmed by biopsy,,
+CL.IETEST,IE Tests,,text,,Is age 18 - 85,,
+CL.IETEST,IE Tests,,text,,Is known to have had a substance abuse (drug or alcohol) problem within the previous 3 years,,
+CL.IETEST,IE Tests,,text,,"Is pregnant, nursing, or planning to become pregnant within 6 months of last study treatment",,
+CL.IETEST,IE Tests,,text,,Is unable or unwilling to undergo multiple venipunctures,,
+CL.IETESTCD,IE Test Codes,,text,,EXCL01,,"Is pregnant, nursing, or planning to become pregnant
+              within 6 months of last study treatment"
+CL.IETESTCD,IE Test Codes,,text,,EXCL02,,"Is unable or unwilling to undergo multiple
+              venipunctures"
+CL.IETESTCD,IE Test Codes,,text,,EXCL03,,"Is known to have had a substance abuse (drug or alcohol)
+              problem within the previous 3 years"
+CL.IETESTCD,IE Test Codes,,text,,INCL01,,Is age 18 - 85
+CL.IETESTCD,IE Test Codes,,text,,INCL02,,"Has Xyz disease of at least 10 weeks duration confirmed by
+              biopsy"
+CL.IETESTCD,IE Test Codes,,text,,INCL03,,"Did not respond to a standard course of medication
+              Abc"
+CL.LB.DOMAIN,Domain Abbreviation (LB),C66734,text,,LB,C49592,Laboratory Data
+CL.LBRESU,Unit (LBRESU),C71620,text,,%,C25613,
+CL.LBRESU,Unit (LBRESU),C71620,text,,X10^9/L,,
+CL.LBRESU,Unit (LBRESU),C71620,text,,g/dL,C64783,
+CL.LBRESU,Unit (LBRESU),C71620,text,,mg/dL,C67015,
+CL.LBRESU,Unit (LBRESU),C71620,text,,ng/dL,C67326,
+CL.LBRESU,Unit (LBRESU),C71620,text,,pg/mL,,
+CL.LBTEST,Laboratory Test Name,C67154,text,,Bilirubin,C38037,
+CL.LBTEST,Laboratory Test Name,C67154,text,,Blood Urea Nitrogen,C61019,
+CL.LBTEST,Laboratory Test Name,C67154,text,,Glucose,C41376,
+CL.LBTEST,Laboratory Test Name,C67154,text,,Hematocrit,C64796,
+CL.LBTEST,Laboratory Test Name,C67154,text,,Hemoglobin,C64848,
+CL.LBTEST,Laboratory Test Name,C67154,text,,Lymphocytes,C51949,
+CL.LBTEST,Laboratory Test Name,C67154,text,,Occult Blood,C74686,
+CL.LBTEST,Laboratory Test Name,C67154,text,,Vitamin B12,C64817,
+CL.LBTEST,Laboratory Test Name,C67154,text,,Vitamin B9,C74676,
+CL.LBTEST,Laboratory Test Name,C67154,text,,pH,C45997,
+CL.LBTESTCD,Laboratory Test Code,C65047,text,,BILI,C38037,Bilirubin
+CL.LBTESTCD,Laboratory Test Code,C65047,text,,BUN,C61019,Blood Urea Nitrogen
+CL.LBTESTCD,Laboratory Test Code,C65047,text,,GLUC,C41376,Glucose
+CL.LBTESTCD,Laboratory Test Code,C65047,text,,HCT,C64796,Hematocrit
+CL.LBTESTCD,Laboratory Test Code,C65047,text,,HGB,C64848,Hemoglobin
+CL.LBTESTCD,Laboratory Test Code,C65047,text,,LYM,C51949,Lymphocytes
+CL.LBTESTCD,Laboratory Test Code,C65047,text,,OCCBLD,C74686,Occult Blood
+CL.LBTESTCD,Laboratory Test Code,C65047,text,,PH,C45997,pH
+CL.LBTESTCD,Laboratory Test Code,C65047,text,,VITB12,C64817,Vitamin B12
+CL.LBTESTCD,Laboratory Test Code,C65047,text,,VITB9,C74676,Vitamin B9
+CL.MARISTAT,Marital Status,C76348,text,,DIVORCED,C51776,
+CL.MARISTAT,Marital Status,C76348,text,,DOMESTIC PARTNER,C53262,
+CL.MARISTAT,Marital Status,C76348,text,,LEGALLY SEPARATED,C51777,
+CL.MARISTAT,Marital Status,C76348,text,,MARRIED,C51773,
+CL.MARISTAT,Marital Status,C76348,text,,NEVER MARRIED,C51774,
+CL.MARISTAT,Marital Status,C76348,text,,WIDOWED,C51775,
+CL.METHOD,Method,C85492,text,,DIPSTICK,,
+CL.METHOD,Method,C85492,text,,QUANT,,
+CL.MH.DOMAIN,Domain Abbreviation (MH),C66734,text,,MH,C49603,Medical History
+CL.MHBODSYS,Body System or Organ Class,,text,,Endocrine-Metabolic,,
+CL.MHBODSYS,Body System or Organ Class,,text,,Eyes-Ears-Nose-Throat,,
+CL.MHBODSYS,Body System or Organ Class,,text,,Genitourinary,,
+CL.MHBODSYS,Body System or Organ Class,,text,,Musculoskeletal,,
+CL.MHBODSYS,Body System or Organ Class,,text,,Neurological,,
+CL.MHCAT,Category for Medical History,,text,,MEDICAL AND SURGICAL HISTORY,,
+CL.MHCAT,Category for Medical History,,text,,PSYCHIATRIC HISTORY,,
+CL.MHENRF,Relation to Reference Period (MHENRF),C66728,text,,BEFORE,C25629,
+CL.MHENRF,Relation to Reference Period (MHENRF),C66728,text,,DURING/AFTER,C49640,
+CL.NABCLIN,Interpretation: Original Results,,text,,ABNORMAL,,
+CL.NABCLIN,Interpretation: Original Results,,text,,NORMAL,,
+CL.NCOMPLT,Completion/Reason for Non-Completion,C66727,text,,ADVERSE EVENT,C41331,
+CL.NCOMPLT,Completion/Reason for Non-Completion,C66727,text,,COMPLETED,C25250,
+CL.NCOMPLT,Completion/Reason for Non-Completion,C66727,text,,INFORMED CONSENT,,
+CL.NCOMPLT,Completion/Reason for Non-Completion,C66727,text,,LACK OF EFFICACY,C48226,
+CL.NCOMPLT,Completion/Reason for Non-Completion,C66727,text,,LOST TO FOLLOW-UP,C48227,
+CL.NCOMPLT,Completion/Reason for Non-Completion,C66727,text,,PHYSICIAN DECISION,C48250,
+CL.NCOMPLT,Completion/Reason for Non-Completion,C66727,text,,PROTOCOL VIOLATION,C48251,
+CL.NCOMPLT,Completion/Reason for Non-Completion,C66727,text,,RANDOMIZED,,
+CL.NCOMPLT,Completion/Reason for Non-Completion,C66727,text,,SCREEN FAILURE,C49628,
+CL.NCOMPLT,Completion/Reason for Non-Completion,C66727,text,,WITHDRAWAL BY SUBJECT,C49634,
+CL.NRIND,Reference Range Indicator,C78736,text,,ABNORMAL,C78802,
+CL.NRIND,Reference Range Indicator,C78736,text,,HIGH,C78800,
+CL.NRIND,Reference Range Indicator,C78736,text,,LOW,C78801,
+CL.NRIND,Reference Range Indicator,C78736,text,,NORMAL,C78727,
+CL.NY,No Yes Response Subset,C66742,text,,N,C49487,No
+CL.NY,No Yes Response Subset,C66742,text,,U,C17998,Unknown
+CL.NY,No Yes Response Subset,C66742,text,,Y,C49488,Yes
+CL.NYNA,No Yes Response,C66742,text,,N,C49487,No
+CL.NYNA,No Yes Response,C66742,text,,NA,C48660,Not Applicable
+CL.NYNA,No Yes Response,C66742,text,,Y,C49488,Yes
+CL.PE.DOMAIN,Domain Abbreviation (PE),C66734,text,,PE,C49608,Physical Exam
+CL.PETEST,PE Tests,,text,1,Abdomen,,
+CL.PETEST,PE Tests,,text,2,Appearance/Skin,,
+CL.PETEST,PE Tests,,text,3,Cardiovascular,,
+CL.PETEST,PE Tests,,text,4,Eyes-Ears-Nose-Throat,,
+CL.PETEST,PE Tests,,text,5,Head/Neck (Including Thyroid),,
+CL.PETEST,PE Tests,,text,6,Musculoskeletal,,
+CL.PETEST,PE Tests,,text,7,Neurological,,
+CL.PETEST,PE Tests,,text,9,Other,,
+CL.PETEST,PE Tests,,text,8,Pulmonary,,
+CL.PETESTCD,PE Test Codes,,text,,PE01,,Appearance/Skin
+CL.PETESTCD,PE Test Codes,,text,,PE02,,Head/Neck (Including Thyroid)
+CL.PETESTCD,PE Test Codes,,text,,PE03,,Eyes-Ears-Nose-Throat
+CL.PETESTCD,PE Test Codes,,text,,PE04,,Cardiovascular
+CL.PETESTCD,PE Test Codes,,text,,PE05,,Pulmonary
+CL.PETESTCD,PE Test Codes,,text,,PE06,,Abdomen
+CL.PETESTCD,PE Test Codes,,text,,PE07,,Neurological
+CL.PETESTCD,PE Test Codes,,text,,PE08,,Musculoskeletal
+CL.PETESTCD,PE Test Codes,,text,,PE09,,Other
+CL.PSRESPF,PSRESPF,,text,,GOOD,,
+CL.PSRESPF,PSRESPF,,text,,NO CHANGE,,
+CL.PSRESPF,PSRESPF,,text,,POOR,,
+CL.QS.DOMAIN,Domain Abbreviation (QS),C66734,text,,QS,C49609,Questionnaires
+CL.QSTEST,QS Tests,,text,,Agitation,,
+CL.QSTEST,QS Tests,,text,,Anxiety,,
+CL.QSTEST,QS Tests,,text,,Appetite Loss,,
+CL.QSTEST,QS Tests,,text,,Attention and Calculation,,
+CL.QSTEST,QS Tests,,text,,Difficulty Falling Asleep,,
+CL.QSTEST,QS Tests,,text,,Diurnal Variation of Mood,,
+CL.QSTEST,QS Tests,,text,,Early Morning Awakening,,
+CL.QSTEST,QS Tests,,text,,Global Improvement,,
+CL.QSTEST,QS Tests,,text,,Irritability,,
+CL.QSTEST,QS Tests,,text,,Lack of Energy,,
+CL.QSTEST,QS Tests,,text,,Lack of Reactivity to Pleasant Events,,
+CL.QSTEST,QS Tests,,text,,Language,,
+CL.QSTEST,QS Tests,,text,,Loss of Interest,,
+CL.QSTEST,QS Tests,,text,,Mood-Congruent Delusions,,
+CL.QSTEST,QS Tests,,text,,Multiple Awakenings During Sleep,,
+CL.QSTEST,QS Tests,,text,,Multiple Physical Complaints,,
+CL.QSTEST,QS Tests,,text,,Orientation place score,,
+CL.QSTEST,QS Tests,,text,,Orientation time score,,
+CL.QSTEST,QS Tests,,text,,Pessimism,,
+CL.QSTEST,QS Tests,,text,,Poor Self-Esteem,,
+CL.QSTEST,QS Tests,,text,,Recall,,
+CL.QSTEST,QS Tests,,text,,Registration,,
+CL.QSTEST,QS Tests,,text,,Retardation,,
+CL.QSTEST,QS Tests,,text,,Sadness,,
+CL.QSTEST,QS Tests,,text,,Suicide,,
+CL.QSTEST,QS Tests,,text,,Total Score,,
+CL.QSTEST,QS Tests,,text,,Weight Loss,,
+CL.QSTESTCD,QS Test Codes,,text,,CGIGLOB,,Global Improvement
+CL.QSTESTCD,QS Test Codes,,text,,CSDD01,,Anxiety
+CL.QSTESTCD,QS Test Codes,,text,,CSDD02,,Sadness
+CL.QSTESTCD,QS Test Codes,,text,,CSDD03,,Lack of Reactivity to Pleasant Events
+CL.QSTESTCD,QS Test Codes,,text,,CSDD04,,Irritability
+CL.QSTESTCD,QS Test Codes,,text,,CSDD05,,Agitation
+CL.QSTESTCD,QS Test Codes,,text,,CSDD06,,Retardation
+CL.QSTESTCD,QS Test Codes,,text,,CSDD07,,Multiple Physical Complaints
+CL.QSTESTCD,QS Test Codes,,text,,CSDD08,,Loss of Interest
+CL.QSTESTCD,QS Test Codes,,text,,CSDD09,,Appetite Loss
+CL.QSTESTCD,QS Test Codes,,text,,CSDD10,,Weight Loss
+CL.QSTESTCD,QS Test Codes,,text,,CSDD11,,Lack of Energy
+CL.QSTESTCD,QS Test Codes,,text,,CSDD12,,Diurnal Variation of Mood
+CL.QSTESTCD,QS Test Codes,,text,,CSDD13,,Difficulty Falling Asleep
+CL.QSTESTCD,QS Test Codes,,text,,CSDD14,,Multiple Awakenings During Sleep
+CL.QSTESTCD,QS Test Codes,,text,,CSDD15,,Early Morning Awakening
+CL.QSTESTCD,QS Test Codes,,text,,CSDD16,,Suicide
+CL.QSTESTCD,QS Test Codes,,text,,CSDD17,,Poor Self-Esteem
+CL.QSTESTCD,QS Test Codes,,text,,CSDD18,,Pessimism
+CL.QSTESTCD,QS Test Codes,,text,,CSDD19,,Mood-Congruent Delusions
+CL.QSTESTCD,QS Test Codes,,text,,CSDDTOT,,Total Score
+CL.QSTESTCD,QS Test Codes,,text,,MMSEA1,,Orientation time score
+CL.QSTESTCD,QS Test Codes,,text,,MMSEA2,,Orientation place score
+CL.QSTESTCD,QS Test Codes,,text,,MMSEB,,Registration
+CL.QSTESTCD,QS Test Codes,,text,,MMSEC,,Attention and Calculation
+CL.QSTESTCD,QS Test Codes,,text,,MMSED,,Recall
+CL.QSTESTCD,QS Test Codes,,text,,MMSEET,,Language
+CL.QSTESTCD,QS Test Codes,,text,,MMSETOT,,Total Score
+CL.RACE,Race,C74457,text,2,AMERICAN INDIAN OR ALASKA NATIVE,C41259,
+CL.RACE,Race,C74457,text,4,ASIAN,C41260,
+CL.RACE,Race,C74457,text,3,BLACK OR AFRICAN AMERICAN,C16352,
+CL.RACE,Race,C74457,text,7,MULTIPLE,,
+CL.RACE,Race,C74457,text,5,NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER,C41219,
+CL.RACE,Race,C74457,text,6,OTHER,,
+CL.RACE,Race,C74457,text,1,WHITE,C41261,
+CL.ROUTE,Route of Administration,C66729,text,3,INTRAMUSCULAR,C28161,
+CL.ROUTE,Route of Administration,C66729,text,8,INTRASINAL,C38262,
+CL.ROUTE,Route of Administration,C66729,text,4,INTRAVENOUS,C38276,
+CL.ROUTE,Route of Administration,C66729,text,7,NASAL,C38284,
+CL.ROUTE,Route of Administration,C66729,text,1,ORAL,C38288,
+CL.ROUTE,Route of Administration,C66729,text,9,OTHER,C38290,
+CL.ROUTE,Route of Administration,C66729,text,5,RECTAL,C38295,
+CL.ROUTE,Route of Administration,C66729,text,2,SUBCUTANEOUS,C38299,
+CL.ROUTE,Route of Administration,C66729,text,6,TOPICAL,C38304,
+CL.SC.DOMAIN,Domain Abbreviation (SC),C66734,text,,SC,C49610,Subject Characteristics
+CL.SCTEST,SC Tests,C103330,text,,Education Level,C17953,
+CL.SCTEST,SC Tests,C103330,text,,Marital Status,C25188,
+CL.SCTEST,SC Tests,C103330,text,,Subject Initials,,
+CL.SCTESTCD,Subject Characteristic Code (SCTESTCD),C74559,text,,EDLEVEL,C17953,Education Level
+CL.SCTESTCD,Subject Characteristic Code (SCTESTCD),C74559,text,,MARISTAT,C25188,Marital Status
+CL.SCTESTCD,Subject Characteristic Code (SCTESTCD),C74559,text,,SUBJINIT,,Subject Initials
+CL.SE.DOMAIN,Domain Abbreviation (SE),C66734,text,,SE,C49616,Subject Element
+CL.SEX,Sex,C66731,text,,F,C16576,Female
+CL.SEX,Sex,C66731,text,,M,C20197,Male
+CL.SEX,Sex,C66731,text,,U,C17998,Unknown
+CL.SIZE,Size,C66733,text,,LARGE,C49508,
+CL.SIZE,Size,C66733,text,,MEDIUM,C49507,
+CL.SIZE,Size,C66733,text,,SMALL,C25376,
+CL.SPECTYPE,Specimen Type,C78734,text,,BLOOD,C12434,
+CL.SPECTYPE,Specimen Type,C78734,text,,SERUM,C13325,
+CL.SPECTYPE,Specimen Type,C78734,text,,URINE,C13283,
+CL.SV.DOMAIN,Domain Abbreviation (SV),C66734,text,,SV,C49617,Subject Visits
+CL.TA.DOMAIN,Domain Abbreviation (TA),C66734,text,,TA,C49618,Trial Arms
+CL.TE.DOMAIN,Domain Abbreviation (TE),C66734,text,,TE,C49619,Trial Elements
+CL.TI.DOMAIN,Domain Abbreviation (TI),C66734,text,,TI,C49620,Trial Inclusion/Exclusion Criteria
+CL.TREASFF,Reported Term for the Disposition Record,,text,,COMPLETED,,
+CL.TREASFF,Reported Term for the Disposition Record,,text,,DID NOT MEET INCLUSION CRITERIA #3,,
+CL.TREASFF,Reported Term for the Disposition Record,,text,,DISCONTINUED DUE TO ADVERSE EVENT,,
+CL.TREASFF,Reported Term for the Disposition Record,,text,,DISCONTINUED DUE TO CONSENT WITHDRAWEL,,
+CL.TREASFF,Reported Term for the Disposition Record,,text,,DISCONTINUED DUE TO LACK OF THERAPEUTIC RESPONSE,,
+CL.TREASFF,Reported Term for the Disposition Record,,text,,DISCONTINUED DUE TO LOST TO FOLLOW UP,,
+CL.TREASFF,Reported Term for the Disposition Record,,text,,DISCONTINUED DUE TO SPONSOR/INVESTIGATOR DECISION,,
+CL.TREASFF,Reported Term for the Disposition Record,,text,,INFORMED CONSENT OBTAINED,,
+CL.TREASFF,Reported Term for the Disposition Record,,text,,PATIENT DID NOT MEET INCLUSION/EXCLUSION CRITERIA AT SCREENING,,
+CL.TREASFF,Reported Term for the Disposition Record,,text,,PROTOCOL VIOLATION,,
+CL.TREASFF,Reported Term for the Disposition Record,,text,,RANDOMIZED,,
+CL.TS.DOMAIN,Domain Abbreviation (TS),C66734,text,,TS,C53483,Trial Summary
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Added on to Existing Treatments,C49703,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Age Span,C20587,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Age Unit,,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Clinical Study Sponsor,C70793,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Control Type,C49647,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Dose Units,C73558,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Dose per Administration,C25488,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Dosing Frequency,C89081,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Investigational Therapy or Treatment,C41161,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Planned Maximum Age of Subjects,C49694,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Planned Minimum Age of Subjects,C49693,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Planned Number of Subjects,C49692,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Route of Administration,C38114,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Sex of Participants,C49696,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Trial Blinding Schema,C49658,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Trial Indication Type,C49652,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Trial Length,C49697,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Trial Phase Classification,C48281,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Trial Primary Objective,C85826,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Trial Secondary Objective,C85827,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Trial Title,C49802,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Trial Type,C49660,
+CL.TSPARM,Trial Summary Parameter Test Name,C67152,text,,Trial is Randomized,C25196,
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,ADDON,C49703,Added on to Existing Treatments
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,AGEMAX,C49694,Planned Maximum Age of Subjects
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,AGEMIN,C49693,Planned Minimum Age of Subjects
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,AGESPAN,C20587,Age Span
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,AGEU,,Age Unit
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,DOSE,C25488,Dose per Administration
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,DOSFRQ,C89081,Dosing Frequency
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,DOSU,C73558,Dose Units
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,LENGTH,C49697,Trial Length
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,OBJPRIM,C85826,Trial Primary Objective
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,OBJSEC,C85827,Trial Secondary Objective
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,PLANSUB,C49692,Planned Number of Subjects
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,RANDOM,C25196,Trial is Randomized
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,ROUTE,C38114,Route of Administration
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,SEXPOP,C49696,Sex of Participants
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,SPONSOR,C70793,Clinical Study Sponsor
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,TBLIND,C49658,Trial Blinding Schema
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,TCNTRL,C49647,Control Type
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,TINDTP,C49652,Trial Indication Type
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,TITLE,C49802,Trial Title
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,TPHASE,C48281,Trial Phase Classification
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,TRT,C41161,Investigational Therapy or Treatment
+CL.TSPARMCD,Trial Summary Parameter Test Code,C66738,text,,TTYPE,C49660,Trial Type
+CL.TV.DOMAIN,Domain Abbreviation (TV),C66734,text,,TV,C49621,Trial Visits
+CL.UH_MC,Unit (UH_MC),C71620,text,,cm,C49668,Centimeter
+CL.UH_NMC,Unit (UH_NMC),C71620,text,,IN,C48500,Inch
+CL.UW_MC,Unit (UW_MC),C71620,text,,kg,C28252,Kilogram
+CL.UW_NMC,Unit (UW_NMC),C71620,text,,LB,C48531,Pound
+CL.VS.DOMAIN,Domain Abbreviation (VS),C66734,text,,VS,C49622,Vital Signs
+CL.VSRESU,Units for Vital Signs Results,C66770,text,,BEATS/MIN,C49673,Beats per Minute
+CL.VSRESU,Units for Vital Signs Results,C66770,text,,cm,C49668,Centimeter
+CL.VSRESU,Units for Vital Signs Results,C66770,text,,kg,C28252,Kilogram
+CL.VSRESU,Units for Vital Signs Results,C66770,text,,mmHg,C49670,Millimeter of Mercury
+CL.VSTEST,Vital Signs Test Name,C67153,text,,Body Frame Size,C49680,
+CL.VSTEST,Vital Signs Test Name,C67153,text,,Diastolic Blood Pressure,C25299,
+CL.VSTEST,Vital Signs Test Name,C67153,text,,Height,C25347,
+CL.VSTEST,Vital Signs Test Name,C67153,text,,Pulse Rate,C49676,
+CL.VSTEST,Vital Signs Test Name,C67153,text,,Systolic Blood Pressure,C25298,
+CL.VSTEST,Vital Signs Test Name,C67153,text,,Weight,C25208,
+CL.VSTESTCD,Vital Signs Test Code,C66741,text,,DIABP,C25299,Diastolic Blood Pressure
+CL.VSTESTCD,Vital Signs Test Code,C66741,text,,FRMSIZE,C49680,Body Frame Size
+CL.VSTESTCD,Vital Signs Test Code,C66741,text,,HEIGHT,C25347,Height
+CL.VSTESTCD,Vital Signs Test Code,C66741,text,,PULSE,C49676,Pulse Rate
+CL.VSTESTCD,Vital Signs Test Code,C66741,text,,SYSBP,C25298,Systolic Blood Pressure
+CL.VSTESTCD,Vital Signs Test Code,C66741,text,,WEIGHT,C25208,Weight
