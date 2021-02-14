@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+*.egg-info/
+docs/build/
+odmlib.egg-info/
+data/*.csv
+data/.idea
+data/odmlib-define-metadata-save.xlsx
+data/odmlib-define-metadata-temp.xlsx
+data/odmlib-rt-test-define.xml
+data/SDTM-Metadata*

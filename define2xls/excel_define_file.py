@@ -1,5 +1,5 @@
 import csv
-import XlsxWriter.xlsxwriter as XLS
+import xlsxwriter as XLS
 import os
 
 
@@ -27,6 +27,6 @@ class ExcelDefineFile:
                                 worksheet.write(r, c, col)
                         is_header_row = False
             except UnicodeDecodeError as ue:
-                print("Encoding error writing load file for row {0} and col {1}: {2}".format(row, col,  ue))
+                print(f"Encoding error writing load file for row {row} and col {col}: {ue}")
         workbook.close()
         return len(workbook.sheetnames)

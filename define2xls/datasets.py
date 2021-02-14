@@ -15,5 +15,5 @@ class Datasets:
             writer = csv.writer(f, dialect="excel")
             writer.writerow(self.HEADERS)
             for ig in self.mdv.ItemGroupDef:
-                writer.writerow([ig.Name, ig.Description.TranslatedText[0]._content, ig.Class, ig.Structure, ig.Purpose,
+                writer.writerow([ig.Name, g.Description.TranslatedText[0]._content, ig.Class, ig.Structure, ig.Purpose,
                                  ig.Repeating, ig.IsReferenceData, ig.CommentOID])

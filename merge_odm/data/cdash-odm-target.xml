@@ -1,2 +1,290 @@
-<?xml version='1.0' encoding='utf-8'?>
-<ODM CreationDateTime="2011-10-24T10:05:00" Description="CDASH Publication" FileOID="CDASH_File_2017_12_22" FileType="Snapshot" Granularity="Metadata" ODMVersion="1.3.2" Originator="Trace-XML" xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:def="http://www.cdisc.org/ns/def/v2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"><Study OID="trace-xml-01"><GlobalVariables><StudyName>odm-prov-prototype</StudyName><StudyDescription>ODM-PROV Test Study</StudyDescription><ProtocolName>ODM-PROV-01</ProtocolName></GlobalVariables><MetaDataVersion Name="TRACE-XML MDV" OID="MDV.TRACE-XML-ODM-01"><Protocol><StudyEventRef Mandatory="Yes" OrderNumber="1" StudyEventOID="BASELINE" /></Protocol><StudyEventDef Name="Baseline Visit" OID="BASELINE" Repeating="No" Type="Scheduled"><FormRef FormOID="ODM.F.DM" Mandatory="Yes" OrderNumber="1" /></StudyEventDef><FormDef Name="Demographics" OID="ODM.F.DM" Repeating="No"><ItemGroupRef ItemGroupOID="ODM.IG.COMMON" Mandatory="Yes" /><ItemGroupRef ItemGroupOID="ODM.IG.DM" Mandatory="Yes" /></FormDef><FormDef Name="Vital Signs" OID="ODM.F.VS" Repeating="No"><ItemGroupRef ItemGroupOID="ODM.IG.COMMON" Mandatory="Yes" /><ItemGroupRef ItemGroupOID="ODM.IG.VS_GENERAL" Mandatory="Yes" /><ItemGroupRef ItemGroupOID="ODM.IG.VS" Mandatory="Yes" /></FormDef><ItemGroupDef Name="Common" OID="ODM.IG.COMMON" Repeating="No"><ItemRef ItemOID="ODM.IT.Common.StudyID" Mandatory="Yes" /><ItemRef ItemOID="ODM.IT.Common.SiteID" Mandatory="Yes" /><ItemRef ItemOID="ODM.IT.Common.SubjectID" Mandatory="Yes" /><ItemRef ItemOID="ODM.IT.Common.Visit" Mandatory="Yes" /></ItemGroupDef><ItemGroupDef Domain="DM" Name="Demographics" OID="ODM.IG.DM" Repeating="No"><ItemRef ItemOID="ODM.IT.DM.BRTHYR" Mandatory="Yes" /><ItemRef ItemOID="ODM.IT.DM.BRTHMO" Mandatory="Yes" /><ItemRef ItemOID="ODM.IT.DM.BRTHDY" Mandatory="Yes" /><ItemRef ItemOID="ODM.IT.DM.SEX" Mandatory="Yes" /><ItemRef ItemOID="ODM.IT.DM.ETHNIC" Mandatory="Yes" /><ItemRef ItemOID="ODM.IT.DM.RACE" Mandatory="Yes" /><ItemRef ItemOID="ODM.IT.DM.RACEOTH" Mandatory="Yes" /></ItemGroupDef><ItemGroupDef Name="General information" OID="ODM.IG.VS_GENERAL" Repeating="No"><ItemRef ItemOID="ODM.IT.VS.VSPERF" Mandatory="Yes" MethodOID="None" /></ItemGroupDef><ItemGroupDef Name="Vital Sign Measurement" OID="ODM.IG.VS" Repeating="Yes"><ItemRef ItemOID="ODM.IT.VS.VSDAT" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.HEIGHT.VSORRES" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.HEIGHT.VSORRESU" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.WEIGHT.VSORRES" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.WEIGHT.VSORRESU" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.BP.DIABP.VSORRES" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.BP.SYSBP.VSORRES" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.BP.VSORRESU" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.BP.VSLOC" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.BP.VSPOS" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.PULSE.VSORRES" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.PULSE.VSORRESU" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.PULSE.VSLOC" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.PULSE.VSPOS" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.TEMP.VSORRES" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.TEMP.VSORRESU" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.TEMP.VSLOC" Mandatory="Yes" MethodOID="None" /><ItemRef ItemOID="ODM.IT.VS.FRMSIZE.VSORRES" Mandatory="Yes" MethodOID="None" /></ItemGroupDef><ItemDef DataType="text" Length="20" Name="Protocol/Study" OID="ODM.IT.Common.StudyID"><Description><TranslatedText xml:lang="en">Unique identifier for a study.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Protocol/Study</TranslatedText></Question><Alias Context="CDASH" Name="STUDYID" /><Alias Context="SDTM" Name="STUDYID" /></ItemDef><ItemDef DataType="text" Length="20" Name="Site" OID="ODM.IT.Common.SiteID"><Description><TranslatedText xml:lang="en">Unique identifier for the study site; however, SITEID is also unique within a submission.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Site</TranslatedText></Question><Alias Context="CDASH" Name="SITEID" /><Alias Context="CDASH/SDTM" Name="SITEID" /></ItemDef><ItemDef DataType="text" Length="20" Name="Subject" OID="ODM.IT.Common.SubjectID"><Description><TranslatedText xml:lang="en">Subject identifier for the study.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Subject</TranslatedText></Question><Alias Context="CDASH" Name="SUBJID" /><Alias Context="SDTM" Name="SUBJID" /></ItemDef><ItemDef DataType="date" Name="Visit Date" OID="ODM.IT.Common.Visit" SASFieldName="VISITDAT" SDSVarName="RFSTDTC"><Question><TranslatedText xml:lang="en">Visit Date</TranslatedText></Question><Alias Context="CDASH" Name="VISITDAT" /><Alias Context="SDTM" Name="RFSTDTC" /></ItemDef><ItemDef DataType="integer" Name="Birth Year" OID="ODM.IT.DM.BRTHYR"><Description><TranslatedText xml:lang="en">Year of the subject’s birth.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Birth Year</TranslatedText></Question><Alias Context="CDASH" Name="BRTHYR" /><Alias Context="SDTM" Name="BRTHDTC" /></ItemDef><ItemDef DataType="integer" Name="Birth Month" OID="ODM.IT.DM.BRTHMO"><Description><TranslatedText xml:lang="en">Text value for the month of the subject’s birth.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Birth Month</TranslatedText></Question><Alias Context="CDASH" Name="BRTHMO" /><Alias Context="SDTM" Name="BRTHDTC" /></ItemDef><ItemDef DataType="integer" Name="Birth Day" OID="ODM.IT.DM.BRTHDY"><Description><TranslatedText xml:lang="en">Numeric day of the month of the subject’s birth.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Birth Day</TranslatedText></Question><Alias Context="CDASH" Name="BRTHDY" /><Alias Context="SDTM" Name="BRTHDTC" /></ItemDef><ItemDef DataType="text" Length="2" Name="Sex" OID="ODM.IT.DM.SEX"><Description><TranslatedText xml:lang="en">The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female (NCI – CDISC Definition). {SEX} (See Section 2.2.)</TranslatedText></Description><Question><TranslatedText xml:lang="en">Sex</TranslatedText></Question><CodeListRef CodeListOID="CL.SEX" /><Alias Context="CDASH" Name="SEX" /><Alias Context="SDTM" Name="SEX" /></ItemDef><ItemDef DataType="text" Length="999" Name="Ethnic" OID="ODM.IT.DM.ETHNIC"><Description><TranslatedText xml:lang="en">A social group characterized by a distinctive social and cultural tradition maintained from generation to generation, a common history and origin and a sense of identification with the group; members of the group have distinctive features in their way of life, shared experiences and often a common genetic heritage; these features may be reflected in their experience of health and disease (NCI – CDISC Definition). {ETHNIC} (See Section 2.2.)</TranslatedText></Description><Question><TranslatedText xml:lang="en">Ethnicity</TranslatedText></Question><CodeListRef CodeListOID="CL.ETHNIC.SUBSET.ETHNIC" /><Alias Context="CDASH" Name="ETHNIC" /><Alias Context="SDTM" Name="ETHNIC" /></ItemDef><ItemDef DataType="text" Length="999" Name="Race" OID="ODM.IT.DM.RACE"><Description><TranslatedText xml:lang="en">An arbitrary classification based on physical characteristics; a group of persons related by common descent or heredity (U.S. Center for Disease Control). {RACE} (See Section 2.2.)</TranslatedText></Description><Question><TranslatedText xml:lang="en">Race</TranslatedText></Question><CodeListRef CodeListOID="CL.RACE" /><Alias Context="CDASH" Name="RACE" /><Alias Context="SDTM" Name="RACE" /></ItemDef><ItemDef DataType="boolean" Name="SIOUX" OID="ODM.IT.DM.RACE.SIOUX"><Description><TranslatedText xml:lang="en">American Indian or Alaska Native: SIOUX (HL7 1609-7).</TranslatedText></Description><Question><TranslatedText xml:lang="en">American Indian or Alaska Native: SIOUX</TranslatedText></Question><Alias Context="CDASH" Name="RACE.SIOUX" /><Alias Context="CDASH/SDTM" Name="SUPPDM.QNAM" /></ItemDef><ItemDef DataType="boolean" Name="APACHE" OID="ODM.IT.DM.RACE.APACHE"><Description><TranslatedText xml:lang="en">American Indian or Alaska Native: APACHE (HL7 1010-8).</TranslatedText></Description><Question><TranslatedText xml:lang="en">American Indian or Alaska Native: APACHE</TranslatedText></Question><Alias Context="CDASH" Name="RACE.APACHE" /><Alias Context="CDASH/SDTM" Name="SUPPDM.QNAM" /></ItemDef><ItemDef DataType="boolean" Name="CHEROKEE" OID="ODM.IT.DM.RACE.CHEROKEE"><Description><TranslatedText xml:lang="en">American Indian or Alaska Native: CHEROKEE (HL7 1088-4).</TranslatedText></Description><Question><TranslatedText xml:lang="en">American Indian or Alaska Native: CHEROKEE</TranslatedText></Question><Alias Context="CDASH" Name="RACE.CHEROKEE" /><Alias Context="CDASH/SDTM" Name="SUPPDM.QNAM" /></ItemDef><ItemDef DataType="boolean" Name="Native Hawaiian or Other Pacific Islander" OID="DM_18_2011-10-24"><Description><TranslatedText xml:lang="en">An arbitrary classification based on physical characteristics; a group of persons related by common descent or heredity (U.S. Center for Disease Control). {RACE} (See Section 2.2.)</TranslatedText></Description><Question><TranslatedText xml:lang="en">Native Hawaiian or Other Pacific Islander</TranslatedText></Question><Alias Context="CDASH" Name="RACE.NATIVE_HAWAIIAN_OR_OTHER_PACIFIC_ISLANDER" /><Alias Context="CDASH/SDTM" Name="SUPPDM.QNAM" /></ItemDef><ItemDef DataType="boolean" Name="White" OID="DM_19_2011-10-24"><Description><TranslatedText xml:lang="en">An arbitrary classification based on physical characteristics; a group of persons related by common descent or heredity (U.S. Center for Disease Control). {RACE} (See Section 2.2.)</TranslatedText></Description><Question><TranslatedText xml:lang="en">White</TranslatedText></Question><Alias Context="CDASH" Name="RACE.WHITE" /><Alias Context="CDASH/SDTM" Name="SUPPDM.QNAM" /></ItemDef><ItemDef DataType="text" Length="75" Name="Specify Other" OID="ODM.IT.DM.RACEOTH"><Description><TranslatedText xml:lang="en">A free-text field to be used when none of the pre-printed values for RACE are applicable or if another, unprinted selection needs to be added to those pre-printed values.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Specify Other</TranslatedText></Question><Alias Context="CDASH" Name="RACEOTH" /><Alias Context="CDASH/SDTM" Name="SUPPDM.QNAM" /></ItemDef><ItemDef DataType="text" Length="999" Name="Vital signs collected?" OID="ODM.IT.VS.VSPERF"><Description><TranslatedText xml:lang="en">General prompt question regarding whether or not any VS were collected during the study. This provides verification that all other fields on the CRF were deliberately left blank.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Vital signs collected?</TranslatedText></Question><CodeListRef CodeListOID="ODM.CL.NY_SUB_Y_N" /><Alias Context="CDASH" Name="VSPERF" /></ItemDef><ItemDef CodeListRef="None" DataType="partialDate" Name="Date" OID="ODM.IT.VS.VSDAT"><Description><TranslatedText xml:lang="en">Date of measurements</TranslatedText></Description><Question><TranslatedText xml:lang="en">Date</TranslatedText></Question><Alias Context="CDASH" Name="VSDAT" /></ItemDef><ItemDef CodeListRef="None" DataType="float" Name="Height" OID="ODM.IT.VS.HEIGHT.VSORRES"><Description><TranslatedText xml:lang="en">Result of the vital signs measurement as originally received or collected.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Height</TranslatedText></Question><Alias Context="CDASH" Name="HEIGHT.VSORRES" /><Alias Context="CDASH/SDTM" Name="VSORRES+VSORRESU" /></ItemDef><ItemDef DataType="text" Name="Height Units" OID="ODM.IT.VS.HEIGHT.VSORRESU"><Description><TranslatedText xml:lang="en">Units for the vital signs measurement as originally received or collected.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Height Units</TranslatedText></Question><CodeListRef CodeListOID="ODM.CL.VSRESU" /><Alias Context="CDASH" Name="HEIGHT.VSORRES" /><Alias Context="CDASH/SDTM" Name="VSORRES+VSORRESU" /></ItemDef><ItemDef CodeListRef="None" DataType="float" Name="Weight" OID="ODM.IT.VS.WEIGHT.VSORRES"><Description><TranslatedText xml:lang="en">Result of the vital signs measurement as originally received or collected.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Weight</TranslatedText></Question><Alias Context="CDASH" Name="WEIGHT.VSORRES" /><Alias Context="CDASH/SDTM" Name="VSORRES+VSORRESU" /></ItemDef><ItemDef DataType="text" Name="Weight Units" OID="ODM.IT.VS.WEIGHT.VSORRESU"><Description><TranslatedText xml:lang="en">Units for the vital signs measurement as originally received or collected.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Weight Units</TranslatedText></Question><CodeListRef CodeListOID="ODM.CL.VSRESU" /><Alias Context="CDASH" Name="WEIGHT.VSORRES" /><Alias Context="CDASH/SDTM" Name="VSORRES+VSORRESU" /></ItemDef><ItemDef CodeListRef="None" DataType="float" Name="Diastolic" OID="ODM.IT.VS.BP.DIABP.VSORRES"><Description><TranslatedText xml:lang="en">Result of the vital signs measurement as originally received or collected.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Diastolic</TranslatedText></Question><Alias Context="CDASH" Name="BP.DIABP.VSORRES" /><Alias Context="CDASH/SDTM" Name="VSORRES+VSORRESU" /></ItemDef><ItemDef CodeListRef="None" DataType="float" Name="Systolic" OID="ODM.IT.VS.BP.SYSBP.VSORRES"><Description><TranslatedText xml:lang="en">Result of the vital signs measurement as originally received or collected.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Systolic</TranslatedText></Question><Alias Context="CDASH" Name="BP.SYSBP.VSORRES" /><Alias Context="CDASH/SDTM" Name="VSORRES+VSORRESU" /></ItemDef><ItemDef DataType="text" Name="BP Units" OID="ODM.IT.VS.BP.VSORRESU"><Description><TranslatedText xml:lang="en">Units for the vital signs measurement as originally received or collected.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Blood Pressure Units</TranslatedText></Question><CodeListRef CodeListOID="ODM.CL.VSRESU" /><Alias Context="CDASH" Name="BP.VSORRES" /><Alias Context="CDASH/SDTM" Name="VSORRES+VSORRESU" /></ItemDef><ItemDef DataType="text" Length="999" Name="BP Location" OID="ODM.IT.VS.BP.VSLOC"><Description><TranslatedText xml:lang="en">Location relevant to the collection of Vital Signs measurement. Example: LEFT ARM for blood pressure.</TranslatedText></Description><Question><TranslatedText xml:lang="en">BP Location</TranslatedText></Question><CodeListRef CodeListOID="ODM.CL.LOC_BP" /><Alias Context="CDASH" Name="BP.VSLOC" /><Alias Context="CDASH/SDTM" Name="VSLOC" /></ItemDef><ItemDef DataType="text" Length="999" Name="BP Position" OID="ODM.IT.VS.BP.VSPOS"><Description><TranslatedText xml:lang="en">Position of the subject during a measurement or examination.</TranslatedText></Description><Question><TranslatedText xml:lang="en">BP Position</TranslatedText></Question><CodeListRef CodeListOID="ODM.CL.VSPOSITION" /><Alias Context="CDASH" Name="BP.VSPOS" /><Alias Context="CDASH/SDTM" Name="VSPOS" /></ItemDef><ItemDef CodeListRef="None" DataType="float" Name="Pulse" OID="ODM.IT.VS.PULSE.VSORRES"><Description><TranslatedText xml:lang="en">Result of the vital signs measurement as originally received or collected.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Pulse</TranslatedText></Question><Alias Context="CDASH" Name="PULSE.VSORRES" /><Alias Context="CDASH/SDTM" Name="VSORRES+VSORRESU" /></ItemDef><ItemDef DataType="text" Name="Pulse Units" OID="ODM.IT.VS.PULSE.VSORRESU"><Description><TranslatedText xml:lang="en">Units for the vital signs measurement as originally received or collected.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Pulse Units</TranslatedText></Question><CodeListRef CodeListOID="ODM.CL.VSRESU" /><Alias Context="CDASH" Name="PULSE.VSORRES" /><Alias Context="CDASH/SDTM" Name="VSORRES+VSORRESU" /></ItemDef><ItemDef DataType="text" Length="999" Name="Pulse Location" OID="ODM.IT.VS.PULSE.VSLOC"><Description><TranslatedText xml:lang="en">Location relevant to the collection of Vital Signs measurement. Example: LEFT ARM for blood pressure.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Pulse Location</TranslatedText></Question><CodeListRef CodeListOID="ODM.CL.LOC.SUBSET.PULSE.VSLOC" /><Alias Context="CDASH" Name="PULSE.VSLOC" /><Alias Context="CDASH/SDTM" Name="VSLOC" /></ItemDef><ItemDef DataType="text" Length="999" Name="Pulse Position" OID="ODM.IT.VS.PULSE.VSPOS"><Description><TranslatedText xml:lang="en">Position of the subject during a measurement or examination.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Pulse Position</TranslatedText></Question><CodeListRef CodeListOID="ODM.CL.VSPOSITION" /><Alias Context="CDASH" Name="PULSE.VSPOS" /><Alias Context="CDASH/SDTM" Name="VSPOS" /></ItemDef><ItemDef CodeListRef="None" DataType="float" Name="Temperature" OID="ODM.IT.VS.TEMP.VSORRES"><Description><TranslatedText xml:lang="en">Result of the vital signs measurement as originally received or collected.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Temperature</TranslatedText></Question><Alias Context="CDASH" Name="TEMP.VSORRES" /><Alias Context="CDASH/SDTM" Name="VSORRES+VSORRESU" /></ItemDef><ItemDef DataType="text" Name="Temperature Units" OID="ODM.IT.VS.TEMP.VSORRESU"><Description><TranslatedText xml:lang="en">Units for the vital signs measurement as originally received or collected.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Temperature Units</TranslatedText></Question><CodeListRef CodeListOID="ODM.CL.VSRESU" /><Alias Context="CDASH" Name="TEMP.VSORRES" /><Alias Context="CDASH/SDTM" Name="VSORRES+VSORRESU" /></ItemDef><ItemDef DataType="text" Length="999" Name="Temperature Location" OID="ODM.IT.VS.TEMP.VSLOC"><Description><TranslatedText xml:lang="en">Location relevant to the collection of Vital Signs measurement. Example: LEFT ARM for blood pressure.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Temperature Location</TranslatedText></Question><CodeListRef CodeListOID="ODM.CL.LOC.SUBSET.TEMP.VSLOC" /><Alias Context="CDASH" Name="TEMP.VSLOC" /><Alias Context="CDASH/SDTM" Name="VSLOC" /></ItemDef><ItemDef DataType="text" Length="999" Name="Frame Size" OID="ODM.IT.VS.FRMSIZE.VSORRES"><Description><TranslatedText xml:lang="en">Result of the vital signs measurement as originally received or collected.</TranslatedText></Description><Question><TranslatedText xml:lang="en">Frame Size</TranslatedText></Question><CodeListRef CodeListOID="ODM.CL.FRMSIZE" /><Alias Context="CDASH" Name="FRMSIZE.VSORRES" /><Alias Context="CDASH/SDTM" Name="VSORRES+VSORRESU" /></ItemDef><CodeList DataType="text" Name="Sex" OID="ODM.CL.SEX"><CodeListItem CodedValue="F"><Decode><TranslatedText xml:lang="en">FEMALE</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="M"><Decode><TranslatedText xml:lang="en">MALE</TranslatedText></Decode></CodeListItem></CodeList><CodeList DataType="text" Name="Ethnic Group" OID="ODM.CL.ETHNIC.SUBSET.ETHNIC"><CodeListItem CodedValue="NOT HISPANIC OR LATINO"><Decode><TranslatedText xml:lang="en">NOT HISPANIC OR LATINO</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="HISPANIC OR LATINO"><Decode><TranslatedText xml:lang="en">HISPANIC OR LATINO</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="NOT REPORTED"><Decode><TranslatedText xml:lang="en">NOT REPORTED</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="UNKNOWN"><Decode><TranslatedText xml:lang="en">UNKNOWN</TranslatedText></Decode></CodeListItem></CodeList><CodeList DataType="text" Name="Race" OID="ODM.CL.RACE"><CodeListItem CodedValue="BLACK OR AFRICAN AMERICAN"><Decode><TranslatedText xml:lang="en">BLACK OR AFRICAN AMERICAN</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="AMERICAN INDIAN OR ALASKA NATIVE"><Decode><TranslatedText xml:lang="en">AMERICAN INDIAN OR ALASKA NATIVE</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="ASIAN"><Decode><TranslatedText xml:lang="en">ASIAN</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER"><Decode><TranslatedText xml:lang="en">NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="WHITE"><Decode><TranslatedText xml:lang="en">WHITE</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="OTHER"><Decode><TranslatedText xml:lang="en">OTHER</TranslatedText></Decode></CodeListItem></CodeList><CodeList DataType="text" Name="No Yes Response" OID="ODM.CL.NY_SUB_Y_N"><CodeListItem CodedValue="N"><Decode><TranslatedText xml:lang="en">NO</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="Y"><Decode><TranslatedText xml:lang="en">YES</TranslatedText></Decode></CodeListItem></CodeList><CodeList DataType="text" Name="Units for Vital Signs Results" OID="ODM.CL.VSRESU"><CodeListItem CodedValue="%"><Decode><TranslatedText xml:lang="en">%</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="BEATS/MIN"><Decode><TranslatedText xml:lang="en">BEATS/MIN</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="BREATHS/MIN"><Decode><TranslatedText xml:lang="en">BREATHS/MIN</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="C"><Decode><TranslatedText xml:lang="en">C</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="cm"><Decode><TranslatedText xml:lang="en">cm</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="F"><Decode><TranslatedText xml:lang="en">F</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="g"><Decode><TranslatedText xml:lang="en">g</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="IN"><Decode><TranslatedText xml:lang="en">IN</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="kg"><Decode><TranslatedText xml:lang="en">kg</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="kg/m2"><Decode><TranslatedText xml:lang="en">kg/m2</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="LB"><Decode><TranslatedText xml:lang="en">LB</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="m2"><Decode><TranslatedText xml:lang="en">m2</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="mmHg"><Decode><TranslatedText xml:lang="en">mmHg</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="ohm"><Decode><TranslatedText xml:lang="en">ohm</TranslatedText></Decode></CodeListItem></CodeList><CodeList DataType="text" Name="Anatomical Location" OID="ODM.CL.LOC_BP"><CodeListItem CodedValue="BRACHIAL ARTERY"><Decode><TranslatedText xml:lang="en">BRACHIAL ARTERY</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="ANKLE"><Decode><TranslatedText xml:lang="en">ANKLE</TranslatedText></Decode></CodeListItem></CodeList><CodeList DataType="text" Name="Vital Sign Positions" OID="ODM.CL.VSPOSITION"><CodeListItem CodedValue="SITTING"><Decode><TranslatedText xml:lang="en">SITTING</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="PRONE"><Decode><TranslatedText xml:lang="en">PRONE</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="STANDING"><Decode><TranslatedText xml:lang="en">STANDING</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="SUPINE"><Decode><TranslatedText xml:lang="en">SUPINE</TranslatedText></Decode></CodeListItem></CodeList><CodeList DataType="text" Name="Anatomical Location" OID="ODM.CL.LOC.SUBSET.PULSE.VSLOC"><CodeListItem CodedValue="RADIAL ARTERY"><Decode><TranslatedText xml:lang="en">RADIAL ARTERY</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="CAROTID ARTERY"><Decode><TranslatedText xml:lang="en">CAROTID ARTERY</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="BRACHIAL ARTERY"><Decode><TranslatedText xml:lang="en">BRACHIAL ARTERY</TranslatedText></Decode></CodeListItem></CodeList><CodeList DataType="text" Name="Anatomical Location" OID="ODM.CL.LOC.SUBSET.TEMP.VSLOC"><CodeListItem CodedValue="AXILLA"><Decode><TranslatedText xml:lang="en">AXILLA</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="EAR"><Decode><TranslatedText xml:lang="en">EAR</TranslatedText></Decode></CodeListItem></CodeList><CodeList DataType="text" Name="Vital Sign frame size" OID="ODM.CL.FRMSIZE"><CodeListItem CodedValue="SMALL"><Decode><TranslatedText xml:lang="en">SMALL</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="MEDIUM"><Decode><TranslatedText xml:lang="en">MEDIUM</TranslatedText></Decode></CodeListItem><CodeListItem CodedValue="LARGE"><Decode><TranslatedText xml:lang="en">LARGE</TranslatedText></Decode></CodeListItem></CodeList></MetaDataVersion></Study></ODM>
+<?xml version="1.0" encoding="UTF-8"?>
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    FileOID="CDASH_File_2017_12_22" ODMVersion="1.3.2" 
+    FileType="Snapshot" 
+    Description="CDASH Publication" 
+    Granularity="Metadata" 
+    Originator="Trace-XML" 
+    CreationDateTime="2011-10-24T10:05:00">
+    <Study OID="trace-xml-01">
+        <GlobalVariables>
+            <StudyName>odm-prov-prototype</StudyName>
+            <StudyDescription>ODM-PROV Test Study</StudyDescription>
+            <ProtocolName>ODM-PROV-01</ProtocolName>
+        </GlobalVariables>
+        <MetaDataVersion OID="MDV.TRACE-XML-ODM-01" Name="TRACE-XML MDV">
+            <Protocol>
+                <StudyEventRef StudyEventOID="BASELINE" Mandatory="Yes" OrderNumber="1"/>
+            </Protocol>
+            
+            <StudyEventDef OID="BASELINE" Name="Baseline Visit" Repeating="No" Type="Scheduled">
+                <FormRef FormOID="ODM.F.DM" Mandatory="Yes" OrderNumber="1"/>
+            </StudyEventDef>
+                        
+            <FormDef OID="ODM.F.DM" Name="Demographics" Repeating="No">
+                <ItemGroupRef ItemGroupOID="ODM.IG.COMMON" Mandatory="Yes"/>
+                <ItemGroupRef ItemGroupOID="ODM.IG.DM" Mandatory="Yes"/>
+            </FormDef>
+            
+            <ItemGroupDef OID="ODM.IG.COMMON" Name="Common" Repeating="No">
+                <ItemRef ItemOID="ODM.IT.Common.StudyID" Mandatory="Yes"/>
+                <ItemRef ItemOID="ODM.IT.Common.SiteID" Mandatory="Yes"/>
+                <ItemRef ItemOID="ODM.IT.Common.SubjectID" Mandatory="Yes"/>
+                <ItemRef ItemOID="ODM.IT.Common.Visit"  Mandatory="Yes"/>
+            </ItemGroupDef>
+
+            <ItemGroupDef OID="ODM.IG.DM" Name="Demographics" Domain="DM" Repeating="No">
+                <ItemRef ItemOID="ODM.IT.DM.BRTHYR" Mandatory="Yes"/>
+                <ItemRef ItemOID="ODM.IT.DM.BRTHMO" Mandatory="Yes"/>
+                <ItemRef ItemOID="ODM.IT.DM.BRTHDY" Mandatory="Yes"/>
+                <ItemRef ItemOID="ODM.IT.DM.SEX" Mandatory="Yes"/>
+                <ItemRef ItemOID="ODM.IT.DM.ETHNIC" Mandatory="Yes"/>
+                <ItemRef ItemOID="ODM.IT.DM.RACE" Mandatory="Yes"/>
+                <ItemRef ItemOID="ODM.IT.DM.RACEOTH" Mandatory="Yes"/>
+            </ItemGroupDef>
+                        
+            <ItemDef OID="ODM.IT.Common.StudyID" Name="Protocol/Study" DataType="text" Length="20">
+                <Description>
+                    <TranslatedText xml:lang="en">Unique identifier for a study.</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText xml:lang="en">Protocol/Study</TranslatedText>
+                </Question>
+                <Alias Context="CDASH" Name="STUDYID"/>
+                <Alias Context="SDTM" Name="STUDYID"/>
+            </ItemDef>
+            
+            <ItemDef OID="ODM.IT.Common.SiteID" Name="Site" DataType="text" Length="20">
+                <Description>
+                    <TranslatedText xml:lang="en">Unique identifier for the study site; however, SITEID is also unique within a submission.</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText xml:lang="en">Site</TranslatedText>
+                </Question>
+                <Alias Context="CDASH" Name="SITEID"/>
+                <Alias Context="CDASH/SDTM" Name="SITEID"/>
+            </ItemDef>
+            
+            <ItemDef OID="ODM.IT.Common.SubjectID" Name="Subject" DataType="text" Length="20">
+                <Description>
+                    <TranslatedText xml:lang="en">Subject identifier for the study.</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText xml:lang="en">Subject</TranslatedText>
+                </Question>
+                <Alias Context="CDASH" Name="SUBJID"/>
+                <Alias Context="SDTM" Name="SUBJID"/>
+            </ItemDef>
+            <ItemDef OID="ODM.IT.Common.Visit" Name="Visit Date" DataType="date" SDSVarName="RFSTDTC" SASFieldName="VISITDAT">
+                <Question>
+                    <TranslatedText xml:lang="en">Visit Date</TranslatedText>
+                </Question>
+                <Alias Context="CDASH" Name="VISITDAT"/>
+                <Alias Context="SDTM" Name="RFSTDTC"/>
+            </ItemDef>
+                                                
+            <ItemDef OID="ODM.IT.DM.BRTHYR" Name="Birth Year" DataType="integer">
+                <Description>
+                    <TranslatedText xml:lang="en">Year of the subject’s birth.</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText xml:lang="en">Birth Year</TranslatedText>
+                </Question>
+                <Alias Context="CDASH" Name="BRTHYR"/>
+                <Alias Context="SDTM" Name="BRTHDTC"/>
+            </ItemDef>
+            
+            <ItemDef OID="ODM.IT.DM.BRTHMO" Name="Birth Month" DataType="integer">
+                <Description>
+                    <TranslatedText xml:lang="en">Text value for the month of the subject’s birth.</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText xml:lang="en">Birth Month</TranslatedText>
+                </Question>
+                <Alias Context="CDASH" Name="BRTHMO"/>
+                <Alias Context="SDTM" Name="BRTHDTC"/>
+            </ItemDef>
+            
+            <ItemDef OID="ODM.IT.DM.BRTHDY" Name="Birth Day" DataType="integer">
+                <Description>
+                    <TranslatedText xml:lang="en">Numeric day of the month of the subject’s birth.</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText xml:lang="en">Birth Day</TranslatedText>
+                </Question>
+                <Alias Context="CDASH" Name="BRTHDY"/>
+                <Alias Context="SDTM" Name="BRTHDTC"/>
+            </ItemDef>
+                                                            
+            <ItemDef OID="ODM.IT.DM.SEX" Name="Sex" DataType="text" Length="2">
+                <Description>
+                    <TranslatedText xml:lang="en">The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female (NCI – CDISC Definition). {SEX} (See Section 2.2.)</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText xml:lang="en">Sex</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL.SEX"/>
+                <Alias Context="CDASH" Name="SEX"/>
+                <Alias Context="SDTM" Name="SEX"/>
+            </ItemDef>
+            
+            <ItemDef OID="ODM.IT.DM.ETHNIC" Name="Ethnic" DataType="text" Length="999">
+                <Description>
+                    <TranslatedText xml:lang="en">A social group characterized by a distinctive social and cultural tradition maintained from generation to generation, a common history and origin and a sense of identification with the group; members of the group have distinctive features in their way of life, shared experiences and often a common genetic heritage; these features may be reflected in their experience of health and disease (NCI – CDISC Definition). {ETHNIC} (See Section 2.2.)</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText xml:lang="en">Ethnicity</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL.ETHNIC.SUBSET.ETHNIC"/>
+                <Alias Context="CDASH" Name="ETHNIC"/>
+                <Alias Context="SDTM" Name="ETHNIC"/>
+            </ItemDef>
+            
+            <ItemDef OID="ODM.IT.DM.RACE" Name="Race" DataType="text" Length="999">
+                <Description>
+                    <TranslatedText xml:lang="en">An arbitrary classification based on physical characteristics; a group of persons related by common descent or heredity (U.S. Center for Disease Control). {RACE} (See Section 2.2.)</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText xml:lang="en">Race</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL.RACE"/>
+                <Alias Context="CDASH" Name="RACE"/>
+                <Alias Context="SDTM" Name="RACE"/>
+            </ItemDef>
+            
+            <ItemDef OID="ODM.IT.DM.RACE.SIOUX" Name="SIOUX" DataType="boolean">
+                <Description>
+                    <TranslatedText xml:lang="en">American Indian or Alaska Native: SIOUX (HL7 1609-7).</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText xml:lang="en">American Indian or Alaska Native: SIOUX</TranslatedText>
+                </Question>
+                <Alias Context="CDASH" Name="RACE.SIOUX"/>
+                <Alias Context="CDASH/SDTM" Name="SUPPDM.QNAM"/>
+            </ItemDef>
+
+            <ItemDef OID="ODM.IT.DM.RACE.APACHE" Name="APACHE" DataType="boolean">
+                <Description>
+                    <TranslatedText xml:lang="en">American Indian or Alaska Native: APACHE (HL7 1010-8).</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText xml:lang="en">American Indian or Alaska Native: APACHE</TranslatedText>
+                </Question>
+                <Alias Context="CDASH" Name="RACE.APACHE"/>
+                <Alias Context="CDASH/SDTM" Name="SUPPDM.QNAM"/>
+            </ItemDef>
+            
+            <ItemDef OID="ODM.IT.DM.RACE.CHEROKEE" Name="CHEROKEE" DataType="boolean">
+                <Description>
+                    <TranslatedText xml:lang="en">American Indian or Alaska Native: CHEROKEE (HL7 1088-4).</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText xml:lang="en">American Indian or Alaska Native: CHEROKEE</TranslatedText>
+                </Question>
+                <Alias Context="CDASH" Name="RACE.CHEROKEE"/>
+                <Alias Context="CDASH/SDTM" Name="SUPPDM.QNAM"/>                
+            </ItemDef>
+            <ItemDef OID="DM_18_2011-10-24" Name="Native Hawaiian or Other Pacific Islander" DataType="boolean">
+                <Description>
+                    <TranslatedText xml:lang="en">An arbitrary classification based on physical characteristics; a group of persons related by common descent or heredity (U.S. Center for Disease Control). {RACE} (See Section 2.2.)</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText xml:lang="en">Native Hawaiian or Other Pacific Islander</TranslatedText>
+                </Question>
+                <Alias Context="CDASH" Name="RACE.NATIVE_HAWAIIAN_OR_OTHER_PACIFIC_ISLANDER"/>
+                <Alias Context="CDASH/SDTM" Name="SUPPDM.QNAM"/>
+            </ItemDef>
+            <ItemDef OID="DM_19_2011-10-24" Name="White" DataType="boolean">
+                <Description>
+                    <TranslatedText xml:lang="en">An arbitrary classification based on physical characteristics; a group of persons related by common descent or heredity (U.S. Center for Disease Control). {RACE} (See Section 2.2.)</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText xml:lang="en">White</TranslatedText>
+                </Question>
+                <Alias Context="CDASH" Name="RACE.WHITE"/>
+                <Alias Context="CDASH/SDTM" Name="SUPPDM.QNAM"/>
+            </ItemDef>
+            
+            <ItemDef OID="ODM.IT.DM.RACEOTH" Name="Specify Other" DataType="text" Length="75">
+                <Description>
+                    <TranslatedText xml:lang="en">A free-text field to be used when none of the pre-printed values for RACE are applicable or if another, unprinted selection needs to be added to those pre-printed values.</TranslatedText>
+                </Description>
+                <Question>
+                    <TranslatedText xml:lang="en">Specify Other</TranslatedText>
+                </Question>
+                <Alias Context="CDASH" Name="RACEOTH"/>
+                <Alias Context="CDASH/SDTM" Name="SUPPDM.QNAM"/>
+            </ItemDef>
+                                    
+            <CodeList OID="ODM.CL.SEX" Name="Sex" DataType="text">
+                <CodeListItem CodedValue="F">
+                    <Decode>
+                        <TranslatedText xml:lang="en">FEMALE</TranslatedText>
+                    </Decode>                    
+                </CodeListItem>
+                <CodeListItem CodedValue="M">
+                    <Decode>
+                        <TranslatedText xml:lang="en">MALE</TranslatedText>
+                    </Decode>                    
+                </CodeListItem>
+            </CodeList>
+            
+            <CodeList OID="ODM.CL.ETHNIC.SUBSET.ETHNIC" Name="Ethnic Group" DataType="text">
+                <CodeListItem CodedValue="NOT HISPANIC OR LATINO">
+                    <Decode>
+                        <TranslatedText xml:lang="en">NOT HISPANIC OR LATINO</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="HISPANIC OR LATINO">
+                    <Decode>
+                        <TranslatedText xml:lang="en">HISPANIC OR LATINO</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="NOT REPORTED">
+                    <Decode>
+                        <TranslatedText xml:lang="en">NOT REPORTED</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="UNKNOWN">
+                    <Decode>
+                        <TranslatedText xml:lang="en">UNKNOWN</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+            </CodeList>
+
+            <CodeList OID="ODM.CL.RACE" Name="Race" DataType="text">
+                <CodeListItem CodedValue="BLACK OR AFRICAN AMERICAN">
+                    <Decode>
+                        <TranslatedText xml:lang="en">BLACK OR AFRICAN AMERICAN</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="AMERICAN INDIAN OR ALASKA NATIVE">
+                    <Decode>
+                        <TranslatedText xml:lang="en">AMERICAN INDIAN OR ALASKA NATIVE</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="ASIAN">
+                    <Decode>
+                        <TranslatedText xml:lang="en">ASIAN</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER">
+                    <Decode>
+                        <TranslatedText xml:lang="en">NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="WHITE">
+                    <Decode>
+                        <TranslatedText xml:lang="en">WHITE</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="OTHER">
+                    <Decode>
+                        <TranslatedText xml:lang="en">OTHER</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+            </CodeList>
+        </MetaDataVersion>
+    </Study>
+</ODM>

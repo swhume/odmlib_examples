@@ -14,8 +14,7 @@ ELEMENTS = ["ValueListDef", "WhereClauseDef", "ItemGroupDef", "ItemDef", "CodeLi
 
 """
 Example Cmd-line Args:
-    example: -e C:\\Users\\shume\\Dropbox\\odm_api\\odm_360\\define2xls\\data\\odmlib-define-metadata.xls
-             -d C:\\Users\\shume\\Dropbox\\odm_api\\odm_360\\xls2define\\data\\odmlib-roundtrip-define.xml
+    example: -e ./data/odmlib-define-metadata.xlsx -d ./data/odmlib-roundtrip-define.xml
 
 NOTE: the xlrd library no longer supports .xlsx files and will only work with .xls file
 """

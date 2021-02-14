@@ -1,6 +1,5 @@
-import sys
-sys.path.insert(0, 'C:\\Users\\shume\\Dropbox\\odmlib')
 import odmlib.odm_loader as OL
+import odmlib.loader as LD
 import os
 
 # An odmlib example application
@@ -11,23 +10,16 @@ TARGET = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data', 'cdas
 
 class MergeODM:
     def __init__(self, source_file, target_file, form_oid):
-        """
-        simple merge application that generates a target ODM file with a CRF moved from a source ODM library file
-
-        :param source_file: string source ODM file path and name that functions as a CRF library in this example
-        :param target_file: string target ODM file path and name that to which the CRF will be added
-        :param form_oid: the OID of the form that will be moved from the source to the target
-        :param language: default language
-        """
+        """ simple merge application that generates a target ODM file with a CRF moved from a source ODM file """
         self.source_file = source_file
         self.target_file = target_file
         self.form_oid = form_oid
 
     def merge(self):
-        source_loader = OL.ODMLoader(OL.XMLODMLoader())
+        source_loader = LD.ODMLoader(OL.XMLODMLoader())
         source_loader.open_odm_document(self.source_file)
         source_mdv = source_loader.MetaDataVersion()
-        target_loader = OL.ODMLoader(OL.XMLODMLoader())
+        target_loader = LD.ODMLoader(OL.XMLODMLoader())
         target_loader.open_odm_document(self.target_file)
         target_root = target_loader.root()
         self._merge_form_def(source_mdv, target_root.Study[0].MetaDataVersion[0])

@@ -1,5 +1,6 @@
 import argparse
-import odmlib.odm_loader as OL
+import odmlib.define_loader as OL
+import odmlib.loader as LD
 import excel_define_file as EX
 import odmlib.odm_parser as P
 import xmlschema as XSD
@@ -13,7 +14,7 @@ EXCEL_NAME = "odmlib-define-metadata.xlsx"
 
 """
 define2xls.py - an example program using odmlib to convert a Define-XML file into a metadata spreadsheet
-ex. cmd-line args: -d C:\\Users\\shume\\Dropbox\\odm_api\\odm_360\\xls2define\\data\\sdtm-xls-define.xml -p ./data/
+ex. cmd-line args: -d ./data/sdtm-xls-define.xml -p ./data/
 ex. cmd-line args: -d C:\\Users\\shume\\Dropbox\\odm_api\\odm_360\\xls2define\\data\\sdtm-xls-define.xml -p ./data/ -v
 -s "C:\\Users\\shume\\Dropbox\\04. XML Tech\\Define-XML\\define_xml_2_0\\define_xml_2_0_releasepackage20140424\\schema\\cdisc-define-2.0\\define2-0-0.xsd"
 """
@@ -27,7 +28,7 @@ class Define2Xls:
         self.lang = language
 
     def create(self):
-        loader = OL.ODMLoader(OL.XMLDefineLoader())
+        loader = LD.ODMLoader(OL.XMLDefineLoader())
         loader.open_odm_document(self.define_file)
         mdv_odmlib = loader.MetaDataVersion()
         study_odmlib = loader.Study()
