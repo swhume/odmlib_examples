@@ -13,13 +13,13 @@ class Study:
         self.file_name = os.path.join(self.path, "study.csv")
 
     def extract(self):
-        print(f"Study OID: {self.study.StudyName}")
+        print(f"Study OID: {self.study.GlobalVariables.StudyName}")
         with open(self.file_name, 'w', newline='') as f:
             writer = csv.writer(f, dialect="excel")
             writer.writerow(self.HEADERS)
-            writer.writerow(["StudyName", self.study.StudyName])
-            writer.writerow(["StudyDescription", self.study.StudyDescription])
-            writer.writerow(["ProtocolName", self.study.ProtocolName])
+            writer.writerow(["StudyName", self.study.GlobalVariables.StudyName])
+            writer.writerow(["StudyDescription", self.study.GlobalVariables.StudyDescription])
+            writer.writerow(["ProtocolName", self.study.GlobalVariables.ProtocolName])
             writer.writerow(["StandardName", self.mdv.StandardName])
             writer.writerow(["StandardVersion", self.mdv.StandardVersion])
             writer.writerow(["Language", self.language])

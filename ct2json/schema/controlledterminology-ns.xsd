@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://ncicb.nci.nih.gov/xml/odm/EVS/CDISC" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" 
+           xmlns:nciodm="http://ncicb.nci.nih.gov/xml/odm/EVS/CDISC" 
+           elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+    <xs:import namespace="http://www.cdisc.org/ns/odm/v1.3" schemaLocation="foundation/ODM1-3-2.xsd"/>
+
+    <xs:attribute name="ControlledTerminologyVersion" type="odm:text" fixed="1.1.1">
+      <xs:annotation><xs:documentation>The version of the CT-XML standard.</xs:documentation></xs:annotation>
+    </xs:attribute>
+
+    <xs:attribute name="ExtCodeID"          type="nciodm:NCIsimpleTypeDefinition-ExtCodeID"/>
+    <xs:attribute name="CodeListExtensible" type="odm:YesOrNo"/>
+
+    <xs:element name="CDISCSubmissionValue" type="nciodm:NCIsimpleTypeDefinition-CDISCSubmissionValue" />
+    <xs:element name="CDISCSynonym" type="nciodm:NCIsimpleTypeDefinition-CDISCSynonym" />
+    <xs:element name="PreferredTerm" type="nciodm:NCIsimpleTypeDefinition-PreferredTerm" />
+    <xs:element name="CDISCDefinition" type="nciodm:NCIsimpleTypeDefinition-CDISCDefinition" />
+
+    <xs:simpleType name="NCIsimpleTypeDefinition-ExtCodeID">
+      <xs:restriction base="odm:text" />
+    </xs:simpleType>
+
+    <xs:simpleType name="NCIsimpleTypeDefinition-CDISCSubmissionValue">
+      <xs:restriction base="odm:text" />
+    </xs:simpleType>
+
+    <xs:simpleType name="NCIsimpleTypeDefinition-CDISCSynonym">
+      <xs:restriction base="odm:text" />
+    </xs:simpleType>
+
+    <xs:simpleType name="NCIsimpleTypeDefinition-PreferredTerm">
+      <xs:restriction base="odm:text" />
+    </xs:simpleType>
+
+    <xs:simpleType name="NCIsimpleTypeDefinition-CDISCDefinition">
+      <xs:restriction base="odm:text" />
+    </xs:simpleType>
+
+</xs:schema>

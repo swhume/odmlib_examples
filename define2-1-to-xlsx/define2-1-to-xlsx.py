@@ -20,7 +20,7 @@ ex. cmd-line args: -d ./data/odmlib-roundtrip-define.xml -p ./data/ -v
 """
 
 class Define2Xls:
-    """ generate a metadata spreadsheet from a Define-XML v2.0 file """
+    """ generate a metadata spreadsheet from a Define-XML v2.1 file """
     def __init__(self, define_file, excel_path, excel_filename=EXCEL_NAME, language="en"):
         self.define_file = define_file
         self.data_path = excel_path

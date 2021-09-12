@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.cdisc.org/ns/odm/v1.3" 
+           xmlns="http://www.cdisc.org/ns/odm/v1.3"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:nciodm="http://ncicb.nci.nih.gov/xml/odm/EVS/CDISC"
+           elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+    <xs:import namespace="http://ncicb.nci.nih.gov/xml/odm/EVS/CDISC" schemaLocation="controlledterminology-ns.xsd"/>
+
+
+
+    <xs:redefine schemaLocation="foundation/ODM1-3-2.xsd">
+
+      <!-- ControlledTerminologyVersion as attribute for ODM - mandatory - fixed to "1.1.1" -->
+        <xs:attributeGroup name="ODMAttributeExtension">
+          <xs:attributeGroup  ref="ODMAttributeExtension"/>
+          <xs:attribute ref="nciodm:ControlledTerminologyVersion" use="optional"/>
+        </xs:attributeGroup>
+
+    <!--  
+          CodeList
+      -->
+      <xs:attributeGroup name="CodeListAttributeExtension">
+          <xs:attributeGroup  ref="CodeListAttributeExtension"/>
+          <xs:attributeGroup  ref="nciCommonAttributes"/>
+          <xs:attribute ref="nciodm:CodeListExtensible" use="required"/>
+      </xs:attributeGroup>
+
+      <xs:group name="CodeListElementExtension">
+            <xs:sequence>
+              <xs:group ref="CodeListElementExtension"/>
+              <xs:group ref="nciCommonElements"/>
+            </xs:sequence>
+      </xs:group>
+
+    <!--  
+          CodeListItem
+      -->
+      <xs:attributeGroup name="CodeListItemAttributeExtension">
+          <xs:attributeGroup  ref="CodeListItemAttributeExtension"/>
+          <xs:attributeGroup  ref="nciCommonAttributes"/>
+      </xs:attributeGroup>
+
+      <xs:group name="CodeListItemElementExtension">
+            <xs:sequence>
+                <xs:group ref="CodeListItemElementExtension"/>
+                <xs:group ref="nciCommonItemElements"/>
+            </xs:sequence>
+      </xs:group>
+   
+    <!--  
+          EnumeratedItem
+      -->
+      <xs:attributeGroup name="EnumeratedItemAttributeExtension">
+          <xs:attributeGroup  ref="EnumeratedItemAttributeExtension"/>
+          <xs:attributeGroup  ref="nciCommonAttributes"/>
+      </xs:attributeGroup>
+
+      <xs:group name="EnumeratedItemElementExtension">
+            <xs:sequence>
+              <xs:group ref="EnumeratedItemElementExtension"/>
+              <xs:group ref="nciCommonItemElements"/>
+            </xs:sequence>
+      </xs:group>
+
+    </xs:redefine>
+    
+    <xs:attributeGroup name="nciCommonAttributes">
+        <xs:attribute ref="nciodm:ExtCodeID" use="optional"/>
+    </xs:attributeGroup>
+    
+    <xs:group name="nciCommonElements">
+        <xs:sequence>
+            <xs:element ref="nciodm:CDISCSubmissionValue" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="nciodm:CDISCSynonym" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="nciodm:PreferredTerm" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:group>
+    
+    <xs:group name="nciCommonItemElements">
+        <xs:sequence>
+            <xs:element ref="nciodm:CDISCSynonym" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="nciodm:CDISCDefinition" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="nciodm:PreferredTerm" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:group>
+    
+</xs:schema>
