@@ -18,9 +18,12 @@ define2-1-to-xlsx/data/*.csv
 define2xls/data/*.csv
 define2-1-to-xlsx/.idea
 xlsx2define2-1/.idea
+xlsx2define2-1/data/t1d*.*
+xlsx2define2-1/data/T1-Dexi*.xlsx
 ct2json/.idea
 ct2odm/.idea
 define2xls/.idea
 get_started/.idea
 merge_odm/.idea
 snippets/.idea
+snippets/data/ODM*.xml

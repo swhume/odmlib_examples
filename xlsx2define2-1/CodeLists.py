@@ -3,7 +3,7 @@ import define_object
 
 
 class CodeLists(define_object.DefineObject):
-    """ create a Define-XML v2.0 CodeList element object """
+    """ create a Define-XML v2.1 CodeList element object """
     def __init__(self):
         super().__init__()
         self.igd = None
@@ -25,7 +25,7 @@ class CodeLists(define_object.DefineObject):
         cl = None
         for row in sheet.iter_rows(min_row=2, min_col=1, max_col=self.sheet.max_column, values_only=True):
             row_content = self.load_row(row, header)
-            # when this is a new code list the names will not be the same
+            # assumes when this is a new code list the names will not be the same
             if row_content["Name"] != cl_name:
                 if cl_name:
                     self._add_previous_codelist_to_objects(cl_c_code, cl, objects)
@@ -52,7 +52,8 @@ class CodeLists(define_object.DefineObject):
             alias = DEFINE.Alias(Context="nci:ExtCodeID", Name=cl_c_code)
             cl.Alias.append(alias)
         # add the code list to the list of code list objects
-        objects["CodeList"].append(cl)
+        if cl:
+            objects["CodeList"].append(cl)
 
     def _create_codelist_object(self, row):
         """

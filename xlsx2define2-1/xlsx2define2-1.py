@@ -5,7 +5,6 @@ import supporting_docs as SD
 from odmlib import odm_parser as P
 from odmlib.define_2_1.rules import metadata_schema as METADATA
 from odmlib.define_2_1.rules import oid_ref as OID
-import xmlschema as XSD
 import os.path
 import Study, Standards, Datasets, Variables, ValueLevel, WhereClauses, CodeLists, Dictionaries, Methods, Comments, Documents
 
@@ -56,7 +55,7 @@ class Xls2Define:
         """
         self._check_oids(odm)
         validator = METADATA.MetadataSchema()
-        study_dict = odm.Study[0].to_dict()
+        study_dict = odm.Study.to_dict()
         try:
             validator.check_conformance(study_dict, "Study")
             print("define-xml passes basic conformance rule check...")
@@ -74,7 +73,10 @@ class Xls2Define:
         try:
             if (oid_checker.check_oid_refs()):
                 print("OID Refs all check out...")
-            if (oid_checker.check_unreferenced_oids()):
+            orphans = oid_checker.check_unreferenced_oids()
+            if orphans:
+                print(f"OID Defs that are not referenced: {orphans}")
+            else:
                 print("OID Defs are all referenced at least once...")
         except ValueError as ve:
             print(f"OID Ref error: {ve}")
@@ -94,12 +96,12 @@ class Xls2Define:
         """
         odm_elem = ODM.ODM()
         odm = odm_elem.create_define_objects()
-        odm.Study.append(self.define_objects["Study"])
-        odm.Study[0].MetaDataVersion = self.define_objects["MetaDataVersion"]
-        odm.Study[0].MetaDataVersion.Standards = self.define_objects["Standards"]
+        odm.Study = self.define_objects["Study"]
+        odm.Study.MetaDataVersion = self.define_objects["MetaDataVersion"]
+        odm.Study.MetaDataVersion.Standards = self.define_objects["Standards"]
         supp_docs = SD.SupportingDocuments()
-        odm.Study[0].MetaDataVersion.AnnotatedCRF = supp_docs.create_annotatedcrf(self.acrf)
-        odm.Study[0].MetaDataVersion.SupplementalDoc = supp_docs.create_supplementaldoc(self.acrf, self.define_objects["leaf"])
+        odm.Study.MetaDataVersion.AnnotatedCRF = supp_docs.create_annotatedcrf(self.acrf)
+        odm.Study.MetaDataVersion.SupplementalDoc = supp_docs.create_supplementaldoc(self.acrf, self.define_objects["leaf"])
         for elem in ELEMENTS:
             self._load_elements(odm, elem)
         return odm
@@ -111,7 +113,7 @@ class Xls2Define:
         :param elem_name: name of the element objects to add to MetaDataVersion
         """
         for obj in self.define_objects[elem_name]:
-            eval("odm.Study[0].MetaDataVersion." + elem_name + ".append(obj)")
+            eval("odm.Study.MetaDataVersion." + elem_name + ".append(obj)")
 
     def _write_define(self, odm):
         """
@@ -142,7 +144,7 @@ class DefineValidator:
         try:
             validator.validate_file(self.define_file)
             print("define-XML schema validation completed successfully...")
-        except XSD.validators.exceptions.XMLSchemaChildrenValidationError as ve:
+        except P.OdmlibSchemaValidationError as ve:
             print(f"schema validation errors: {ve}")
 
     def _check_file_existence(self):

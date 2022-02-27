@@ -32,7 +32,7 @@ class Standards(define_object.DefineObject):
         :param row: Standards worksheet row values as a dictionary
         :return: odmlib Standard object
         """
-        attr = {"OID": row["OID"], "Name": row["Name"], "Type": row["Type"], "Version": row["Version"],
+        attr = {"OID": row["OID"], "Name": row["Name"], "Type": row["Type"], "Version": str(row["Version"]),
                 "Status": row["Status"]}
         if row.get("PublishingSet"):
             attr["PublishingSet"] = row["Publishing Set"]

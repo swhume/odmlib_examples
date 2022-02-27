@@ -23,6 +23,11 @@ class Variables(define_object.DefineObject):
         header = self.load_header(self.sheet.max_column)
         objects["ItemDef"] = []
         for row in sheet.iter_rows(min_row=2, min_col=1, max_col=self.sheet.max_column, values_only=True):
+            # TODO workaround when using LibreOffice Calc instead of Excel
+            if row[0] is None:
+                print("Row is None")
+                self._create_itemref_object(row_content, objects)
+                break
             row_content = self.load_row(row, header)
             if row_content["OID"] not in self.item_def_oids:
                 item = self._create_itemdef_object(row_content)
