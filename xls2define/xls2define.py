@@ -55,7 +55,7 @@ class Xls2Define:
         """
         self._check_oids(odm)
         validator = METADATA.MetadataSchema()
-        study_dict = odm.Study[0].to_dict()
+        study_dict = odm.Study.to_dict()
         try:
             validator.check_conformance(study_dict, "Study")
             print("define-xml passes basic conformance rule check...")
@@ -88,11 +88,11 @@ class Xls2Define:
         """
         odm_elem = ODM.ODM()
         odm = odm_elem.create_define_objects()
-        odm.Study.append(self.define_objects["Study"])
-        odm.Study[0].MetaDataVersion = self.define_objects["MetaDataVersion"]
+        odm.Study = self.define_objects["Study"]
+        odm.Study.MetaDataVersion = self.define_objects["MetaDataVersion"]
         supp_docs = SD.SupportingDocuments()
-        odm.Study[0].MetaDataVersion.AnnotatedCRF = supp_docs.create_annotatedcrf()
-        odm.Study[0].MetaDataVersion.SupplementalDoc = supp_docs.create_supplementaldoc()
+        odm.Study.MetaDataVersion.AnnotatedCRF = supp_docs.create_annotatedcrf()
+        odm.Study.MetaDataVersion.SupplementalDoc = supp_docs.create_supplementaldoc()
         for elem in ELEMENTS:
             self._load_elements(odm, elem)
         return odm
@@ -104,7 +104,7 @@ class Xls2Define:
         :param elem_name: name of the element objects to add to MetaDataVersion
         """
         for obj in self.define_objects[elem_name]:
-            eval("odm.Study[0].MetaDataVersion." + elem_name + ".append(obj)")
+            eval("odm.Study.MetaDataVersion." + elem_name + ".append(obj)")
 
     def _write_define(self, odm):
         """

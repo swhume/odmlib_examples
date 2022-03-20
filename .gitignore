@@ -27,3 +27,7 @@ get_started/.idea
 merge_odm/.idea
 snippets/.idea
 snippets/data/ODM*.xml
+snippets/data/t1d-define.xml
+notebooks/.idea
+notebooks/.ipynb_checkpoints
+.gitignore.swp

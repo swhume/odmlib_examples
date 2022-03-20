@@ -1,6 +1,9 @@
 # define2xls
 
 ## Introduction
+Use the define2-1-to-xlsx example instead of this one. The Define-XML v2.1 examples are getting more use and testing 
+creating study Define-XML files, so they're getting updated more frequently. 
+
 The define2xls program is an odmlib example application that generates an Excel spreadsheet that contains the content
 of a Define-XML v2.0 file. The Exel spreadsheet version of the makes it easier for many to edit or create new content
 to include in a Define-XML v2.0 file. The companion xls2define program takes the updated spreadsheet and generates a

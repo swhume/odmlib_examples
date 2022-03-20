@@ -18,10 +18,14 @@ See the [odmlib repository](https://github.com/swhume/odmlib) to get the odmlib 
 make its way into PyPi, but for now you'll need to install from the source. The odmlib README provides 
 instructions for getting started.
 
+## Note
+Effort will be made to update the odmlib_examples as odmlib and it's associated models are updated. If 
+an example doesn't run correctly, please update to the latest version of odmlib.
+
 ## Limitations
 The odmlib examples are simple programs intended to demonstrate some of the basic capabilities of odmlib.
 The examples are not complete, production ready applications.
 
-The odmlib package is still in development. Although odmlib supports all of ODM more work remains 
-to complete all features for processing ClinicalData. The initial focus has been on getting 
-the metadata sections complete. 
+The odmlib package is still in development. Although is being actively used on several projects, additional 
+use and testing may trigger updates or bug fixes. Create an issue in GitHub if you need some help getting
+an example to run. Thanks for your patience. 

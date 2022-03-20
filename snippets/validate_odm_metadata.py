@@ -1,7 +1,7 @@
 from odmlib import odm_parser as P
 import odmlib.odm_1_3_2.rules.oid_ref as OID
 #import cerberus as C
-import odmlib.odm_1_3_2.model as ODM
+# import odmlib.odm_1_3_2.model as ODM
 import odmlib.odm_loader as OL
 import odmlib.loader as LD
 import odmlib.odm_1_3_2.rules.metadata_schema as METADATA
@@ -57,7 +57,7 @@ def find_unreferenced_oids(mdv):
 
 def verify_schema_rules(root):
     validator = METADATA.MetadataSchema()
-    is_valid = validator.verify_conformance(root.to_dict(), "ODM")
+    is_valid = validator.check_conformance(root.to_dict(), "ODM")
     if is_valid:
         print("MetaDataVersion conforms to schema rules...")
     else:

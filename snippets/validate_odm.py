@@ -50,7 +50,7 @@ def verify_oids():
     mdv.MethodDef = _add_MD()
     mdv.ConditionDef = _add_CD()
     validator = METADATA.MetadataSchema()
-    is_valid = validator.verify_conformance(mdv.to_dict(), "MetaDataVersion")
+    is_valid = validator.check_conformance(mdv.to_dict(), "MetaDataVersion")
     oid_checker = OID.OIDRef()
     try:
         # checks for non-unique OIDs and runs the ref/def check
@@ -116,7 +116,7 @@ def conformance_check_object():
     method.Description.TranslatedText.append(ODM.TranslatedText(_content="Age at Screening Date (Screening Date - Birth date)", lang="en"))
     method.FormalExpression.append(ODM.FormalExpression(Context="Python 3.7", _content="print('hello world')"))
     validator = METADATA.MetadataSchema()
-    is_valid = validator.verify_conformance(method.to_dict(), "MethodDef")
+    is_valid = validator.check_conformance(method.to_dict(), "MethodDef")
     print(f"MethodDef object is valid: {is_valid}")
 
 

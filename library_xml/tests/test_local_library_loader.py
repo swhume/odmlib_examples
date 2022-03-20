@@ -1,8 +1,4 @@
 import unittest
-# temporary to test against local development version of odmlib
-import sys
-sys.path.insert(0, '/home/sam/src/odmlib')
-
 import odmlib.ns_registry as NS
 import odmlib.define_loader as DL
 import odmlib.odm_loader as OL

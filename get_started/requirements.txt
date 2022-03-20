@@ -1,0 +1,8 @@
+pip>=20.3.3
+xmlschema>=1.10.0
+validators>=0.18.2
+elementpath>=2.5.0
+setuptools>=51.1.2
+six>=1.15.0
+decorator>=4.4.2
+odmlib>=0.1.4
