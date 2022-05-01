@@ -34,7 +34,7 @@ class Standards(define_object.DefineObject):
         """
         attr = {"OID": row["OID"], "Name": row["Name"], "Type": row["Type"], "Version": str(row["Version"]),
                 "Status": row["Status"]}
-        if row.get("PublishingSet"):
+        if row.get("Publishing Set"):
             attr["PublishingSet"] = row["Publishing Set"]
         if row.get("Comment"):
             attr["CommentOID"] = row["Comment"]

@@ -22,6 +22,7 @@ class CodeLists(define_object.DefineObject):
         objects["CodeList"] = []
         cl_c_code = ""
         cl_name = ""
+        is_decode_item = False
         cl = None
         for row in sheet.iter_rows(min_row=2, min_col=1, max_col=self.sheet.max_column, values_only=True):
             row_content = self.load_row(row, header)
@@ -32,7 +33,12 @@ class CodeLists(define_object.DefineObject):
                 cl = self._create_codelist_object(row_content)
                 cl_c_code = row_content.get("NCI Codelist Code")
                 cl_name = row_content.get("Name")
-            if row_content["Decoded Value"]:
+                # assumption: if the first term has a decode element then create the list with decodes
+                if row_content["Decoded Value"]:
+                    is_decode_item = True
+                else:
+                    is_decode_item = False
+            if is_decode_item:
                 cl_item = self._create_codelistitem_object(row_content)
                 cl.CodeListItem.append(cl_item)
             else:
@@ -97,7 +103,11 @@ class CodeLists(define_object.DefineObject):
             attr["OrderNumber"] = row["Order"]
         cl_item = DEFINE.CodeListItem(**attr)
         decode = DEFINE.Decode()
-        tt = DEFINE.TranslatedText(_content=row["Decoded Value"], lang="en")
+        if row["Decoded Value"]:
+            tt = DEFINE.TranslatedText(_content=row["Decoded Value"], lang="en")
+        else:
+            # if no decode for this term the use the submission value
+            tt = DEFINE.TranslatedText(_content=row["Term"], lang="en")
         decode.TranslatedText.append(tt)
         cl_item.Decode = decode
         if row.get("NCI Term Code"):

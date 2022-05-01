@@ -3,7 +3,7 @@ import define_object
 
 
 class Study(define_object.DefineObject):
-    """ create a Define-XML v2.0 Study element object and initialize the MetaDataVersion object """
+    """ create a Define-XML v2.1 Study element object and initialize the MetaDataVersion object """
     def __init__(self):
         super().__init__()
 
