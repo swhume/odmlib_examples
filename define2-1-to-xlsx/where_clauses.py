@@ -1,5 +1,6 @@
 import csv
 import os
+from odmlib import OdmlibValidationError
 
 
 class WhereClauses:
@@ -31,14 +32,14 @@ class WhereClauses:
             ir = igd.find("ItemRef", "ItemOID", item_oid)
             if ir:
                 return igd.Name
-        raise ValueError(f"Dataset for ItemRef {item_oid} not found in the Define-XML file")
+        raise OdmlibValidationError(f"Dataset for ItemRef {item_oid} not found in the Define-XML file")
 
     def _get_variable_name(self, item_oid):
         item = self.mdv.find("ItemDef", "OID", item_oid)
         if item:
             return item.Name
         else:
-            raise ValueError(f"ItemDef for ItemRef {item_oid} not found in the Define-XML file")
+            raise OdmlibValidationError(f"ItemDef for ItemRef {item_oid} not found in the Define-XML file")
 
     def _load_check_values(self, rc):
         check_values = []

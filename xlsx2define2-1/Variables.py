@@ -1,4 +1,5 @@
 from odmlib.define_2_1 import model as DEFINE
+from odmlib import OdmlibValidationError
 import define_object
 
 
@@ -104,7 +105,7 @@ class Variables(define_object.DefineObject):
             self.lookup_oid = dataset_oid
             self.igd = self.find_object(objects["ItemGroupDef"], self.lookup_oid)
         if self.igd is None:
-            raise ValueError(f"ItemGroupDef with OID {dataset_oid} is missing from the Datasets tab")
+            raise OdmlibValidationError(f"ItemGroupDef with OID {dataset_oid} is missing from the Datasets tab")
         # oid = self.generate_oid(["IT", row["Dataset"], row["Variable"]])
         attr = {"ItemOID": row["OID"], "Mandatory": row["Mandatory"]}
         self._add_optional_itemref_attributes(attr, row)
