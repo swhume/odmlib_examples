@@ -1,0 +1,5 @@
+OID,ParameterOID,Description,Reason,Purpose,DisplayOID,Documentation,Document,Pages,Title,DatasetComment
+AR.Table14.3.01.AR.0000,IT.ADADAS.PARAMCD,Dose response analysis for ADAS-Cog changes from Baseline,SPECIFIED IN PROTOCOL,PRIMARY OUTCOME MEASURE,RD.Table14.3.01,"Accordingly, the dose response for the change from baseline at Week 24,
+adjusted for site and baseline score is not statistically significantly different from 0.
+Pairwise comparisons among the treatment groups are also presented.",,,,
+AR.Table14.5.02.AR.0000,,Get denominators for precentages from ADSL and counts and numerators from ADAE. Join ADAE with ADSL based on USUBJID keeping only records in ADAE for the numerator.,SPECIFIED IN PROTOCOL,SECONDARY OUTCOME MEASURE,RD.Table14.5.02,"Summarization at the subject, System Organ Class, and Preferred Term levels, respectively.",,,,

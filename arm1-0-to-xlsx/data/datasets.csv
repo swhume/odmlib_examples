@@ -1,0 +1,13 @@
+OID,Dataset,Description,Class,Structure,Purpose,Repeating,Reference Data,Comment,IsNonStandard,StandardOID,HasNoData,Document
+IG.ADSL,ADSL,Subject-Level Analysis,SUBJECT LEVEL ANALYSIS DATASET,one record per subject,Analysis,No,No,COM.ADSL,,STD.ADaMIG 1.1,,LF.ADSL
+IG.ADADAS,ADADAS,ADAS-Cog Analysis,BASIC DATA STRUCTURE,one record per subject per parameter per analysis visit per analysis date,Analysis,Yes,No,COM.ADADAS,,STD.ADaMIG 1.1,,LF.ADADAS
+IG.ADCIBC,ADCIBC,CIBIC+ Analysis,BASIC DATA STRUCTURE,one record per subject per parameter per analysis visit per analysis date,Analysis,Yes,No,COM.ADCIBC,,STD.ADaMIG 1.1,,LF.ADCIBC
+IG.ADLBC,ADLBC,Analysis Dataset Lab Blood Chemistry,BASIC DATA STRUCTURE,one record per subject per parameter per analysis visit,Analysis,Yes,No,COM.ADLBC,,STD.ADaMIG 1.1,,LF.ADLBC
+IG.ADLBCPV,ADLBCPV,Analysis Dataset Lab Blood Chemistry (Previous Visit),BASIC DATA STRUCTURE,one record per subject per parameter per analysis visit,Analysis,Yes,No,,,STD.ADaMIG 1.1,,LF.ADLBCPV
+IG.ADLBH,ADLBH,Analysis Dataset Lab Hematology,BASIC DATA STRUCTURE,one record per subject per parameter per analysis visit,Analysis,Yes,No,COM.ADLBH,,STD.ADaMIG 1.1,,LF.ADLBH
+IG.ADLBHPV,ADLBHPV,Analysis Dataset Lab Hematology (Previous Visit),BASIC DATA STRUCTURE,one record per subject per parameter per analysis visit,Analysis,Yes,No,,,STD.ADaMIG 1.1,,LF.ADLBHPV
+IG.ADLBHY,ADLBHY,Analysis Dataset Lab Hy's Law,BASIC DATA STRUCTURE,one record per subject per parameter per analysis visit,Analysis,Yes,No,COM.ADLBHY,,STD.ADaMIG 1.1,,LF.ADLBHY
+IG.ADNPIX,ADNPIX,NPI-X Item Analysis Data,BASIC DATA STRUCTURE,one record per subject per parameter per analysis visit per analysis date,Analysis,Yes,No,COM.ADNPIX,,STD.ADaMIG 1.1,,LF.ADNPIX
+IG.ADTTE,ADTTE,AE Time To 1st Derm. Event Analysis,BASIC DATA STRUCTURE,one record per subject per parameter,Analysis,Yes,No,,,STD.ADaMIG 1.1,,LF.ADTTE
+IG.ADVS,ADVS,Vital Signs Analysis Dataset,BASIC DATA STRUCTURE,one record per subject per parameter per analysis visit per analysis timepoint,Analysis,Yes,No,,,STD.ADaMIG 1.1,,LF.ADVS
+IG.ADAE,ADAE,Adverse Events Analysis Dataset,OCCURRENCE DATA STRUCTURE,one record per subject per adverse event,Analysis,Yes,No,COM.ADAE,,STD.ADaMIG 1.1,,LF.ADAE

@@ -1,0 +1,37 @@
+Result,Context,Document,Code
+AR.Table14.3.01.AR.0000,SAS Version 9.4,,"proc glm data= adadas;
+where EFFFL01 = 'Y' and ANL01FL = ""Y"" and AVISIT = ""Week 24"" and PARAMCD ='ACTOT';
+class SITEGR1;
+model chg = TRTPN SITEGR1;
+run;"
+AR.Table14.5.02.AR.0000,SAS Version 9.4,,"** INFERENTIAL STATISTICS **;
+** PT LEVEL **;
+proc sql;
+create table BACKBONE as select * from
+(select distinct USUBJID, TRT01AN as TRTAN from ADSL(where=(SAFFL='Y'))) ,
+(select distinct AEDECOD from ADAE(where=(TRTEMFL='Y' and AESER='Y')));
+create table HADEVENT as select distinct STUDYID, USUBJID, TRTAN, AEDECOD
+from ADAE(where=(TRTEMFL='Y' and AESER='Y'));
+
+create table FISHER as select a.USUBJID, a.TRTAN, a.AEDECOD,
+case when STUDYID='CDISCPILOT01' then 1
+else 0
+end as EVENT
+from BACKBONE a left join HADEVENT b
+on a.USUBJID=b.USUBJID and a.TRTAN=b.TRTAN and a.AEDECOD=b.AEDECOD
+order by a.AEDECOD, a.TRTAN;
+quit;
+** HIGH DOSE VERSUS PLACEBO **;
+proc freq data=FISHER; 
+by AEDECOD; 
+where TRTAN in (0,2);
+table TRTAN*EVENT/exact; 
+ods output FishersExact=F1PT(where=(Name1='XP2_FISH'));
+run;
+** LOW DOSE VERSUS PLACEBO **;
+proc freq data=FISHER; 
+by AEDECOD; 
+where TRTAN in (0,1);
+table TRTAN*EVENT/exact; 
+ods output FishersExact=F2PT(where=(Name1='XP2_FISH'));
+run;"
