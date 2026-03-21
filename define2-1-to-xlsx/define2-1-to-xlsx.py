@@ -3,7 +3,7 @@ import odmlib.define_loader as OL
 import odmlib.loader as LD
 import excel_define_file as EX
 import odmlib.odm_parser as P
-import xmlschema as XSD
+from odmlib import OdmlibValidationError
 import os
 import study, standards, datasets, variables, value_level as valuelevel, where_clauses as whereclauses, codelists
 import dictionaries, methods, comments, documents
@@ -12,10 +12,24 @@ WORKSHEETS = ["Study", "Standards", "Datasets", "Variables", "ValueLevel", "Wher
               "Methods", "Comments", "Documents"]
 EXCEL_NAME = "odmlib-define-metadata.xlsx"
 
+EXTRACTORS = {
+    "Study": lambda s, m, p, l, a: study.Study(s, m, p, l, a),
+    "Standards": lambda s, m, p, l, a: standards.Standards(m, p),
+    "Datasets": lambda s, m, p, l, a: datasets.Datasets(m, p),
+    "Variables": lambda s, m, p, l, a: variables.Variables(m, p),
+    "ValueLevel": lambda s, m, p, l, a: valuelevel.ValueLevel(m, p),
+    "WhereClauses": lambda s, m, p, l, a: whereclauses.WhereClauses(m, p),
+    "CodeLists": lambda s, m, p, l, a: codelists.CodeLists(m, p),
+    "Dictionaries": lambda s, m, p, l, a: dictionaries.Dictionaries(m, p),
+    "Methods": lambda s, m, p, l, a: methods.Methods(m, p),
+    "Comments": lambda s, m, p, l, a: comments.Comments(m, p),
+    "Documents": lambda s, m, p, l, a: documents.Documents(m, p),
+}
+
 """
 define2-1-to-xlsx.py - an example program using odmlib to convert a Define-XML file into a metadata spreadsheet
 ex. cmd-line args: -d ./data/odmlib-roundtrip-define.xml -p ./data/
-ex. cmd-line args: -d ./data/odmlib-roundtrip-define.xml -p ./data/ -v 
+ex. cmd-line args: -d ./data/odmlib-roundtrip-define.xml -p ./data/ -v
     -s "/home/sam/standards/DefineV211/schema/cdisc-define-2.1/define2-1-0.xsd
 """
 
@@ -36,10 +50,8 @@ class Define2Xls:
         self._set_acrf(mdv_odmlib)
         ws_files = []
         for worksheet in WORKSHEETS:
-            if worksheet == "Study":
-                ws = eval(worksheet.lower() + "." + worksheet + "(study_odmlib, mdv_odmlib, self.data_path, self.lang, self.acrf)")
-            else:
-                ws = eval(worksheet.lower() + "." + worksheet + "(mdv_odmlib, self.data_path)")
+            factory = EXTRACTORS[worksheet]
+            ws = factory(study_odmlib, mdv_odmlib, self.data_path, self.lang, self.acrf)
             ws.extract()
             ws_files.append(ws.file_name)
         self._write_excel(ws_files)
@@ -74,15 +86,15 @@ class DefineValidator:
         try:
             validator.validate_file(self.define_file)
             print("define-XML schema validation completed successfully...")
-        except XSD.validators.exceptions.XMLSchemaChildrenValidationError as ve:
+        except P.OdmlibSchemaValidationError as ve:
             print(f"schema validation errors: {ve}")
 
     def _check_file_existence(self):
         """ throw an error if the schema of Define-XML file cannot be found """
         if not os.path.isfile(self.schema_file):
-            raise ValueError("The schema validate flag is set, but the schema file cannot be found.")
+            raise OdmlibValidationError("The schema validate flag is set, but the schema file cannot be found.")
         if not os.path.isfile(self.define_file):
-            raise ValueError("The define-xml file cannot be found.")
+            raise OdmlibValidationError("The define-xml file cannot be found.")
 
 
 def set_cmd_line_args():
@@ -106,7 +118,7 @@ def set_cmd_line_args():
 
 
 def main():
-    """ main driver method that generates an Excel file using tje Define-XML v2.0 metadata """
+    """ main driver method that generates an Excel file from Define-XML v2.1 metadata """
     args = set_cmd_line_args()
     if args.is_validate:
         validator = DefineValidator(args.schema_file, args.define_file)

@@ -1,5 +1,6 @@
 import csv
 import os
+from odmlib import OdmlibValidationError
 
 
 class ValueLevel:
@@ -35,7 +36,7 @@ class ValueLevel:
                     ir = igd.find("ItemRef", "ItemOID", item.OID)
                     if ir:
                         return igd.Name
-        raise ValueError(f"Dataset for ValueListDef {vl_oid} not found in the Define-XML file")
+        raise OdmlibValidationError(f"Dataset for ValueListDef {vl_oid} not found in the Define-XML file")
 
 
     def _load_item_ref(self, ir):
