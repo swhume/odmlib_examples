@@ -1,0 +1,54 @@
+{
+  "datasetJSONCreationDateTime": "2026-04-13T23:47:18.579571+00:00",
+  "datasetJSONVersion": "1.1.0",
+  "itemGroupOID": "IG.DM",
+  "records": 3,
+  "name": "DM",
+  "label": "Demographics",
+  "columns": [
+    {
+      "itemOID": "IT.DM.STUDYID",
+      "name": "STUDYID",
+      "label": "STUDYID",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "IT.DM.USUBJID",
+      "name": "USUBJID",
+      "label": "USUBJID",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "IT.DM.AGE",
+      "name": "AGE",
+      "label": "AGE",
+      "dataType": "integer"
+    },
+    {
+      "itemOID": "IT.DM.WEIGHT",
+      "name": "WEIGHT",
+      "label": "WEIGHT",
+      "dataType": "decimal"
+    }
+  ],
+  "rows": [
+    [
+      "CDISC01",
+      "001",
+      65,
+      75.5
+    ],
+    [
+      "CDISC01",
+      "002",
+      72,
+      80.0
+    ],
+    [
+      "CDISC01",
+      "003",
+      58,
+      null
+    ]
+  ]
+}

@@ -1,0 +1,1349 @@
+{
+  "datasetJSONCreationDateTime": "2026-04-13T23:41:36.129755+00:00",
+  "datasetJSONVersion": "1.1.0",
+  "fileOID": "www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0",
+  "studyOID": "STDY.www.cdisc.org.CDISC01_1",
+  "metaDataVersionOID": "MDV.CDISC01_1.1.SDTMIG.3.1.2.SDTM.1.2_X",
+  "itemGroupOID": "IG.DEFINE.CODELIST_TERMS",
+  "records": 162,
+  "name": "codelist_terms",
+  "label": "CodeList Terms",
+  "columns": [
+    {
+      "itemOID": "DEFINE.CLT.CODELISTOID",
+      "name": "CodeListOID",
+      "label": "CodeList OID",
+      "dataType": "string",
+      "keySequence": 1
+    },
+    {
+      "itemOID": "DEFINE.CLT.CODEDVALUE",
+      "name": "CodedValue",
+      "label": "Coded Value",
+      "dataType": "string",
+      "keySequence": 2
+    },
+    {
+      "itemOID": "DEFINE.CLT.RANK",
+      "name": "Rank",
+      "label": "Rank",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.CLT.ORDERNUMBER",
+      "name": "OrderNumber",
+      "label": "Order Number",
+      "dataType": "integer"
+    },
+    {
+      "itemOID": "DEFINE.CLT.EXTENDEDVALUE",
+      "name": "ExtendedValue",
+      "label": "Extended Value",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.CLT.DECODEDTEXT",
+      "name": "DecodedText",
+      "label": "Decoded Text",
+      "dataType": "string"
+    }
+  ],
+  "rows": [
+    [
+      "CL.AGEU",
+      "YEARS",
+      null,
+      1,
+      null,
+      null
+    ],
+    [
+      "CL.ARM",
+      "Miracle Drug 10 mg",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ARM",
+      "Miracle Drug 20 mg",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ARM",
+      "Placebo",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ARM",
+      "Screen Failure",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ARMCD",
+      "WONDER10",
+      null,
+      1,
+      null,
+      "Miracle Drug 10 mg"
+    ],
+    [
+      "CL.ARMCD",
+      "WONDER20",
+      null,
+      2,
+      null,
+      "Miracle Drug 20 mg"
+    ],
+    [
+      "CL.ARMCD",
+      "PLACEBO",
+      null,
+      3,
+      null,
+      "Placebo"
+    ],
+    [
+      "CL.ARMCD",
+      "SCRNFAIL",
+      null,
+      4,
+      null,
+      "Screen Failure"
+    ],
+    [
+      "CL.COUNTRY.STUDY",
+      "USA",
+      null,
+      null,
+      null,
+      "United States of America (the)"
+    ],
+    [
+      "CL.COUNTRY.STUDY",
+      "CAN",
+      null,
+      null,
+      null,
+      "Canada"
+    ],
+    [
+      "CL.COUNTRY.STUDY",
+      "MEX",
+      null,
+      null,
+      null,
+      "Mexico"
+    ],
+    [
+      "CL.DI.DOMAIN",
+      "DI",
+      null,
+      null,
+      null,
+      "Device Identifiers"
+    ],
+    [
+      "CL.DM.DOMAIN",
+      "DM",
+      null,
+      null,
+      null,
+      "Demographics"
+    ],
+    [
+      "CL.EC.DOMAIN",
+      "EC",
+      null,
+      null,
+      null,
+      "Exposure as Collected"
+    ],
+    [
+      "CL.ETHNIC",
+      "HISPANIC OR LATINO",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ETHNIC",
+      "NOT HISPANIC OR LATINO",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.EX.DOMAIN",
+      "EX",
+      null,
+      null,
+      null,
+      "Exposure"
+    ],
+    [
+      "CL.EXTRT",
+      "Miracle Drug",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.EXTRT",
+      "Placebo",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.FRM",
+      "TABLET",
+      null,
+      null,
+      null,
+      "tab"
+    ],
+    [
+      "CL.LB.DOMAIN",
+      "LB",
+      null,
+      null,
+      null,
+      "Laboratory Data"
+    ],
+    [
+      "CL.LBRESU",
+      "%",
+      null,
+      null,
+      null,
+      "Percentage"
+    ],
+    [
+      "CL.LBRESU",
+      "X10^9/L",
+      null,
+      null,
+      "Yes",
+      "X10^9/L"
+    ],
+    [
+      "CL.LBRESU",
+      "g/dL",
+      null,
+      null,
+      null,
+      "Gram per Deciliter"
+    ],
+    [
+      "CL.LBRESU",
+      "mg/dL",
+      null,
+      null,
+      null,
+      "Milligram per Deciliter"
+    ],
+    [
+      "CL.LBRESU",
+      "ng/dL",
+      null,
+      null,
+      null,
+      "Nanogram per Deciliter"
+    ],
+    [
+      "CL.LBRESU",
+      "pg/mL",
+      null,
+      null,
+      "Yes",
+      "pg/mL"
+    ],
+    [
+      "CL.LBTEST",
+      "Bilirubin",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.LBTEST",
+      "Blood Urea Nitrogen",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.LBTEST",
+      "Glucose",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.LBTEST",
+      "Hematocrit",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.LBTEST",
+      "Hemoglobin",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.LBTEST",
+      "Lymphocytes",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.LBTEST",
+      "Occult Blood",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.LBTEST",
+      "Vitamin B12",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.LBTEST",
+      "Vitamin B9",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.LBTEST",
+      "pH",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.LBTESTCD",
+      "BILI",
+      null,
+      null,
+      null,
+      "Bilirubin"
+    ],
+    [
+      "CL.LBTESTCD",
+      "BUN",
+      null,
+      null,
+      null,
+      "Blood Urea Nitrogen"
+    ],
+    [
+      "CL.LBTESTCD",
+      "GLUC",
+      null,
+      null,
+      null,
+      "Glucose"
+    ],
+    [
+      "CL.LBTESTCD",
+      "HCT",
+      null,
+      null,
+      null,
+      "Hematocrit"
+    ],
+    [
+      "CL.LBTESTCD",
+      "HGB",
+      null,
+      null,
+      null,
+      "Hemoglobin"
+    ],
+    [
+      "CL.LBTESTCD",
+      "LYM",
+      null,
+      null,
+      null,
+      "Lymphocytes"
+    ],
+    [
+      "CL.LBTESTCD",
+      "OCCBLD",
+      null,
+      null,
+      null,
+      "Occult Blood"
+    ],
+    [
+      "CL.LBTESTCD",
+      "PH",
+      null,
+      null,
+      null,
+      "pH"
+    ],
+    [
+      "CL.LBTESTCD",
+      "VITB12",
+      null,
+      null,
+      null,
+      "Vitamin B12"
+    ],
+    [
+      "CL.LBTESTCD",
+      "VITB9",
+      null,
+      null,
+      null,
+      "Vitamin B9"
+    ],
+    [
+      "CL.METHOD",
+      "DIPSTICK",
+      null,
+      null,
+      "Yes",
+      null
+    ],
+    [
+      "CL.METHOD",
+      "QUANT",
+      null,
+      null,
+      "Yes",
+      null
+    ],
+    [
+      "CL.NRIND",
+      "ABNORMAL",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.NRIND",
+      "HIGH",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.NRIND",
+      "LOW",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.NRIND",
+      "NORMAL",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.NY",
+      "Y",
+      null,
+      null,
+      null,
+      "Yes"
+    ],
+    [
+      "CL.NY",
+      "N",
+      null,
+      null,
+      null,
+      "No"
+    ],
+    [
+      "CL.NY",
+      "U",
+      null,
+      null,
+      null,
+      "Unknown"
+    ],
+    [
+      "CL.RACE",
+      "WHITE",
+      null,
+      1,
+      null,
+      null
+    ],
+    [
+      "CL.RACE",
+      "AMERICAN INDIAN OR ALASKA NATIVE",
+      null,
+      2,
+      null,
+      null
+    ],
+    [
+      "CL.RACE",
+      "BLACK OR AFRICAN AMERICAN",
+      null,
+      3,
+      null,
+      null
+    ],
+    [
+      "CL.RACE",
+      "ASIAN",
+      null,
+      4,
+      null,
+      null
+    ],
+    [
+      "CL.RACE",
+      "NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER",
+      null,
+      5,
+      null,
+      null
+    ],
+    [
+      "CL.SEX",
+      "F",
+      null,
+      null,
+      null,
+      "Female"
+    ],
+    [
+      "CL.SEX",
+      "M",
+      null,
+      null,
+      null,
+      "Male"
+    ],
+    [
+      "CL.SEX",
+      "U",
+      null,
+      null,
+      null,
+      "Unknown"
+    ],
+    [
+      "CL.SEX",
+      "UNDIFFERENTIATED",
+      null,
+      null,
+      null,
+      "Undifferentiated"
+    ],
+    [
+      "CL.SIZE",
+      "SMALL",
+      1.0,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.SIZE",
+      "MEDIUM",
+      2.0,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.SIZE",
+      "LARGE",
+      3.0,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.SPECTYPE",
+      "BLOOD",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.SPECTYPE",
+      "SERUM",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.SPECTYPE",
+      "URINE",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TS.DOMAIN",
+      "TS",
+      null,
+      null,
+      null,
+      "Trial Summary"
+    ],
+    [
+      "CL.TSPARM",
+      "Added on to Existing Treatments",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Age Span",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Age Unit",
+      null,
+      null,
+      "Yes",
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Clinical Study Sponsor",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Control Type",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Dose Units",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Dose per Administration",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Dosing Frequency",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Investigational Therapy or Treatment",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Planned Country of Investigational Sites",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Planned Maximum Age of Subjects",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Planned Minimum Age of Subjects",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Planned Number of Subjects",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Route of Administration",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Sex of Participants",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Trial Blinding Schema",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Trial Indication Type",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Trial Length",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Trial Phase Classification",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Trial Primary Objective",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Trial Secondary Objective",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Trial Title",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Trial Type",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARM",
+      "Trial is Randomized",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.TSPARMCD",
+      "ADDON",
+      null,
+      null,
+      null,
+      "Added on to Existing Treatments"
+    ],
+    [
+      "CL.TSPARMCD",
+      "AGEMAX",
+      null,
+      null,
+      null,
+      "Planned Maximum Age of Subjects"
+    ],
+    [
+      "CL.TSPARMCD",
+      "AGEMIN",
+      null,
+      null,
+      null,
+      "Planned Minimum Age of Subjects"
+    ],
+    [
+      "CL.TSPARMCD",
+      "AGESPAN",
+      null,
+      null,
+      null,
+      "Age Span"
+    ],
+    [
+      "CL.TSPARMCD",
+      "AGEU",
+      null,
+      null,
+      "Yes",
+      "Age Unit"
+    ],
+    [
+      "CL.TSPARMCD",
+      "DOSE",
+      null,
+      null,
+      null,
+      "Dose per Administration"
+    ],
+    [
+      "CL.TSPARMCD",
+      "DOSFRQ",
+      null,
+      null,
+      null,
+      "Dosing Frequency"
+    ],
+    [
+      "CL.TSPARMCD",
+      "DOSU",
+      null,
+      null,
+      null,
+      "Dose Units"
+    ],
+    [
+      "CL.TSPARMCD",
+      "FCNTRY",
+      null,
+      null,
+      null,
+      "Planned Country of Investigational Sites"
+    ],
+    [
+      "CL.TSPARMCD",
+      "LENGTH",
+      null,
+      null,
+      null,
+      "Trial Length"
+    ],
+    [
+      "CL.TSPARMCD",
+      "OBJPRIM",
+      null,
+      null,
+      null,
+      "Trial Primary Objective"
+    ],
+    [
+      "CL.TSPARMCD",
+      "OBJSEC",
+      null,
+      null,
+      null,
+      "Trial Secondary Objective"
+    ],
+    [
+      "CL.TSPARMCD",
+      "PLANSUB",
+      null,
+      null,
+      null,
+      "Planned Number of Subjects"
+    ],
+    [
+      "CL.TSPARMCD",
+      "RANDOM",
+      null,
+      null,
+      null,
+      "Trial is Randomized"
+    ],
+    [
+      "CL.TSPARMCD",
+      "ROUTE",
+      null,
+      null,
+      null,
+      "Route of Administration"
+    ],
+    [
+      "CL.TSPARMCD",
+      "SEXPOP",
+      null,
+      null,
+      null,
+      "Sex of Participants"
+    ],
+    [
+      "CL.TSPARMCD",
+      "SPONSOR",
+      null,
+      null,
+      null,
+      "Clinical Study Sponsor"
+    ],
+    [
+      "CL.TSPARMCD",
+      "TBLIND",
+      null,
+      null,
+      null,
+      "Trial Blinding Schema"
+    ],
+    [
+      "CL.TSPARMCD",
+      "TCNTRL",
+      null,
+      null,
+      null,
+      "Control Type"
+    ],
+    [
+      "CL.TSPARMCD",
+      "TINDTP",
+      null,
+      null,
+      null,
+      "Trial Indication Type"
+    ],
+    [
+      "CL.TSPARMCD",
+      "TITLE",
+      null,
+      null,
+      null,
+      "Trial Title"
+    ],
+    [
+      "CL.TSPARMCD",
+      "TPHASE",
+      null,
+      null,
+      null,
+      "Trial Phase Classification"
+    ],
+    [
+      "CL.TSPARMCD",
+      "TRT",
+      null,
+      null,
+      null,
+      "Investigational Therapy or Treatment"
+    ],
+    [
+      "CL.TSPARMCD",
+      "TTYPE",
+      null,
+      null,
+      null,
+      "Trial Type"
+    ],
+    [
+      "CL.UH_MC",
+      "cm",
+      null,
+      null,
+      null,
+      "Centimeter"
+    ],
+    [
+      "CL.UH_NMC",
+      "IN",
+      null,
+      null,
+      null,
+      "Inch"
+    ],
+    [
+      "CL.UW_MC",
+      "kg",
+      null,
+      null,
+      null,
+      "Kilogram"
+    ],
+    [
+      "CL.UW_NMC",
+      "LB",
+      null,
+      null,
+      null,
+      "Pound"
+    ],
+    [
+      "CL.VS.DOMAIN",
+      "VS",
+      null,
+      null,
+      null,
+      "Vital Signs"
+    ],
+    [
+      "CL.VSRESU",
+      "Beats per Minute",
+      null,
+      null,
+      null,
+      "Beats per Minute"
+    ],
+    [
+      "CL.VSRESU",
+      "cm",
+      null,
+      null,
+      null,
+      "Centimeter"
+    ],
+    [
+      "CL.VSRESU",
+      "kg",
+      null,
+      null,
+      null,
+      "Kilogram"
+    ],
+    [
+      "CL.VSRESU",
+      "mmHg",
+      null,
+      null,
+      null,
+      "Millimeter of Mercury"
+    ],
+    [
+      "CL.VSRESU",
+      "kg/m2",
+      null,
+      null,
+      null,
+      "Kilogram per Square Meter"
+    ],
+    [
+      "CL.VSTEST",
+      "Body Mass Index",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.VSTEST",
+      "Body Frame Size",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.VSTEST",
+      "Diastolic Blood Pressure",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.VSTEST",
+      "Height",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.VSTEST",
+      "Pulse Rate",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.VSTEST",
+      "Systolic Blood Pressure",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.VSTEST",
+      "Weight",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.VSTESTCD",
+      "BMI",
+      null,
+      null,
+      null,
+      "Body Mass Index"
+    ],
+    [
+      "CL.VSTESTCD",
+      "DIABP",
+      null,
+      null,
+      null,
+      "Diastolic Blood Pressure"
+    ],
+    [
+      "CL.VSTESTCD",
+      "FRMSIZE",
+      null,
+      null,
+      null,
+      "Body Frame Size"
+    ],
+    [
+      "CL.VSTESTCD",
+      "HEIGHT",
+      null,
+      null,
+      null,
+      "Height"
+    ],
+    [
+      "CL.VSTESTCD",
+      "PULSE",
+      null,
+      null,
+      null,
+      "Pulse Rate"
+    ],
+    [
+      "CL.VSTESTCD",
+      "SYSBP",
+      null,
+      null,
+      null,
+      "Systolic Blood Pressure"
+    ],
+    [
+      "CL.VSTESTCD",
+      "WEIGHT",
+      null,
+      null,
+      null,
+      "Weight"
+    ],
+    [
+      "CL.XSRESU",
+      "g/dL",
+      null,
+      null,
+      null,
+      "g/dL"
+    ],
+    [
+      "CL.XSRESU",
+      "mg/dL",
+      null,
+      null,
+      null,
+      "mg/dL"
+    ],
+    [
+      "CL.XSTEST",
+      "Test 1",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.XSTEST",
+      "Test 2",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.XSTEST",
+      "Test 3",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.XSTESTCD",
+      "TEST1",
+      null,
+      null,
+      null,
+      "Test 1"
+    ],
+    [
+      "CL.XSTESTCD",
+      "TEST2",
+      null,
+      null,
+      null,
+      "Test 2"
+    ],
+    [
+      "CL.XSTESTCD",
+      "TEST3",
+      null,
+      null,
+      null,
+      "Test 3"
+    ],
+    [
+      "CL.XXRESU",
+      "g/dL",
+      null,
+      null,
+      null,
+      "g/dL"
+    ],
+    [
+      "CL.XXRESU",
+      "mg/dL",
+      null,
+      null,
+      null,
+      "mg/dL"
+    ],
+    [
+      "CL.XXRESU",
+      "%",
+      null,
+      null,
+      null,
+      "%"
+    ],
+    [
+      "CL.XXTEST",
+      "Test 11",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.XXTEST",
+      "Test 12",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.XXTEST",
+      "Test 13",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.XXTESTCD",
+      "TEST11",
+      null,
+      null,
+      null,
+      "Test 11"
+    ],
+    [
+      "CL.XXTESTCD",
+      "TEST12",
+      null,
+      null,
+      null,
+      "Test 12"
+    ],
+    [
+      "CL.XXTESTCD",
+      "TEST13",
+      null,
+      null,
+      null,
+      "Test 13"
+    ]
+  ]
+}

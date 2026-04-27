@@ -1,0 +1,3 @@
+{"datasetJSONCreationDateTime": "2024-06-28T15:38:43", "datasetJSONVersion": "1.1.0", "fileOID": "www.example.com.DM", "originator": "HDL LLC", "sourceSystem": {"name": "odmlib", "version": "0.2.0"}, "studyOID": "CDISCPILOT01", "metaDataVersionOID": "MDV.CDISCPILOT01", "itemGroupOID": "IG.DM", "records": 2, "name": "DM", "label": "Demographics", "columns": [{"itemOID": "IT.STUDYID", "name": "STUDYID", "label": "Study Identifier", "dataType": "string", "keySequence": 1}, {"itemOID": "IT.AGE", "name": "AGE", "label": "Age", "dataType": "integer", "length": 3}]}
+["CDISCPILOT01", 84]
+["CDISCPILOT01", 76]

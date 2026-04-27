@@ -1,0 +1,122 @@
+{
+  "datasetJSONCreationDateTime": "2026-04-13T23:41:36.129755+00:00",
+  "datasetJSONVersion": "1.1.0",
+  "fileOID": "www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0",
+  "studyOID": "STDY.www.cdisc.org.CDISC01_1",
+  "metaDataVersionOID": "MDV.CDISC01_1.1.SDTMIG.3.1.2.SDTM.1.2_X",
+  "itemGroupOID": "IG.DEFINE.STUDY",
+  "records": 1,
+  "name": "study",
+  "label": "Study Metadata",
+  "columns": [
+    {
+      "itemOID": "DEFINE.STUDY.FILEOID",
+      "name": "FileOID",
+      "label": "File OID",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.CREATIONDATETIME",
+      "name": "CreationDateTime",
+      "label": "Creation Date/Time",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.ASOFDATETIME",
+      "name": "AsOfDateTime",
+      "label": "As-Of Date/Time",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.ORIGINATOR",
+      "name": "Originator",
+      "label": "Originator",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.SOURCESYSTEM",
+      "name": "SourceSystem",
+      "label": "Source System",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.SOURCESYSTEMVERSION",
+      "name": "SourceSystemVersion",
+      "label": "Source System Version",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.STUDYOID",
+      "name": "StudyOID",
+      "label": "Study OID",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.STUDYNAME",
+      "name": "StudyName",
+      "label": "Study Name",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.STUDYDESCRIPTION",
+      "name": "StudyDescription",
+      "label": "Study Description",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.PROTOCOLNAME",
+      "name": "ProtocolName",
+      "label": "Protocol Name",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.MDVOID",
+      "name": "MetaDataVersionOID",
+      "label": "MetaDataVersion OID",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.MDVNAME",
+      "name": "MetaDataVersionName",
+      "label": "MetaDataVersion Name",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.DEFINEVERSION",
+      "name": "DefineVersion",
+      "label": "Define-XML Version",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.COMMENTOID",
+      "name": "CommentOID",
+      "label": "Comment OID",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.CONTEXT",
+      "name": "Context",
+      "label": "Context",
+      "dataType": "string"
+    }
+  ],
+  "rows": [
+    [
+      "www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0",
+      "2019-02-11T15:30:01",
+      null,
+      "CDISC Data Exchange Standards Team",
+      "M.Hungria-System",
+      "2.1-A1",
+      "STDY.www.cdisc.org.CDISC01_1",
+      "CDISC01_1",
+      "CDISC Test Study Modified to illustrate Define-XML 2.1 features",
+      "CDISC01-1",
+      "MDV.CDISC01_1.1.SDTMIG.3.1.2.SDTM.1.2_X",
+      "Study CDISC01_1, Data Definitions V-1",
+      "2.1.0",
+      null,
+      "Other"
+    ]
+  ]
+}

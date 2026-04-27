@@ -1,0 +1,420 @@
+{
+  "datasetJSONCreationDateTime": "2026-04-13T23:41:36.129755+00:00",
+  "datasetJSONVersion": "1.1.0",
+  "fileOID": "www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0",
+  "studyOID": "STDY.www.cdisc.org.CDISC01_1",
+  "metaDataVersionOID": "MDV.CDISC01_1.1.SDTMIG.3.1.2.SDTM.1.2_X",
+  "itemGroupOID": "IG.DEFINE.WHERE_CLAUSES",
+  "records": 46,
+  "name": "where_clauses",
+  "label": "Where Clause Definitions",
+  "columns": [
+    {
+      "itemOID": "DEFINE.WC.WHERECLAUSEOID",
+      "name": "WhereClauseOID",
+      "label": "WhereClause OID",
+      "dataType": "string",
+      "keySequence": 1
+    },
+    {
+      "itemOID": "DEFINE.WC.COMMENTOID",
+      "name": "WhereClauseCommentOID",
+      "label": "WhereClause Comment OID",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.WC.COMPARATOR",
+      "name": "Comparator",
+      "label": "Comparator",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.WC.SOFTHARD",
+      "name": "SoftHard",
+      "label": "Soft/Hard",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.WC.ITEMOID",
+      "name": "ItemOID",
+      "label": "Item OID",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.WC.CHECKVALUES",
+      "name": "CheckValues",
+      "label": "Check Values",
+      "dataType": "string"
+    }
+  ],
+  "rows": [
+    [
+      "WC.LB.LBTESTCD.SET1.LBSPEC.BLOOD",
+      null,
+      "IN",
+      "Soft",
+      "IT.LB.LBTESTCD",
+      "BILI, GLUC"
+    ],
+    [
+      "WC.LB.LBTESTCD.SET1.LBSPEC.BLOOD",
+      null,
+      "EQ",
+      "Soft",
+      "IT.LB.LBSPEC",
+      "BLOOD"
+    ],
+    [
+      "WC.LB.LBTESTCD.SET2.LBSPEC.BLOOD",
+      null,
+      "IN",
+      "Soft",
+      "IT.LB.LBTESTCD",
+      "BUN, HGB, LYM"
+    ],
+    [
+      "WC.LB.LBTESTCD.SET2.LBSPEC.BLOOD",
+      null,
+      "EQ",
+      "Soft",
+      "IT.LB.LBSPEC",
+      "BLOOD"
+    ],
+    [
+      "WC.LB.LBTESTCD.HCT.LBSPEC.BLOOD.VENDOR",
+      null,
+      "EQ",
+      "Soft",
+      "IT.LB.LBTESTCD",
+      "HCT"
+    ],
+    [
+      "WC.LB.LBTESTCD.HCT.LBSPEC.BLOOD.VENDOR",
+      null,
+      "EQ",
+      "Soft",
+      "IT.LB.LBSPEC",
+      "BLOOD"
+    ],
+    [
+      "WC.LB.LBTESTCD.HCT.LBSPEC.BLOOD.VENDOR",
+      null,
+      "NE",
+      "Soft",
+      "IT.LB.LBNAM",
+      "LOCAL LAB"
+    ],
+    [
+      "WC.LB.LBTESTCD.HCT.LBSPEC.BLOOD.CRF",
+      null,
+      "EQ",
+      "Soft",
+      "IT.LB.LBTESTCD",
+      "HCT"
+    ],
+    [
+      "WC.LB.LBTESTCD.HCT.LBSPEC.BLOOD.CRF",
+      null,
+      "EQ",
+      "Soft",
+      "IT.LB.LBSPEC",
+      "BLOOD"
+    ],
+    [
+      "WC.LB.LBTESTCD.HCT.LBSPEC.BLOOD.CRF",
+      null,
+      "EQ",
+      "Soft",
+      "IT.LB.LBNAM",
+      "LOCAL LAB"
+    ],
+    [
+      "WC.LB.LBTESTCD.SET3.LBSPEC.URINE",
+      null,
+      "IN",
+      "Soft",
+      "IT.LB.LBTESTCD",
+      "GLUC, OCCBLD"
+    ],
+    [
+      "WC.LB.LBTESTCD.SET3.LBSPEC.URINE",
+      null,
+      "EQ",
+      "Soft",
+      "IT.LB.LBSPEC",
+      "URINE"
+    ],
+    [
+      "WC.LB.LBTESTCD.PH.LBSPEC.URINE",
+      null,
+      "EQ",
+      "Soft",
+      "IT.LB.LBTESTCD",
+      "PH"
+    ],
+    [
+      "WC.LB.LBTESTCD.PH.LBSPEC.URINE",
+      null,
+      "EQ",
+      "Soft",
+      "IT.LB.LBSPEC",
+      "URINE"
+    ],
+    [
+      "WC.LB.LBTESTCD.VITB12.LBSPEC.SERUM",
+      null,
+      "EQ",
+      "Soft",
+      "IT.LB.LBTESTCD",
+      "VITB12"
+    ],
+    [
+      "WC.LB.LBTESTCD.VITB12.LBSPEC.SERUM",
+      null,
+      "EQ",
+      "Soft",
+      "IT.LB.LBSPEC",
+      "SERUM"
+    ],
+    [
+      "WC.LB.LBTESTCD.VITB9.LBSPEC.BLOOD",
+      null,
+      "EQ",
+      "Soft",
+      "IT.LB.LBTESTCD",
+      "VITB9"
+    ],
+    [
+      "WC.LB.LBTESTCD.VITB9.LBSPEC.BLOOD",
+      null,
+      "EQ",
+      "Soft",
+      "IT.LB.LBSPEC",
+      "BLOOD"
+    ],
+    [
+      "WC.SUPPDM.QNAM.RACE1",
+      null,
+      "EQ",
+      "Soft",
+      "IT.SUPPDM.QNAM",
+      "RACE1"
+    ],
+    [
+      "WC.SUPPDM.QNAM.RACE2",
+      null,
+      "EQ",
+      "Soft",
+      "IT.SUPPDM.QNAM",
+      "RACE2"
+    ],
+    [
+      "WC.SUPPDM.QNAM.RACE3",
+      null,
+      "EQ",
+      "Soft",
+      "IT.SUPPDM.QNAM",
+      "RACE3"
+    ],
+    [
+      "WC.SUPPDM.QNAM.RAND",
+      null,
+      "EQ",
+      "Soft",
+      "IT.SUPPDM.QNAM",
+      "RAND"
+    ],
+    [
+      "WC.SUPPDM.QNAM.RANDNO",
+      null,
+      "EQ",
+      "Soft",
+      "IT.SUPPDM.QNAM",
+      "RANDNO"
+    ],
+    [
+      "WC.SUPPDM.QNAM.SAFETY",
+      null,
+      "EQ",
+      "Soft",
+      "IT.SUPPDM.QNAM",
+      "SAFETY"
+    ],
+    [
+      "WC.SUPPVS.QNAM.VSCLSIG",
+      null,
+      "EQ",
+      "Soft",
+      "IT.SUPPVS.QNAM",
+      "VSCLSIG"
+    ],
+    [
+      "WC.TS.TSPARMCD.AGEMAX",
+      null,
+      "EQ",
+      "Soft",
+      "IT.TS.TSPARMCD",
+      "AGEMAX"
+    ],
+    [
+      "WC.TS.TSPARMCD.AGEMIN",
+      null,
+      "EQ",
+      "Soft",
+      "IT.TS.TSPARMCD",
+      "AGEMIN"
+    ],
+    [
+      "WC.TS.TSPARMCD.AGEU",
+      null,
+      "EQ",
+      "Soft",
+      "IT.TS.TSPARMCD",
+      "AGEU"
+    ],
+    [
+      "WC.TS.TSPARMCD.DOSE",
+      null,
+      "EQ",
+      "Soft",
+      "IT.TS.TSPARMCD",
+      "DOSE"
+    ],
+    [
+      "WC.TS.TSPARMCD.FCNTRY",
+      null,
+      "EQ",
+      "Soft",
+      "IT.TS.TSPARMCD",
+      "FCNTRY"
+    ],
+    [
+      "WC.TS.TSPARMCD.PLANSUB",
+      null,
+      "EQ",
+      "Soft",
+      "IT.TS.TSPARMCD",
+      "PLANSUB"
+    ],
+    [
+      "WC.VS.VSTESTCD.DIABP",
+      null,
+      "EQ",
+      "Soft",
+      "IT.VS.VSTESTCD",
+      "DIABP"
+    ],
+    [
+      "WC.VS.VSTESTCD.FRMSIZE",
+      null,
+      "EQ",
+      "Soft",
+      "IT.VS.VSTESTCD",
+      "FRMSIZE"
+    ],
+    [
+      "WC.VS.VSTESTCD.HEIGHT",
+      null,
+      "EQ",
+      "Soft",
+      "IT.VS.VSTESTCD",
+      "HEIGHT"
+    ],
+    [
+      "WC.VS.VSTESTCD.PULSE",
+      null,
+      "EQ",
+      "Soft",
+      "IT.VS.VSTESTCD",
+      "PULSE"
+    ],
+    [
+      "WC.VS.VSTESTCD.SYSBP",
+      null,
+      "EQ",
+      "Soft",
+      "IT.VS.VSTESTCD",
+      "SYSBP"
+    ],
+    [
+      "WC.VS.VSTESTCD.WEIGHT",
+      null,
+      "EQ",
+      "Soft",
+      "IT.VS.VSTESTCD",
+      "WEIGHT"
+    ],
+    [
+      "WC.VS.VSTESTCD.BMI",
+      null,
+      "EQ",
+      "Soft",
+      "IT.VS.VSTESTCD",
+      "BMI"
+    ],
+    [
+      "WC.VS.VSTESTCD.HEIGHT.[DM].COUNTRY.CMETRIC",
+      "COM.SUBJECTDATA-JOIN-DM",
+      "EQ",
+      "Soft",
+      "IT.VS.VSTESTCD",
+      "HEIGHT"
+    ],
+    [
+      "WC.VS.VSTESTCD.HEIGHT.[DM].COUNTRY.CMETRIC",
+      "COM.SUBJECTDATA-JOIN-DM",
+      "IN",
+      "Soft",
+      "IT.DM.COUNTRY",
+      "CAN, MEX"
+    ],
+    [
+      "WC.VS.VSTESTCD.HEIGHT.[DM].COUNTRY.CNMETRIC",
+      "COM.SUBJECTDATA-JOIN-DM",
+      "EQ",
+      "Soft",
+      "IT.VS.VSTESTCD",
+      "HEIGHT"
+    ],
+    [
+      "WC.VS.VSTESTCD.HEIGHT.[DM].COUNTRY.CNMETRIC",
+      "COM.SUBJECTDATA-JOIN-DM",
+      "EQ",
+      "Soft",
+      "IT.DM.COUNTRY",
+      "USA"
+    ],
+    [
+      "WC.VS.VSTESTCD.WEIGHT.[DM].COUNTRY.CMETRIC",
+      "COM.SUBJECTDATA-JOIN-DM",
+      "EQ",
+      "Soft",
+      "IT.VS.VSTESTCD",
+      "WEIGHT"
+    ],
+    [
+      "WC.VS.VSTESTCD.WEIGHT.[DM].COUNTRY.CMETRIC",
+      "COM.SUBJECTDATA-JOIN-DM",
+      "IN",
+      "Soft",
+      "IT.DM.COUNTRY",
+      "CAN, MEX"
+    ],
+    [
+      "WC.VS.VSTESTCD.WEIGHT.[DM].COUNTRY.CNMETRIC",
+      "COM.SUBJECTDATA-JOIN-DM",
+      "EQ",
+      "Soft",
+      "IT.VS.VSTESTCD",
+      "WEIGHT"
+    ],
+    [
+      "WC.VS.VSTESTCD.WEIGHT.[DM].COUNTRY.CNMETRIC",
+      "COM.SUBJECTDATA-JOIN-DM",
+      "EQ",
+      "Soft",
+      "IT.DM.COUNTRY",
+      "USA"
+    ]
+  ]
+}

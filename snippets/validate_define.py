@@ -10,7 +10,7 @@ from odmlib.define_2_1.rules import metadata_schema as METADATA
 from odmlib.define_2_1.rules import oid_ref as OID
 
 
-DEF_FILE = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data', 'define-360i.xml')
+DEF_FILE = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data', 'define-360i-old.xml')
 # DEF_FILE = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data', 't1d-define.xml')
 SCHEMA_FILE = os.path.join(os.sep, 'home', 'sam', 'standards', 'define-xml-2-1', 'schema', 'cdisc-define-2.1', 'define2-1-0.xsd')
 # SCHEMA_FILE = os.path.join(os.sep, 'home', 'sam', 'standards', 'DefineV211', 'schema', 'cdisc-define-2.1', 'define2-1-0.xsd')
