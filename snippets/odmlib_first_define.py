@@ -1,6 +1,6 @@
 # Copyright 2022 Sam Hume. Licensed under the MIT-0 license https://opensource.org/licenses/MIT-0
 import odmlib.define_2_1.model as DEFINE
-import datetime
+from datetime import datetime, timezone
 
 """
 This is the code presented at the PHUSE US Connect 2022 and described in paper PAP_OS01.
@@ -8,7 +8,7 @@ The purpose of this code is to demonstrate using odmlib to create and process a 
 NOTE: In places where paths are referenced, you will need to update them to reflect your system.
 """
 
-current_datetime = datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat()
+current_datetime = datetime.now(timezone.utc).isoformat()
 odm = DEFINE.ODM(FileOID="DEF.COSA.DEMO",
               AsOfDateTime=current_datetime,
               CreationDateTime=current_datetime,
@@ -75,7 +75,7 @@ print(cosa_odm)
 
 from odmlib import odm_parser as P
 # relpace the path below to your Define-XML v2.1 schema
-schema_file = "/home/sam/standards/DefineV211/schema/cdisc-define-2.1/define2-1-0.xsd"
+schema_file = "/home/sam/standards/define-xml-2-1/schema/cdisc-define-2.1/define2-1-0.xsd"
 
 validator = P.ODMSchemaValidator(schema_file)
 try:

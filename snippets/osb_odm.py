@@ -7,9 +7,8 @@ OSB_ODM_FILE = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data',
 
 
 model_package = "osb_odm_1_0"
-loader = OL.XMLODMLoader(model_package=model_package, ns_uri="http://www.cdisc.org/ns/osb-xml/v1.0", local_model=True)
-ns = NS.NamespaceRegistry(prefix="osb", uri="http://www.cdisc.org/ns/osb-xml/v1.0")
-loader.create_document(OSB_ODM_FILE, ns)
+loader = OL.XMLODMLoader(model_package=model_package, ns_uri="http://www.cdisc.org/ns/odm/v1.3", local_model=True)
+loader.create_document(OSB_ODM_FILE)
 
 odm = loader.load_odm()
 print(f"Study OID is {odm.Study[0].OID}")

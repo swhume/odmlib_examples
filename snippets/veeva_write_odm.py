@@ -16,8 +16,8 @@ the data directory.
 """
 
 ODM_FILE = "data/veeva_vodm.xml"
-ns1 = NS.NamespaceRegistry(prefix="odm", uri="http://www.cdisc.org/ns/odm/v1.3", is_default=True)
-ns = NS.NamespaceRegistry(prefix="vee", uri="http://www.cdisc.org/ns/vee-xml/v1.0")
+NS.NamespaceRegistry(prefix="odm", uri="http://www.cdisc.org/ns/odm/v1.3", is_default=True)
+NS.NamespaceRegistry(prefix="vee", uri="http://www.cdisc.org/ns/vee-xml/v1.0")
 
 current_datetime = datetime.now(timezone.utc).isoformat()
 root = ODM.ODM(FileOID="ODM.VEEVA", Granularity="Metadata", AsOfDateTime=current_datetime,

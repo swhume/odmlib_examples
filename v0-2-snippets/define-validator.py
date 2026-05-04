@@ -9,6 +9,7 @@ from odmlib import (
     define_loader as DL,
     create_oid_checker,
     OdmlibValidationError,
+    OdmlibOIDError,
     odm_parser as P
 )
 from odmlib.mode import permissive
@@ -18,7 +19,7 @@ define_file = "data/define-360i.xml"
 output_file = "data/intermediate.xml"
 # create the needed odmlib objects
 checker = create_oid_checker("define_2_1")
-loader = LD.ODMLoader(DL.XMLDefineLoader(model_package='define_2_1'))
+loader = LD.ODMLoader(DL.XMLDefineLoader(model_package='define_2_1', ns_uri='http://www.cdisc.org/ns/def/v2.1'))
 validator = P.ODMSchemaValidator(standard="define", version="2.1")
 
 # schema validate the define.xml and collect all validation errors
@@ -41,7 +42,7 @@ with permissive():
 
 print(f"Loaded non-conformant ODM: {odm.FileOID}")
 try:
-    oid_errors = odm.validate(collect_errors=False, oid_checker=checker)
+    oid_errors = odm.validate(collect_errors=True, oid_checker=checker)
     if oid_errors:
         print(f"Found {len(oid_errors)} validation error(s):\n")
         for i, err in enumerate(oid_errors, 1):

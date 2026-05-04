@@ -12,7 +12,6 @@ Example Cmd-line Args:
 NOTE: you will need to replace the -k arg with our own CDISC Library API key
 """
 
-
 def write_odm_as_json(odm, filename):
     print(f"Saving {odm.Study[0].GlobalVariables.StudyName} in Library-XML version {odm.LibraryXMLVersion} as JSON")
     with open(filename, 'w') as f:
@@ -25,9 +24,9 @@ def load_odmlib(endpoint, filename, model_package, ns, api_key):
     r = requests.get(base_url + endpoint, headers=headers)
     if r.status_code == 200:
         if "define" in model_package:
-            loader = DL.XMLDefineLoader(model_package=model_package, ns_uri="http://www.cdisc.org/ns/library-xml/v1.0", local_model=True)
+            loader = DL.XMLDefineLoader(model_package=model_package, local_model=True)
         else:
-            loader = OL.XMLODMLoader(model_package=model_package, ns_uri="http://www.cdisc.org/ns/library-xml/v1.0", local_model=True)
+            loader = OL.XMLODMLoader(model_package=model_package, local_model=True)
         loader.create_document_from_string(r.text, ns)
         odm = loader.load_odm()
         write_odm_as_json(odm, filename)

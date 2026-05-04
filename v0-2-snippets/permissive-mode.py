@@ -7,7 +7,6 @@ This odmlib v0.2 example snippet covers:
 5. **The Load-Inspect-Fix-Validate workflow** — repairing a broken document end-to-end
 """
 import os
-import tempfile
 import odmlib.odm_loader as OL
 import odmlib.loader as LD
 import odmlib.odm_1_3_2.model as ODM
@@ -80,13 +79,17 @@ print(f"\nNon-conformant values that were loaded:")
 print(f"  ItemDef.DataType:  {item_def.DataType!r} (should be a valid CDISC type)")
 print(f"  ItemRef.Mandatory: {item_ref.Mandatory!r} (should be 'Yes' or 'No')")
 
+# Asymmetry: SKIP_VALUESET/TYPE/FORMAT store the bad value on the instance, so it
+# reads back normally outside the block. SKIP_REQUIRED has nothing stored to fall
+# back on, so the read-time check consults the live validation mode — wrap reads
+# of possibly missing required attributes in `with permissive():`.
 with permissive():
-    # TODO if Name is missing and loaded in permissive mode, should the below raise an error?
     print(f"  ItemDef.Name:      {item_def.Name!r} (missing required attribute)")
-    # set Name to be an integer instead of a string
+    # SKIP_TYPE: integer is stored as-is and remains readable outside the block.
     item_def.Name = 1234
 
-# prints fine outside of the permissive block - a missing name
+# reads cleanly here because Name now holds 1234 — the missing required check
+# only fires when the attribute is unset.
 print(f"  ItemDef.Name:      {item_def.Name!r} (string attribute set to an integer)")
 
 """
@@ -235,10 +238,10 @@ with open_define("data/nonconformant_define21.xml", output_file=output,
 
 """
 5. Permissive mode enables a structured workflow for repairing non-conformant documents:
-1. **Load** — open the document in permissive mode
-2. **Inspect** — examine the loaded objects to find violations
-3. **Fix** — correct the conformance problems programmatically
-4. **Validate** — reload the repaired document in strict mode to confirm it is conformant
+5.1. **Load** — open the document in permissive mode
+5.2. **Inspect** — examine the loaded objects to find violations
+5.3. **Fix** — correct the conformance problems programmatically
+5.4. **Validate** — reload the repaired document in strict mode to confirm it is conformant
 """
 ### Step 1: Load and Inspect
 with permissive():
@@ -251,9 +254,8 @@ mdv = odm.Study[0].MetaDataVersion[0]
 # inspect for violations
 issues = []
 for item in mdv.ItemDef:
-    # TODO this doesn't work because Name is required and is missing in the define.xml - should this work?
-    # Hint: Attribute 'Name' is required when constructing ItemDef
-    # Hack: added with permissive() to skip the Name check
+    # inspecting a possibly missing required attribute needs permissive mode, even
+    # though the document was loaded permissively — see the asymmetry note in section 2.
     with permissive():
         if item.Name is None:
             issues.append(f"ItemDef '{item.OID}': missing required Name attribute")
@@ -278,8 +280,8 @@ for i, issue in enumerate(issues, 1):
 ### Step 2: Fix the conformance problems
 # Fix 1: Set the missing Name attribute
 for item in mdv.ItemDef:
-    # TODO this doesn't work because Name is required and is missing in the define.xml - should this work?
-    # Hack: added with permissive() to skip the Name check
+    # reading the missing-required Name to detect it needs permissive mode; once
+    # set on the next line, subsequent reads work in strict mode.
     with permissive():
         if item.Name is None:
             item.Name = item.OID.replace("IT.", "")  # derive Name from OID

@@ -17,7 +17,7 @@ OUTPUT_ODM_FILE = "data/odm_from_veeva.xml"
 # load the draft Veeva model
 model_package = "veeva_1_0"
 loader = LO.ODMLoader(
-    OL.XMLODMLoader(model_package=model_package, ns_uri="http://www.cdisc.org/ns/veeva/v1.0", local_model=True)
+    OL.XMLODMLoader(model_package=model_package, ns_uri="http://www.cdisc.org/ns/odm/v1.3", local_model=True)
 )
 loader.open_odm_document(INPUT_ODM_FILE)
 v_odm = loader.root()
@@ -27,11 +27,8 @@ print(f"Loaded Veeva file with study name is {v_study.Name}")
 print(f"Veeva file with MetaDataVersion name: {v_study.MetaDataVersion.Name}")
 print(f"Veeva file with EventGroupDef name: {v_study.MetaDataVersion.EventGroupDef[0].Name}")
 
-# transform the Veeva ODM-related content to CDISC ODM v1.3.2 with Veeva extensions
-odm_model_package = "veeva_odm_1_0"
-loader = OL.XMLODMLoader(model_package=odm_model_package, ns_uri="http://www.cdisc.org/ns/veeva-odm/v1.0",
-                         local_model=True)
-ns = NS.NamespaceRegistry(prefix="vee", uri="http://www.cdisc.org/ns/veeva-odm/v1.0")
+# switch to the Veeva ODM model
+NS.NamespaceRegistry(prefix="vee", uri="http://www.cdisc.org/ns/veeva-odm/v1.0")
 
 root = ODM.ODM(
     FileOID=v_odm.FileOID,

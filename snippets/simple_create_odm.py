@@ -1,9 +1,9 @@
 import odmlib.odm_1_3_2.model as ODM
-import datetime
+from datetime import datetime, timezone
 
 ODM_FILE = "./data/simple_create.xml"
 
-current_datetime = datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat()
+current_datetime = datetime.now(timezone.utc).isoformat()
 root = ODM.ODM(FileOID="ODM.DEMO.001", Granularity="Metadata", AsOfDateTime=current_datetime,
                CreationDateTime=current_datetime, ODMVersion="1.3.2", FileType="Snapshot",
                Originator="swhume", SourceSystem="odmlib", SourceSystemVersion="0.1")

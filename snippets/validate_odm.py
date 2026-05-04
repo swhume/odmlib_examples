@@ -1,14 +1,20 @@
+import warnings
 from odmlib import odm_parser as P
 import odmlib.odm_1_3_2.rules.oid_ref as OID
 #import cerberus as C
 import odmlib.odm_1_3_2.model as ODM
 import odmlib.odm_1_3_2.rules.metadata_schema as METADATA
+from odmlib import (
+    OdmlibOIDError,
+    OdmlibConformanceError,
+    OdmlibElementOrderError,
+    create_oid_checker
+)
 import xmlschema as XSD
 import os
 
 ODM_FILE = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data', 'cdash-odm-test.xml')
-SCHEMA_FILE = os.path.join(os.sep, 'home', 'sam', 'standards', 'odm1-3-2', 'ODM1-3-2.xsd')
-
+SCHEMA_FILE = os.path.join(os.sep, 'home', 'sam', 'standards', 'odm1_3_2', 'ODM1-3-2.xsd')
 
 def validate_odm_xml_file():
     validator = P.ODMSchemaValidator(SCHEMA_FILE)
@@ -49,13 +55,11 @@ def verify_oids():
     mdv.CodeList = _add_CL()
     mdv.MethodDef = _add_MD()
     mdv.ConditionDef = _add_CD()
-    validator = METADATA.MetadataSchema()
-    is_valid = validator.check_conformance(mdv.to_dict(), "MetaDataVersion")
-    oid_checker = OID.OIDRef()
+    # check OIDs
+    oid_checker = create_oid_checker("odm_1_3_2")
     try:
-        # checks for non-unique OIDs and runs the ref/def check
         mdv.verify_oids(oid_checker)
-    except ValueError as ve:
+    except OdmlibOIDError as ve:
         print(f"Error verifying OIDs: {ve}")
     else:
         print(f"OIDs verified as valid")
@@ -72,11 +76,11 @@ def find_unreferenced_oids():
     mdv.CodeList = _add_CL()
     mdv.MethodDef = _add_MD()
     mdv.ConditionDef = _add_CD()
-    oid_checker = OID.OIDRef()
-    mdv.verify_oids(oid_checker)
-    orphans = oid_checker.check_unreferenced_oids()
+    oid_checker = create_oid_checker("odm_1_3_2")
+    orphans = mdv.unreferenced_oids(oid_checker)
     print(f"found {len(orphans)} missing OID Defs")
-
+    if orphans:
+        print(f"Orphaned OIDs: {orphans}")
 
 def verify_element_order():
     study = ODM.Study(OID="ST.001.Test")
@@ -100,13 +104,25 @@ def reorder_object():
     itd.Description.TranslatedText.append(ODM.TranslatedText(_content="Year of the subject's birth", lang="en"))
     itd.Question = ODM.Question()
     itd.Question.TranslatedText.append(ODM.TranslatedText(_content="Birth Year", lang="en"))
-    itd.reorder_object()
     try:
         itd.verify_order()
-    except ValueError as ve:
-        print(f"ItemDef element re-order failed. {ve}")
+    except OdmlibElementOrderError as ve:
+        print(f"Invalid ItemDef element order. {ve}")
+        with warnings.catch_warnings(record=True) as caught:
+            warnings.simplefilter("always")
+            itd.reorder_object()
+            if caught:
+                print(f"Warning issued: {caught[0].message}")
     else:
-        print(f"ItemDef element re-order succeeded.")
+        print(f"Valid ItemDef element order.")
+
+    try:
+        itd.verify_order()
+    except OdmlibElementOrderError as ve:
+        print(f"Element order not fixed: invalid ItemDef element order. {ve}")
+    else:
+        print(f"Element order fixed: valid ItemDef element order.")
+
 
 
 def conformance_check_object():
@@ -115,10 +131,15 @@ def conformance_check_object():
     method.Description = ODM.Description()
     method.Description.TranslatedText.append(ODM.TranslatedText(_content="Age at Screening Date (Screening Date - Birth date)", lang="en"))
     method.FormalExpression.append(ODM.FormalExpression(Context="Python 3.7", _content="print('hello world')"))
+    # check rule conformance
     validator = METADATA.MetadataSchema()
-    is_valid = validator.check_conformance(method.to_dict(), "MethodDef")
-    print(f"MethodDef object is valid: {is_valid}")
-
+    try:
+        method.verify_conformance(validator)
+        print("Conformance check passed.")
+    except OdmlibConformanceError as e:
+        print(f"Conformance error for: {e.element_type}")
+        print(f"Hint: {e.hint}")
+        print(f"\nCerberus errors (dict): {e.cerberus_errors}")
 
 def validate_content_during_object_creation():
     try:

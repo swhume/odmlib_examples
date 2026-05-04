@@ -12,7 +12,7 @@ ct2json.py - an example program using odmlib to read a CT-XML ODM file and conve
 Command-line examples:
 python ct2json.py -x ./data/sdtm-ct.xml -j ./data/sdtm-ct.json
 python ct2json.py -v -x ./data/sdtm-ct.xml -j ./data/sdtm-ct.json
-python ct2json.py -v -x ./data/sdtm-ct.xml -j ./data/sdtm-ct.json -s "/home/sam/src/ct2json/schema/controlledterminology1-1-1.xsd
+python ct2json.py -v -x ./data/sdtm-ct.xml -j ./data/sdtm-ct.json -s "./schema/controlledterminology1-1-1.xsd
 """
 
 

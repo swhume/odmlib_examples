@@ -3,12 +3,15 @@ import odmlib.odm_1_3_2.model as ODM
 import odmlib.odm_1_3_2.rules.oid_ref as OID
 import xml.etree.ElementTree as ET
 import odmlib.odm_parser as P
+from odmlib import (
+    OdmlibOIDError,
+    create_oid_checker,
+)
 import os
 import datetime
 
 # update this path to point to your ODM1-3-2 schema file
-SCHEMA_FILE = os.path.join(os.sep, 'home', 'sam', 'standards', 'odm1-3-2', 'ODM1-3-2.xsd')
-
+SCHEMA_FILE = os.path.join(os.sep, 'home', 'sam', 'standards', 'odm1_3_2', 'ODM1-3-2.xsd')
 
 class ODMProcessor:
     def __init__(self, odm_file):
@@ -28,11 +31,10 @@ class ODMProcessor:
         print(f"Is ODM valid: {self.validator.validate_tree(tree)}")
 
     def _oid_check(self):
-        self.oid_checker = OID.OIDRef()
+        self.oid_checker = create_oid_checker("define_2_1")
         try:
             self.mdv.verify_oids(self.oid_checker)
-            self.oid_checker.check_oid_refs()
-        except ValueError as ve:
+        except OdmlibOIDError as ve:
             print(f"OID def/ref validation error: {str(ve)}\n")
 
     def list_metadata(self):
@@ -180,7 +182,8 @@ class ODMCreator:
 
     def _set_datetime(self):
         """return the current datetime in ISO 8601 format"""
-        return datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat()
+        # return datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat()
+        return datetime.datetime.now(datetime.timezone.utc).isoformat()
 
 
 if __name__ == '__main__':

@@ -1,4 +1,3 @@
-#import xlrd
 from openpyxl import Workbook, load_workbook
 import argparse
 import odm as ODM
@@ -16,6 +15,8 @@ ELEMENTS = ["ValueListDef", "WhereClauseDef", "ItemGroupDef", "ItemDef", "CodeLi
 Example Cmd-line Args:
     example: -e ./data/odmlib-define-metadata.xlsx -d ./data/odmlib-roundtrip-define.xml
 
+    example: -e ./data/odmlib-define-metadata.xlsx -d ./data/odmlib-roundtrip-define.xml 
+             -v -s /home/sam/standards/define-xml-2-0/schema/cdisc-define-2.0/define2-0-0.xsd
 NOTE: the xlrd library no longer supports .xlsx files and will only work with .xls file
 """
 
