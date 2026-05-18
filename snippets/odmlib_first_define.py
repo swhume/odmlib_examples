@@ -1,6 +1,7 @@
 # Copyright 2022 Sam Hume. Licensed under the MIT-0 license https://opensource.org/licenses/MIT-0
-import odmlib.define_2_1.model as DEFINE
 from datetime import datetime, timezone
+import odmlib.define_2_1.model as DEFINE
+from odmlib import odm_parser as P
 
 """
 This is the code presented at the PHUSE US Connect 2022 and described in paper PAP_OS01.
@@ -26,7 +27,7 @@ study.GlobalVariables.ProtocolName = DEFINE.ProtocolName(_content="Define-XML It
 odm.Study = study
 
 mdv = DEFINE.MetaDataVersion(OID="MDV.COSA.IGD.001", Name="ItemGroupDefDemo001",
-                                     Description="ItemGroupDef COSA Demo", DefineVersion="2.1.0")
+                             Description="ItemGroupDef COSA Demo", DefineVersion="2.1.0")
 
 mdv.Standards.Standard.append(DEFINE.Standard(OID="STD.1", Name="SDTMIG", Type="IG", Version="3.2", Status="Final"))
 mdv.Standards.Standard.append(DEFINE.Standard(OID="STD.2", Name="CDISC/NCI", Type="CT", PublishingSet="SDTM",
@@ -73,11 +74,7 @@ with open("./data/cosa_define_demo.xml", 'r') as file:
     cosa_odm = file.read()
 print(cosa_odm)
 
-from odmlib import odm_parser as P
-# relpace the path below to your Define-XML v2.1 schema
-schema_file = "/home/sam/standards/define-xml-2-1/schema/cdisc-define-2.1/define2-1-0.xsd"
-
-validator = P.ODMSchemaValidator(schema_file)
+validator = P.ODMSchemaValidator(standard="define", version="2.1")
 try:
     # update the path to reflect your system
     validator.validate_file("./data/cosa_define_demo.xml")

@@ -2,10 +2,17 @@ from odmlib import odm_parser as P
 # import odmlib.define_2_1.rules.oid_ref as OID
 import odmlib.define_loader as OL
 import odmlib.loader as LD
-from odmlib import create_oid_checker, OdmlibValidationError, OdmlibConformanceError, OdmlibOIDError
+from odmlib import (
+    create_oid_checker,
+    OdmlibError,
+    OdmlibValidationError,
+    OdmlibConformanceError,
+    OdmlibOIDError,
+    OdmlibElementOrderError
+)
 
 # import odmlib.define_2_1.rules.metadata_schema as METADATA
-import xmlschema as XSD
+# import xmlschema as XSD
 import os
 
 from odmlib.define_2_1.rules import metadata_schema as METADATA
@@ -23,7 +30,7 @@ def validate_odm_xml_file():
     validator = P.ODMSchemaValidator(SCHEMA_FILE)
     try:
         validator.validate_file(DEF_FILE)
-    except XSD.validators.exceptions.XMLSchemaChildrenValidationError as ve:
+    except OdmlibValidationError as ve:
         print(f"schema validation errors: {ve}")
     else:
         print("Define-XML schema validation completed successfully...")
@@ -75,7 +82,7 @@ def verify_schema_rules(root):
 def verify_element_order(mdv):
     try:
         mdv.verify_order()
-    except ValueError as ve:
+    except OdmlibElementOrderError as ve:
         print(f"Error verifying element order in MetaDataVersion: {ve}")
     else:
         print(f"MetaDataVersion element order is verified")

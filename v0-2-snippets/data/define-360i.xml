@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<ODM FileOID="ODM.DEFINE21.23bcdb7d-b748-4786-96c5-06a9602c0a64" AsOfDateTime="2026-04-13T01:56:02.959680+00:00"
-     CreationDateTime="2026-04-13T01:56:02.959687+00:00" ODMVersion="1.3.2" FileType="Snapshot"
+<ODM FileOID="ODM.DEFINE21.d611c8de-4b6f-44ff-ade2-b82a6aab83d1" AsOfDateTime="2026-05-07T11:43:50.402827+00:00"
+     CreationDateTime="2026-05-07T11:43:50.402844+00:00" ODMVersion="1.3.2" FileType="Snapshot"
      Originator="360i Define-XML Team" SourceSystem="odmlib" SourceSystemVersion="0.2" def:Context="Other"
      xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
      xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -2310,8 +2310,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Disposition</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.DS.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.DS.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.DS.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.DS.USUBJID" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.DS.DSSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
@@ -2331,8 +2330,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Demographics</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.DM.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.DM.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.DM.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.DM.USUBJID" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.DM.SUBJID" Mandatory="Yes" OrderNumber="4" Role="Topic"/>
@@ -2369,8 +2367,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Subject Characteristics</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.SC.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.SC.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.SC.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.SC.USUBJID" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.SC.SCSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
@@ -2393,8 +2390,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Medical History</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.MH.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.MH.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.MH.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.MH.USUBJID" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.MH.MHSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
@@ -2416,8 +2412,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Substance Use</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.SU.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.SU.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.SU.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.SU.USUBJID" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.SU.SUSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
@@ -2450,8 +2445,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Procedures</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.PR.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.PR.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.PR.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.PR.USUBJID" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.PR.PRSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
@@ -2475,8 +2469,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Vital Signs</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.VS.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.VS.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.VS.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.VS.USUBJID" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.VS.VSSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
@@ -2504,8 +2497,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">ECG Test Results</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.EG.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.EG.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.EG.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.EG.USUBJID" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.EG.EGSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
@@ -2535,8 +2527,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Concomitant/Prior Medications</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.CM.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.CM.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.CM.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.CM.USUBJID" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.CM.CMSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
@@ -2564,8 +2555,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Laboratory Test Results</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.LB.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.LB.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.LB.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.LB.USUBJID" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.LB.LBSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
@@ -2599,8 +2589,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Microbiology Specimen</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.MB.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.MB.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.MB.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.MB.USUBJID" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.MB.MBSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
@@ -2624,8 +2613,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Exposure as Collected</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.EC.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.EC.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.EC.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.EC.USUBJID" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.EC.ECSEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
@@ -2654,8 +2642,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Adverse Events</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.AE.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.AE.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.AE.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.AE.USUBJID" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.AE.AESEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
@@ -2710,8 +2697,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Trial Summary</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.TS.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.TS.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.TS.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.TS.TSSEQ" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.TS.TSPARMCD" Mandatory="Yes" OrderNumber="4" Role="Topic"/>
@@ -2731,8 +2717,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Trial Arms</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.TA.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.TA.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.TA.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.TA.ARMCD" Mandatory="Yes" OrderNumber="3" Role="Topic"/>
                 <ItemRef ItemOID="IT.TA.ARM" Mandatory="Yes" OrderNumber="4" Role="Synonym Qualifier"/>
@@ -2753,8 +2738,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Trial Elements</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.TE.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.TE.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.TE.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.TE.ETCD" Mandatory="Yes" OrderNumber="3" Role="Topic"/>
                 <ItemRef ItemOID="IT.TE.ELEMENT" Mandatory="Yes" OrderNumber="4" Role="Synonym Qualifier"/>
@@ -2770,8 +2754,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Trial Inclusion/Exclusion Criteria</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.TI.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.TI.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.TI.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.TI.IETESTCD" Mandatory="Yes" OrderNumber="3" Role="Topic"/>
                 <ItemRef ItemOID="IT.TI.IETEST" Mandatory="Yes" OrderNumber="4" Role="Synonym Qualifier"/>
@@ -2787,8 +2770,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Trial Visits</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.TV.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.TV.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.TV.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.TV.VISITNUM" Mandatory="Yes" OrderNumber="3" Role="Topic"/>
                 <ItemRef ItemOID="IT.TV.VISIT" Mandatory="Yes" OrderNumber="4" Role="Synonym Qualifier"/>
@@ -2808,8 +2790,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Subject Visits</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.SV.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.SV.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.SV.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.SV.USUBJID" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.SV.VISITNUM" Mandatory="Yes" OrderNumber="4" Role="Topic"/>
@@ -2830,8 +2811,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Inclusion/Exclusion Criteria Not Met</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.IE.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.IE.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.IE.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.IE.USUBJID" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.IE.IESEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>
@@ -2851,8 +2831,7 @@
                 <Description>
                     <TranslatedText xml:lang="en">Subject Elements</TranslatedText>
                 </Description>
-                <ItemRef ItemOID="IT.SE.STUDYID" Mandatory="Yes" OrderNumber="1" KeySequence="__PLACEHOLDER__"
-                         Role="Identifier"/>
+                <ItemRef ItemOID="IT.SE.STUDYID" Mandatory="Yes" OrderNumber="1" Role="Identifier"/>
                 <ItemRef ItemOID="IT.SE.DOMAIN" Mandatory="Yes" OrderNumber="2" Role="Identifier"/>
                 <ItemRef ItemOID="IT.SE.USUBJID" Mandatory="Yes" OrderNumber="3" Role="Identifier"/>
                 <ItemRef ItemOID="IT.SE.SESEQ" Mandatory="Yes" OrderNumber="4" Role="Identifier"/>

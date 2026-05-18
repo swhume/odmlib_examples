@@ -1,16 +1,17 @@
 import warnings
 from odmlib import odm_parser as P
-import odmlib.odm_1_3_2.rules.oid_ref as OID
-#import cerberus as C
 import odmlib.odm_1_3_2.model as ODM
 import odmlib.odm_1_3_2.rules.metadata_schema as METADATA
 from odmlib import (
+    create_oid_checker,
+    OdmlibError,
     OdmlibOIDError,
+    OdmlibValidationError,
     OdmlibConformanceError,
     OdmlibElementOrderError,
     create_oid_checker
 )
-import xmlschema as XSD
+
 import os
 
 ODM_FILE = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data', 'cdash-odm-test.xml')
@@ -20,7 +21,7 @@ def validate_odm_xml_file():
     validator = P.ODMSchemaValidator(SCHEMA_FILE)
     try:
         validator.validate_file(ODM_FILE)
-    except XSD.validators.exceptions.XMLSchemaChildrenValidationError as ve:
+    except OdmlibValidationError as ve:
         print(f"schema validation errors: {ve}")
     else:
         print("ODM XML schema validation completed successfully...")
@@ -90,7 +91,7 @@ def verify_element_order():
     study.GlobalVariables.ProtocolName = ODM.ProtocolName(_content="The ODM protocol name")
     try:
         study.verify_order()
-    except ValueError as ve:
+    except OdmlibElementOrderError as ve:
         print(f"Error verifying element order in Study. {ve}")
     else:
         print(f"Study element order is verified")

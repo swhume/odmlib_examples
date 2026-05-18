@@ -1,7 +1,5 @@
 from datetime import datetime, timezone
-
 import odmlib.ns_registry as NS
-
 from veeva_1_0 import model as ODM
 
 """

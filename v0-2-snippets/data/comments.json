@@ -1,11 +1,11 @@
 {
-  "datasetJSONCreationDateTime": "2026-05-04T19:11:16.992760+00:00",
+  "datasetJSONCreationDateTime": "2026-05-17T20:12:06.887232+00:00",
   "datasetJSONVersion": "1.1.0",
-  "fileOID": "www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0",
-  "studyOID": "STDY.www.cdisc.org.CDISC01_1",
-  "metaDataVersionOID": "MDV.CDISC01_1.1.SDTMIG.3.1.2.SDTM.1.2_X",
+  "fileOID": "ODM.DEFINE21.d611c8de-4b6f-44ff-ade2-b82a6aab83d1",
+  "studyOID": "ODM.LZZT - NEW.Version1.Design1",
+  "metaDataVersionOID": "MDV.LZZT---NEW",
   "itemGroupOID": "IG.DEFINE.COMMENTS",
-  "records": 29,
+  "records": 0,
   "name": "comments",
   "label": "Comment Definitions",
   "columns": [
@@ -28,152 +28,5 @@
       "label": "Document Ref Leaf IDs",
       "dataType": "string"
     }
-  ],
-  "rows": [
-    [
-      "COM.AGEU",
-      "Defaulted to YEARS",
-      null
-    ],
-    [
-      "COM.ARM",
-      "Assigned from TA.ARM based on ARMCD.",
-      null
-    ],
-    [
-      "COM.ARMCD",
-      "Assigned based on Randomization Number. See Note 2.1",
-      "LF.csdrg"
-    ],
-    [
-      "COM.COUNTRY",
-      "This is a subset of the ISO-3166 (Country Codes) codelist",
-      null
-    ],
-    [
-      "COM.CT1",
-      "Assuming the CT was not upversioned for this study",
-      null
-    ],
-    [
-      "COM.CT2",
-      "The CT version applicable for the new Domain is the 2015-12-18 version",
-      null
-    ],
-    [
-      "COM.CT2-EC",
-      "The Domain codelist was updated when SDTMIG 3.2 became production. Referencing a newer CT version that includes the revised codelist",
-      null
-    ],
-    [
-      "COM.CT2-SEX",
-      "The term \"UN\" was changed to \"UNDIFERENTIATED\" for codelist \"SEX\" on the 2014-03-28 CT release. Referencing the codelist from a newer release since the new release includes other codelists used in the study.",
-      null
-    ],
-    [
-      "COM.DOMAIN.DI",
-      "The DI domain is included to illustrate the use of a separate complementary SDTMIG. In this example, the device ID is referenced from a Findings Domain (XS).",
-      null
-    ],
-    [
-      "COM.DOMAIN.DM",
-      "See Reviewer's Guide, Section 2.1 Demographics",
-      "LF.csdrg"
-    ],
-    [
-      "COM.IDVAR",
-      "Name of the variables for the related records.",
-      null
-    ],
-    [
-      "COM.IDVARVAL",
-      "Value of identifying variable described in IDVAR.",
-      null
-    ],
-    [
-      "COM.ISO3166",
-      "The code values used are the Alpha-3 codes",
-      null
-    ],
-    [
-      "COM.LBNRIND",
-      "Assuming the LBNRIND is derived by the vendor",
-      null
-    ],
-    [
-      "COM.LBORRES",
-      "Origin specified at Value Level Metadata",
-      null
-    ],
-    [
-      "COM.LBORRESU(Repeated)",
-      "Note this example does not include VLM for this variable since it is just an example and the way to specify VLM is illustrated for LBORRESU.",
-      null
-    ],
-    [
-      "COM.LBREFID",
-      "Accession number",
-      null
-    ],
-    [
-      "COM.RACE",
-      "Note that the study protocol has been amended to not allow the specification of other race per current regulatory requirements. Refer to FDA Guidance XYZ and PMDA Guidance P-XYZ.",
-      null
-    ],
-    [
-      "COM.RESU",
-      "Planned Numeric tests were not performed.",
-      null
-    ],
-    [
-      "COM.STD1",
-      "The CDISC01 study was modeled on a very old SDTMIG and no attempt was done yet to upversion it to a newer SDTMIG",
-      null
-    ],
-    [
-      "COM.STD2",
-      "As an example, the CDISC01 study was adjusted to include a new Domain available in SDTM IG 3.2",
-      null
-    ],
-    [
-      "COM.STD3",
-      "As an example, the CDISC01 study was adjusted to include a new Domain available in SDTMIG-MD 1.0. The XS Domain is expected to reference the device used with variable SPDEVID.",
-      null
-    ],
-    [
-      "COM.STUDY.DATA",
-      "The data submitted only includes subjects in the USA since other sites did not enroll any subjects.",
-      null
-    ],
-    [
-      "COM.SUBJECTDATA-JOIN-DM",
-      "Join any Subject Level dataset with the Demographics dataset based on [IG.datasetname]IT.USUBJID = [IG.DM]IT.USUBJID, assuming 'IG.datasetname' is the OID of the ItemGroupDef that defines the subject-level dataset to be joined with the Demographics dataset.",
-      null
-    ],
-    [
-      "COM.VS.VISITNUM",
-      "Assigned from the TV domain based on the VISIT",
-      null
-    ],
-    [
-      "COM.VSSTRESC",
-      "Testing a comment in addition to a method: BMI is derived and the specific method is provided at VLM",
-      null
-    ],
-    [
-      "COM.VSSTRESN",
-      "Testing a comment in addition to a method: BMI is operationally derived and the specific method is provided at VLM",
-      null
-    ],
-    [
-      "COM.VSSTRESU",
-      "Standard units consistent with CDISC controlled terminology",
-      null
-    ],
-    [
-      "COM.XX",
-      "Special domain contingent on rare conditions observed.",
-      null
-    ]
   ]
 }

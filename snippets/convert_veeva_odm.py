@@ -1,6 +1,5 @@
 import odmlib.ns_registry as NS
 from odmlib import odm_loader as OL, loader as LO
-
 from veeva_odm_1_0 import model as ODM
 
 """

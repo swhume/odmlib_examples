@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ODM FileOID="ODM.NC.001" FileType="Snapshot" Granularity="Metadata"
+     CreationDateTime="2026-01-01T00:00:00" AsOfDateTime="2026-01-01T00:00:00"
+     ODMVersion="1.3.2" Originator="test" SourceSystem="odmlib"
+     SourceSystemVersion="0.2.0"
+     xmlns="http://www.cdisc.org/ns/odm/v1.3">
+  <Study OID="S.NC.001">
+    <GlobalVariables>
+      <StudyName>Nonconformant Test Study</StudyName>
+      <StudyDescription>Test file for permissive loading</StudyDescription>
+      <ProtocolName>NC Protocol</ProtocolName>
+    </GlobalVariables>
+    <MetaDataVersion OID="MDV.NC.001" Name="NC MetaData" Description="Nonconformant test metadata">
+      <ItemGroupDef OID="IG.DM" Name="Demographics" Repeating="No">
+        <ItemRef ItemOID="IT.NONAME" Mandatory="Maybe" />
+      </ItemGroupDef>
+      <ItemDef OID="IT.NONAME" DataType="bogus" />
+    </MetaDataVersion>
+  </Study>
+</ODM>

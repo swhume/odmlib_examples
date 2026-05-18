@@ -1,0 +1,890 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ODM FileOID="ODM.CDASH.POC" Granularity="Metadata" CreationDateTime="2025-10-23T12:33:13.558824+00:00" ODMVersion="2.0"
+     FileType="Snapshot" Originator="Lex Jansen" SourceSystem="odmlib" SourceSystemVersion="0.1"
+     xmlns="http://www.cdisc.org/ns/odm/v2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <Study OID="ODM.CDASH.STUDY" StudyName="Vital Signs" ProtocolName="Vital Signs">
+        <Description>
+            <TranslatedText Type="text/plain" xml:lang="en">Vital Signs</TranslatedText>
+        </Description>
+        <MetaDataVersion OID="ODM.CDASH.STUDY.MDV" Name="Vital Signs">
+            <Description>
+                <TranslatedText Type="text/plain" xml:lang="en">Vital Signs</TranslatedText>
+            </Description>
+            <ItemGroupDef OID="IG_FORM.VS1" Name="Vital Signs" Repeating="No" Type="Form">
+                <Description>
+                    <TranslatedText Type="text/plain" xml:lang="en">Vital Signs</TranslatedText>
+                </Description>
+                <ItemGroupRef ItemGroupOID="IG.VS_01_1" OrderNumber="1" Mandatory="Yes"/>
+                <ItemGroupRef ItemGroupOID="IG.VS_02_2" OrderNumber="2" Mandatory="Yes"/>
+                <Alias Context="formAnnotation" Name="DOMAIN = VS"/>
+            </ItemGroupDef>
+            <ItemGroupDef OID="IG.VS_01_1" Name="Vital Signs Performed" Repeating="No" Type="Section">
+                <Description>
+                    <TranslatedText Type="text/plain" xml:lang="en">Vital Signs Performed</TranslatedText>
+                </Description>
+                <ItemGroupRef ItemGroupOID="IG.VS_01_1_VSPERF_1" OrderNumber="1" Mandatory="Yes"/>
+            </ItemGroupDef>
+            <ItemGroupDef OID="IG.VS_02_2" Name="Vital Signs" Repeating="Simple" Type="Section">
+                <Description>
+                    <TranslatedText Type="text/plain" xml:lang="en">Vital Signs</TranslatedText>
+                </Description>
+                <ItemGroupRef ItemGroupOID="IG.VS_02_2_SYSBP_DENORMALIZED_1" OrderNumber="1" Mandatory="Yes"/>
+                <ItemGroupRef ItemGroupOID="IG.VS_02_2_DIABP_DENORMALIZED_2" OrderNumber="2" Mandatory="Yes"/>
+                <ItemGroupRef ItemGroupOID="IG.VS_02_2_HEIGHT_DENORMALIZED_3" OrderNumber="3" Mandatory="Yes"/>
+                <ItemGroupRef ItemGroupOID="IG.VS_02_2_WEIGHT_DENORMALIZED_4" OrderNumber="4" Mandatory="Yes"/>
+                <ItemGroupRef ItemGroupOID="IG.VS_02_2_BMI_DENORMALIZED_5" OrderNumber="5" Mandatory="Yes"/>
+                <ItemGroupRef ItemGroupOID="IG.VS_02_2_PULSE_DENORMALIZED_6" OrderNumber="6" Mandatory="Yes"/>
+                <ItemGroupRef ItemGroupOID="IG.VS_02_2_RESP_DENORMALIZED_7" OrderNumber="7" Mandatory="Yes"/>
+                <ItemGroupRef ItemGroupOID="IG.VS_02_2_TEMP_DENORMALIZED_8" OrderNumber="8" Mandatory="Yes"/>
+                <ItemGroupRef ItemGroupOID="IG.VS_02_2_HR_DENORMALIZED_9" OrderNumber="9" Mandatory="Yes"/>
+            </ItemGroupDef>
+            <ItemGroupDef OID="IG.VS_01_1_VSPERF_1" Name="Vital Signs Performed" Repeating="No" Type="Concept">
+                <Description>
+                    <TranslatedText Type="text/plain" xml:lang="en">Vital Signs Performed</TranslatedText>
+                </Description>
+                <ItemRef ItemOID="IT.VS_01_1_VSPERF_1.VSPERF" OrderNumber="1" Mandatory="Yes"/>
+                <ItemRef ItemOID="IT.VS_01_1_VSPERF_1.VSDAT" OrderNumber="2" Mandatory="No"/>
+                <Coding System="/mdr/bc/biomedicalconcepts/C82525" Code="C82525" SystemName="CDISC Biomedical Concept"/>
+            </ItemGroupDef>
+            <ItemGroupDef OID="IG.VS_02_2_SYSBP_DENORMALIZED_1" Name="Systolic Blood Pressure (Denormalized)"
+                          Repeating="No" Type="Concept">
+                <Description>
+                    <TranslatedText Type="text/plain" xml:lang="en">Systolic Blood Pressure (Denormalized)
+                    </TranslatedText>
+                </Description>
+                <ItemRef ItemOID="IT.VS_02_2_SYSBP_DENORMALIZED_1.VSDAT" OrderNumber="1" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_SYSBP_DENORMALIZED_1.SYSBP_VSPOS" OrderNumber="2" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_SYSBP_DENORMALIZED_1.SYSBP_VSLOC" OrderNumber="3" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_SYSBP_DENORMALIZED_1.SYSBP_VSORRES" OrderNumber="4" Mandatory="Yes"/>
+                <ItemRef ItemOID="IT.VS_02_2_SYSBP_DENORMALIZED_1.SYSBP_VSORRESU" OrderNumber="5" Mandatory="Yes"
+                         PreSpecifiedValue="mmHg"/>
+                <Coding System="/mdr/bc/biomedicalconcepts/C25298" Code="C25298" SystemName="CDISC Biomedical Concept"/>
+                <Coding System="/mdr/specializations/sdtm/datasetspecializations/SYSBP" Code="SYSBP"
+                        SystemName="CDISC SDTM Dataset Specialization"/>
+            </ItemGroupDef>
+            <ItemGroupDef OID="IG.VS_02_2_DIABP_DENORMALIZED_2" Name="Diastolic Blood Pressure (Denormalized)"
+                          Repeating="No" Type="Concept">
+                <Description>
+                    <TranslatedText Type="text/plain" xml:lang="en">Diastolic Blood Pressure (Denormalized)
+                    </TranslatedText>
+                </Description>
+                <ItemRef ItemOID="IT.VS_02_2_DIABP_DENORMALIZED_2.VSDAT" OrderNumber="1" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_DIABP_DENORMALIZED_2.DIABP_VSPOS" OrderNumber="2" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_DIABP_DENORMALIZED_2.DIABP_VSLOC" OrderNumber="3" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_DIABP_DENORMALIZED_2.DIABP_VSORRES" OrderNumber="4" Mandatory="Yes"/>
+                <ItemRef ItemOID="IT.VS_02_2_DIABP_DENORMALIZED_2.DIABP_VSORRESU" OrderNumber="5" Mandatory="Yes"
+                         PreSpecifiedValue="mmHg"/>
+                <Coding System="/mdr/bc/biomedicalconcepts/C25299" Code="C25299" SystemName="CDISC Biomedical Concept"/>
+                <Coding System="/mdr/specializations/sdtm/datasetspecializations/DIABP" Code="DIABP"
+                        SystemName="CDISC SDTM Dataset Specialization"/>
+            </ItemGroupDef>
+            <ItemGroupDef OID="IG.VS_02_2_HEIGHT_DENORMALIZED_3" Name="Height (Denormalized)" Repeating="No"
+                          Type="Concept">
+                <Description>
+                    <TranslatedText Type="text/plain" xml:lang="en">Height (Denormalized)</TranslatedText>
+                </Description>
+                <ItemRef ItemOID="IT.VS_02_2_HEIGHT_DENORMALIZED_3.VSDAT" OrderNumber="1" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_HEIGHT_DENORMALIZED_3.HEIGHT_VSORRES" OrderNumber="2" Mandatory="Yes"/>
+                <ItemRef ItemOID="IT.VS_02_2_HEIGHT_DENORMALIZED_3.HEIGHT_VSORRESU" OrderNumber="3" Mandatory="Yes"/>
+                <Coding System="/mdr/bc/biomedicalconcepts/C164634" Code="C164634"
+                        SystemName="CDISC Biomedical Concept"/>
+                <Coding System="/mdr/specializations/sdtm/datasetspecializations/HEIGHT" Code="HEIGHT"
+                        SystemName="CDISC SDTM Dataset Specialization"/>
+            </ItemGroupDef>
+            <ItemGroupDef OID="IG.VS_02_2_WEIGHT_DENORMALIZED_4" Name="Weight (Denormalized)" Repeating="No"
+                          Type="Concept">
+                <Description>
+                    <TranslatedText Type="text/plain" xml:lang="en">Weight (Denormalized)</TranslatedText>
+                </Description>
+                <ItemRef ItemOID="IT.VS_02_2_WEIGHT_DENORMALIZED_4.VSDAT" OrderNumber="1" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_WEIGHT_DENORMALIZED_4.WEIGHT_VSORRES" OrderNumber="2" Mandatory="Yes"/>
+                <ItemRef ItemOID="IT.VS_02_2_WEIGHT_DENORMALIZED_4.WEIGHT_VSORRESU" OrderNumber="3" Mandatory="Yes"/>
+                <Coding System="/mdr/bc/biomedicalconcepts/C81328" Code="C81328" SystemName="CDISC Biomedical Concept"/>
+                <Coding System="/mdr/specializations/sdtm/datasetspecializations/WEIGHT" Code="WEIGHT"
+                        SystemName="CDISC SDTM Dataset Specialization"/>
+            </ItemGroupDef>
+            <ItemGroupDef OID="IG.VS_02_2_BMI_DENORMALIZED_5" Name="Body Mass Index (Denormalized)" Repeating="No"
+                          Type="Concept">
+                <Description>
+                    <TranslatedText Type="text/plain" xml:lang="en">Body Mass Index (Denormalized)</TranslatedText>
+                </Description>
+                <ItemRef ItemOID="IT.VS_02_2_BMI_DENORMALIZED_5.VSDAT" OrderNumber="1" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_BMI_DENORMALIZED_5.BMI_VSORRES" OrderNumber="2" Mandatory="Yes"/>
+                <ItemRef ItemOID="IT.VS_02_2_BMI_DENORMALIZED_5.BMI_VSORRESU" OrderNumber="3" Mandatory="Yes"/>
+                <Coding System="/mdr/bc/biomedicalconcepts/C16358" Code="C16358" SystemName="CDISC Biomedical Concept"/>
+                <Coding System="/mdr/specializations/sdtm/datasetspecializations/BMI" Code="BMI"
+                        SystemName="CDISC SDTM Dataset Specialization"/>
+            </ItemGroupDef>
+            <ItemGroupDef OID="IG.VS_02_2_PULSE_DENORMALIZED_6" Name="Pulse (Denormalized)" Repeating="No"
+                          Type="Concept">
+                <Description>
+                    <TranslatedText Type="text/plain" xml:lang="en">Pulse (Denormalized)</TranslatedText>
+                </Description>
+                <ItemRef ItemOID="IT.VS_02_2_PULSE_DENORMALIZED_6.VSDAT" OrderNumber="1" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_PULSE_DENORMALIZED_6.PULSE_VSPOS" OrderNumber="2" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_PULSE_DENORMALIZED_6.PULSE_VSLOC" OrderNumber="3" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_PULSE_DENORMALIZED_6.PULSE_VSLAT" OrderNumber="4" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_PULSE_DENORMALIZED_6.PULSE_VSORRES" OrderNumber="5" Mandatory="Yes"/>
+                <ItemRef ItemOID="IT.VS_02_2_PULSE_DENORMALIZED_6.PULSE_VSORRESU" OrderNumber="6" Mandatory="Yes"
+                         PreSpecifiedValue="beats/min"/>
+                <Coding System="/mdr/bc/biomedicalconcepts/C49676" Code="C49676" SystemName="CDISC Biomedical Concept"/>
+                <Coding System="/mdr/specializations/sdtm/datasetspecializations/PULSE" Code="PULSE"
+                        SystemName="CDISC SDTM Dataset Specialization"/>
+            </ItemGroupDef>
+            <ItemGroupDef OID="IG.VS_02_2_RESP_DENORMALIZED_7" Name="Respiratory Rate (Denormalized)" Repeating="No"
+                          Type="Concept">
+                <Description>
+                    <TranslatedText Type="text/plain" xml:lang="en">Respiratory Rate (Denormalized)</TranslatedText>
+                </Description>
+                <ItemRef ItemOID="IT.VS_02_2_RESP_DENORMALIZED_7.VSDAT" OrderNumber="1" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_RESP_DENORMALIZED_7.RESP_VSORRES" OrderNumber="2" Mandatory="Yes"/>
+                <ItemRef ItemOID="IT.VS_02_2_RESP_DENORMALIZED_7.RESP_VSORRESU" OrderNumber="3" Mandatory="Yes"
+                         PreSpecifiedValue="breaths/min"/>
+                <Coding System="/mdr/bc/biomedicalconcepts/C49678" Code="C49678" SystemName="CDISC Biomedical Concept"/>
+                <Coding System="/mdr/specializations/sdtm/datasetspecializations/RESP" Code="RESP"
+                        SystemName="CDISC SDTM Dataset Specialization"/>
+            </ItemGroupDef>
+            <ItemGroupDef OID="IG.VS_02_2_TEMP_DENORMALIZED_8" Name="Temperature (Denormalized)" Repeating="No"
+                          Type="Concept">
+                <Description>
+                    <TranslatedText Type="text/plain" xml:lang="en">Temperature (Denormalized)</TranslatedText>
+                </Description>
+                <ItemRef ItemOID="IT.VS_02_2_TEMP_DENORMALIZED_8.VSDAT" OrderNumber="1" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_TEMP_DENORMALIZED_8.TEMP_VSORRES" OrderNumber="2" Mandatory="Yes"/>
+                <ItemRef ItemOID="IT.VS_02_2_TEMP_DENORMALIZED_8.TEMP_VSORRESU" OrderNumber="3" Mandatory="Yes"/>
+                <ItemRef ItemOID="IT.VS_02_2_TEMP_DENORMALIZED_8.TEMP_VSLOC" OrderNumber="4" Mandatory="No"/>
+                <Coding System="/mdr/bc/biomedicalconcepts/C174446" Code="C174446"
+                        SystemName="CDISC Biomedical Concept"/>
+                <Coding System="/mdr/specializations/sdtm/datasetspecializations/TEMP" Code="TEMP"
+                        SystemName="CDISC SDTM Dataset Specialization"/>
+            </ItemGroupDef>
+            <ItemGroupDef OID="IG.VS_02_2_HR_DENORMALIZED_9" Name="Heart Rate (Denormalized)" Repeating="No"
+                          Type="Concept">
+                <Description>
+                    <TranslatedText Type="text/plain" xml:lang="en">Heart Rate (Denormalized)</TranslatedText>
+                </Description>
+                <ItemRef ItemOID="IT.VS_02_2_HR_DENORMALIZED_9.VSDAT" OrderNumber="1" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_HR_DENORMALIZED_9.HR_VSPOS" OrderNumber="2" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_HR_DENORMALIZED_9.HR_VSLOC" OrderNumber="3" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_HR_DENORMALIZED_9.HR_VSLAT" OrderNumber="4" Mandatory="No"/>
+                <ItemRef ItemOID="IT.VS_02_2_HR_DENORMALIZED_9.HR_VSORRES" OrderNumber="5" Mandatory="Yes"/>
+                <ItemRef ItemOID="IT.VS_02_2_HR_DENORMALIZED_9.HR_VSORRESU" OrderNumber="6" Mandatory="Yes"
+                         PreSpecifiedValue="beats/min"/>
+                <Coding System="/mdr/bc/biomedicalconcepts/C49677" Code="C49677" SystemName="CDISC Biomedical Concept"/>
+                <Coding System="/mdr/specializations/sdtm/datasetspecializations/HR" Code="HR"
+                        SystemName="CDISC SDTM Dataset Specialization"/>
+            </ItemGroupDef>
+            <ItemDef OID="IT.VS_01_1_VSPERF_1.VSPERF" Name="VSPERF" DataType="text" Length="1">
+                <Question>
+                    <TranslatedText Type="text/plain" xml:lang="en">Were vital signs performed?</TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL.VS_01_VSPERF_1.VSPERF.C66742"/>
+                <Alias Context="SDTM" Name="[NOT SUBMITTED]; VSSTAT = NOT DONE when VSTESTCD = VSALL"/>
+                <Alias Context="CDASH" Name="VSPERF"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_01_1_VSPERF_1.VSDAT" Name="VSDAT" DataType="date" Length="10">
+                <Question>
+                    <TranslatedText Type="text/plain" xml:lang="en">Date of Assessment</TranslatedText>
+                </Question>
+                <Alias Context="SDTM" Name="VSDTC"/>
+                <Alias Context="CDASH" Name="VSDAT"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_SYSBP_DENORMALIZED_1.VSDAT" Name="VSDAT" DataType="date" Length="10">
+                <Question>
+                    <TranslatedText Type="text/plain" xml:lang="en">What was the date of the measurement?
+                    </TranslatedText>
+                </Question>
+                <Alias Context="SDTM" Name="VSDTC"/>
+                <Alias Context="CDASH" Name="VSDAT"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_SYSBP_DENORMALIZED_1.SYSBP_VSPOS" Name="SYSBP_VSPOS" DataType="text" Length="50">
+                <Question>
+                    <TranslatedText Type="text/plain" xml:lang="en">What was the position of the subject during the
+                        Systolic Blood Pressure measurement?
+                    </TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL.VS_02_SYSBP_DENORMALIZED_1.SYSBP_VSPOS.C71148"/>
+                <Alias Context="SDTM" Name="VSPOS when VSTESTCD = SYSBP"/>
+                <Alias Context="CDASH" Name="SYSBP_VSPOS"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_SYSBP_DENORMALIZED_1.SYSBP_VSLOC" Name="SYSBP_VSLOC" DataType="text" Length="10">
+                <Question>
+                    <TranslatedText Type="text/plain" xml:lang="en">What was the location of the subject during the
+                        Systolic Blood Pressure measurement?
+                    </TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL.VS_02_SYSBP_DENORMALIZED_1.SYSBP_VSLOC.C74456"/>
+                <Alias Context="SDTM" Name="VSLOC when VSTESTCD = SYSBP"/>
+                <Alias Context="CDASH" Name="SYSBP_VSLOC"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_SYSBP_DENORMALIZED_1.SYSBP_VSORRES" Name="SYSBP_VSORRES" DataType="integer"
+                     Length="3">
+                <Question>
+                    <TranslatedText Type="text/plain" xml:lang="en">What was the result of the Systolic Blood Pressure
+                        measurement?
+                    </TranslatedText>
+                </Question>
+                <Alias Context="SDTM" Name="VSORRES when VSTESTCD = SYSBP"/>
+                <Alias Context="CDASH" Name="SYSBP_VSORRES"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_SYSBP_DENORMALIZED_1.SYSBP_VSORRESU" Name="SYSBP_VSORRESU" DataType="text"
+                     Length="10">
+                <Question>
+                    <TranslatedText Type="text/plain" xml:lang="en">What was the unit of the Systolic Blood Pressure
+                        measurement?
+                    </TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL.VS_02_SYSBP_DENORMALIZED_1.SYSBP_VSORRESU.C66770"/>
+                <Alias Context="SDTM" Name="VSORRESU = mmHg when VSTESTCD = SYSBP"/>
+                <Alias Context="CDASH" Name="SYSBP_VSORRESU"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_DIABP_DENORMALIZED_2.VSDAT" Name="VSDAT" DataType="date" Length="10">
+                <Question>
+                    <TranslatedText Type="text/plain" xml:lang="en">What was the date of the measurement?
+                    </TranslatedText>
+                </Question>
+                <Alias Context="SDTM" Name="VSDTC"/>
+                <Alias Context="CDASH" Name="VSDAT"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_DIABP_DENORMALIZED_2.DIABP_VSPOS" Name="DIABP_VSPOS" DataType="text" Length="50">
+                <Question>
+                    <TranslatedText Type="text/plain" xml:lang="en">What was the position of the subject during the
+                        Diastolic Blood Pressure measurement?
+                    </TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL.VS_02_DIABP_DENORMALIZED_2.DIABP_VSPOS.C71148"/>
+                <Alias Context="SDTM" Name="VSPOS when VSTESTCD = DIABP"/>
+                <Alias Context="CDASH" Name="DIABP_VSPOS"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_DIABP_DENORMALIZED_2.DIABP_VSLOC" Name="DIABP_VSLOC" DataType="text" Length="50">
+                <Question>
+                    <TranslatedText Type="text/plain" xml:lang="en">What was the position of the subject during the
+                        Diastolic Blood Pressure measurement?
+                    </TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL.VS_02_DIABP_DENORMALIZED_2.DIABP_VSLOC.C74456"/>
+                <Alias Context="SDTM" Name="VSLOC when VSTESTCD = DIABP"/>
+                <Alias Context="CDASH" Name="DIABP_VSLOC"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_DIABP_DENORMALIZED_2.DIABP_VSORRES" Name="DIABP_VSORRES" DataType="integer"
+                     Length="3">
+                <Question>
+                    <TranslatedText Type="text/plain" xml:lang="en">What was the result of the Diastolic Blood Pressure
+                        measurement?
+                    </TranslatedText>
+                </Question>
+                <Alias Context="SDTM" Name="VSORRES when VSTESTCD = DIABP"/>
+                <Alias Context="CDASH" Name="DIABP_VSORRES"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_DIABP_DENORMALIZED_2.DIABP_VSORRESU" Name="DIABP_VSORRESU" DataType="text"
+                     Length="10">
+                <Question>
+                    <TranslatedText Type="text/plain" xml:lang="en">What was the result of the Diastolic Blood Pressure
+                        measurement?
+                    </TranslatedText>
+                </Question>
+                <CodeListRef CodeListOID="CL.VS_02_DIABP_DENORMALIZED_2.DIABP_VSORRESU.C66770"/>
+                <Alias Context="SDTM" Name="VSORRESU = mmHg when VSTESTCD = DIABP"/>
+                <Alias Context="CDASH" Name="DIABP_VSORRESU"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_HEIGHT_DENORMALIZED_3.VSDAT" Name="VSDAT" DataType="date" Length="10">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Date of Assessment</TranslatedText>
+                </Prompt>
+                <Alias Context="SDTM" Name="VSDTC"/>
+                <Alias Context="CDASH" Name="VSDAT"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_HEIGHT_DENORMALIZED_3.HEIGHT_VSORRES" Name="HEIGHT_VSORRES" DataType="decimal"
+                     Length="4">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Height</TranslatedText>
+                </Prompt>
+                <Alias Context="SDTM" Name="VSORRES when VSTESTCD = HEIGHT"/>
+                <Alias Context="CDASH" Name="HEIGHT_VSORRES"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_HEIGHT_DENORMALIZED_3.HEIGHT_VSORRESU" Name="HEIGHT_VSORRESU" DataType="text"
+                     Length="2">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Height Unit</TranslatedText>
+                </Prompt>
+                <CodeListRef CodeListOID="CL.VS_02_HEIGHT_DENORMALIZED_3.HEIGHT_VSORRESU.C66770"/>
+                <Alias Context="SDTM" Name="VSORRESU when VSTESTCD = HEIGHT"/>
+                <Alias Context="CDASH" Name="HEIGHT_VSORRESU"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_WEIGHT_DENORMALIZED_4.VSDAT" Name="VSDAT" DataType="date" Length="10">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Date of Assessment</TranslatedText>
+                </Prompt>
+                <Alias Context="SDTM" Name="VSDTC"/>
+                <Alias Context="CDASH" Name="VSDAT"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_WEIGHT_DENORMALIZED_4.WEIGHT_VSORRES" Name="WEIGHT_VSORRES" DataType="decimal"
+                     Length="4">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Weight</TranslatedText>
+                </Prompt>
+                <Alias Context="SDTM" Name="VSORRES when VSTESTCD = WEIGHT"/>
+                <Alias Context="CDASH" Name="WEIGHT_VSORRES"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_WEIGHT_DENORMALIZED_4.WEIGHT_VSORRESU" Name="WEIGHT_VSORRESU" DataType="text"
+                     Length="10">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Weight Unit</TranslatedText>
+                </Prompt>
+                <CodeListRef CodeListOID="CL.VS_02_WEIGHT_DENORMALIZED_4.WEIGHT_VSORRESU.C66770"/>
+                <Alias Context="SDTM" Name="VSORRESU when VSTESTCD = WEIGHT"/>
+                <Alias Context="CDASH" Name="WEIGHT_VSORRESU"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_BMI_DENORMALIZED_5.VSDAT" Name="VSDAT" DataType="date" Length="10">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Date of Assessment</TranslatedText>
+                </Prompt>
+                <Alias Context="SDTM" Name="VSDTC"/>
+                <Alias Context="CDASH" Name="VSDAT"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_BMI_DENORMALIZED_5.BMI_VSORRES" Name="BMI_VSORRES" DataType="decimal" Length="4">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">BMI</TranslatedText>
+                </Prompt>
+                <Alias Context="SDTM" Name="VSORRES when VSTESTCD = BMI"/>
+                <Alias Context="CDASH" Name="BMI_VSORRES"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_BMI_DENORMALIZED_5.BMI_VSORRESU" Name="BMI_VSORRESU" DataType="text" Length="3">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">BMI Unit</TranslatedText>
+                </Prompt>
+                <CodeListRef CodeListOID="CL.VS_02_BMI_DENORMALIZED_5.BMI_VSORRESU.C71620"/>
+                <Alias Context="SDTM" Name="VSORRESU when VSTESTCD = BMI"/>
+                <Alias Context="CDASH" Name="BMI_VSORRESU"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_PULSE_DENORMALIZED_6.VSDAT" Name="VSDAT" DataType="date" Length="10">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Date of Assessment</TranslatedText>
+                </Prompt>
+                <Alias Context="SDTM" Name="VSDTC"/>
+                <Alias Context="CDASH" Name="VSDAT"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_PULSE_DENORMALIZED_6.PULSE_VSPOS" Name="PULSE_VSPOS" DataType="text" Length="50">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Position</TranslatedText>
+                </Prompt>
+                <CodeListRef CodeListOID="CL.VS_02_PULSE_DENORMALIZED_6.PULSE_VSPOS.C71148"/>
+                <Alias Context="SDTM" Name="VSPOS when VSTESTCD = PULSE"/>
+                <Alias Context="CDASH" Name="PULSE_VSPOS"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_PULSE_DENORMALIZED_6.PULSE_VSLOC" Name="PULSE_VSLOC" DataType="text" Length="50">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Anatomical Location</TranslatedText>
+                </Prompt>
+                <CodeListRef CodeListOID="CL.VS_02_PULSE_DENORMALIZED_6.PULSE_VSLOC.C74456"/>
+                <Alias Context="SDTM" Name="VSLOC when VSTESTCD = PULSE"/>
+                <Alias Context="CDASH" Name="PULSE_VSLOC"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_PULSE_DENORMALIZED_6.PULSE_VSLAT" Name="PULSE_VSLAT" DataType="text" Length="10">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Side</TranslatedText>
+                </Prompt>
+                <CodeListRef CodeListOID="CL.VS_02_PULSE_DENORMALIZED_6.PULSE_VSLAT.C99073"/>
+                <Alias Context="SDTM" Name="VSLAT when VSTESTCD = PULSE"/>
+                <Alias Context="CDASH" Name="PULSE_VSLAT"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_PULSE_DENORMALIZED_6.PULSE_VSORRES" Name="PULSE_VSORRES" DataType="decimal"
+                     Length="4">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Pulse Rate</TranslatedText>
+                </Prompt>
+                <Alias Context="SDTM" Name="VSORRES when VSTESTCD = PULSE"/>
+                <Alias Context="CDASH" Name="PULSE_VSORRES"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_PULSE_DENORMALIZED_6.PULSE_VSORRESU" Name="PULSE_VSORRESU" DataType="text"
+                     Length="2">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Pulse Rate Unit</TranslatedText>
+                </Prompt>
+                <CodeListRef CodeListOID="CL.VS_02_PULSE_DENORMALIZED_6.PULSE_VSORRESU.C66770"/>
+                <Alias Context="SDTM" Name="VSORRESU = beats/min when VSTESTCD = PULSE"/>
+                <Alias Context="CDASH" Name="PULSE_VSORRESU"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_RESP_DENORMALIZED_7.VSDAT" Name="VSDAT" DataType="date" Length="10">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Date of Assessment</TranslatedText>
+                </Prompt>
+                <Alias Context="SDTM" Name="VSDTC"/>
+                <Alias Context="CDASH" Name="VSDAT"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_RESP_DENORMALIZED_7.RESP_VSORRES" Name="RESP_VSORRES" DataType="integer"
+                     Length="2">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Respiratory Rate</TranslatedText>
+                </Prompt>
+                <Alias Context="SDTM" Name="VSORRES when VSTESTCD = RESP"/>
+                <Alias Context="CDASH" Name="RESP_VSORRES"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_RESP_DENORMALIZED_7.RESP_VSORRESU" Name="RESP_VSORRESU" DataType="text"
+                     Length="10">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Respiratory Rate Unit</TranslatedText>
+                </Prompt>
+                <CodeListRef CodeListOID="CL.VS_02_RESP_DENORMALIZED_7.RESP_VSORRESU.C66770"/>
+                <Alias Context="SDTM" Name="VSORRESU = breaths/min when VSTESTCD = RESP"/>
+                <Alias Context="CDASH" Name="RESP_VSORRESU"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_TEMP_DENORMALIZED_8.VSDAT" Name="VSDAT" DataType="date" Length="10">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Date of Assessment</TranslatedText>
+                </Prompt>
+                <Alias Context="SDTM" Name="VSDTC"/>
+                <Alias Context="CDASH" Name="VSDAT"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_TEMP_DENORMALIZED_8.TEMP_VSORRES" Name="TEMP_VSORRES" DataType="decimal"
+                     Length="4">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Temperature</TranslatedText>
+                </Prompt>
+                <Alias Context="SDTM" Name="VSORRES when VSTESTCD = TEMP"/>
+                <Alias Context="CDASH" Name="TEMP_VSORRES"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_TEMP_DENORMALIZED_8.TEMP_VSORRESU" Name="TEMP_VSORRESU" DataType="text" Length="2">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Temperature Unit</TranslatedText>
+                </Prompt>
+                <CodeListRef CodeListOID="CL.VS_02_TEMP_DENORMALIZED_8.TEMP_VSORRESU.C66770"/>
+                <Alias Context="SDTM" Name="VSORRESU when VSTESTCD = TEMP"/>
+                <Alias Context="CDASH" Name="TEMP_VSORRESU"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_TEMP_DENORMALIZED_8.TEMP_VSLOC" Name="TEMP_VSLOC" DataType="text" Length="11">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Anatomical Location</TranslatedText>
+                </Prompt>
+                <CodeListRef CodeListOID="CL.VS_02_TEMP_DENORMALIZED_8.TEMP_VSLOC.C74456"/>
+                <Alias Context="SDTM" Name="VSLOC when VSTESTCD = TEMP"/>
+                <Alias Context="CDASH" Name="TEMP_VSLOC"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_HR_DENORMALIZED_9.VSDAT" Name="VSDAT" DataType="date" Length="10">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Date of Assessment</TranslatedText>
+                </Prompt>
+                <Alias Context="SDTM" Name="VSDTC"/>
+                <Alias Context="CDASH" Name="VSDAT"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_HR_DENORMALIZED_9.HR_VSPOS" Name="HR_VSPOS" DataType="text" Length="50">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Position</TranslatedText>
+                </Prompt>
+                <CodeListRef CodeListOID="CL.VS_02_HR_DENORMALIZED_9.HR_VSPOS.C71148"/>
+                <Alias Context="SDTM" Name="VSPOS when VSTESTCD = HR"/>
+                <Alias Context="CDASH" Name="HR_VSPOS"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_HR_DENORMALIZED_9.HR_VSLOC" Name="HR_VSLOC" DataType="text" Length="50">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Anatomical Location</TranslatedText>
+                </Prompt>
+                <CodeListRef CodeListOID="CL.VS_02_HR_DENORMALIZED_9.HR_VSLOC.C74456"/>
+                <Alias Context="SDTM" Name="VSLOC when VSTESTCD = HR"/>
+                <Alias Context="CDASH" Name="HR_VSLOC"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_HR_DENORMALIZED_9.HR_VSLAT" Name="HR_VSLAT" DataType="text" Length="10">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Side</TranslatedText>
+                </Prompt>
+                <CodeListRef CodeListOID="CL.VS_02_HR_DENORMALIZED_9.HR_VSLAT.C99073"/>
+                <Alias Context="SDTM" Name="VSLAT when VSTESTCD = HR"/>
+                <Alias Context="CDASH" Name="HR_VSLAT"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_HR_DENORMALIZED_9.HR_VSORRES" Name="HR_VSORRES" DataType="integer" Length="3">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Heart Rate</TranslatedText>
+                </Prompt>
+                <Alias Context="SDTM" Name="VSORRES when VSTESTCD = HR"/>
+                <Alias Context="CDASH" Name="HR_VSORRES"/>
+            </ItemDef>
+            <ItemDef OID="IT.VS_02_2_HR_DENORMALIZED_9.HR_VSORRESU" Name="HR_VSORRESU" DataType="text" Length="10">
+                <Prompt>
+                    <TranslatedText Type="text/plain" xml:lang="en">Heart Rate Unit</TranslatedText>
+                </Prompt>
+                <CodeListRef CodeListOID="CL.VS_02_HR_DENORMALIZED_9.HR_VSORRESU.C66770"/>
+                <Alias Context="SDTM" Name="VSORRESU = beats/min when VSTESTCD = HR"/>
+                <Alias Context="CDASH" Name="HR_VSORRESU"/>
+            </ItemDef>
+            <CodeList OID="CL.VS_01_VSPERF_1.VSPERF.C66742" Name="NY" DataType="text">
+                <CodeListItem CodedValue="N">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">No</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="Y">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Yes</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C66742" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_SYSBP_DENORMALIZED_1.SYSBP_VSPOS.C71148" Name="POSITION" DataType="text">
+                <CodeListItem CodedValue="PRONE">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Prone</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="SEMI-RECUMBENT">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Semi-recumbent</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="SITTING">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Sitting</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="STANDING">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Standing</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="SUPINE">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Supine</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C71148" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_SYSBP_DENORMALIZED_1.SYSBP_VSLOC.C74456" Name="LOC" DataType="text">
+                <CodeListItem CodedValue="BRACHIAL ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Brachial Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="FEMORAL ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Femoral Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="PERIPHERAL ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Peripheral Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="RADIAL ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Radial Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C74456" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_SYSBP_DENORMALIZED_1.SYSBP_VSORRESU.C66770" Name="VSRESU" DataType="text">
+                <CodeListItem CodedValue="mmHg">
+                    <Coding System="https://www.cdisc.org/standards/terminology" Code="C49670"
+                            SystemName="CDISC/NCI CT"/>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C66770" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_DIABP_DENORMALIZED_2.DIABP_VSPOS.C71148" Name="POSITION" DataType="text">
+                <CodeListItem CodedValue="PRONE">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Prone</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="SEMI-RECUMBENT">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Semi-recumbent</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="SITTING">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Sitting</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="STANDING">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Standing</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="SUPINE">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Supine</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C71148" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_DIABP_DENORMALIZED_2.DIABP_VSLOC.C74456" Name="LOC" DataType="text">
+                <CodeListItem CodedValue="BRACHIAL ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Brachial Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="FEMORAL ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Femoral Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="PERIPHERAL ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Peripheral Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="RADIAL ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Radial Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C74456" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_DIABP_DENORMALIZED_2.DIABP_VSORRESU.C66770" Name="VSRESU" DataType="text">
+                <CodeListItem CodedValue="mmHg">
+                    <Coding System="https://www.cdisc.org/standards/terminology" Code="C49670"
+                            SystemName="CDISC/NCI CT"/>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C66770" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_HEIGHT_DENORMALIZED_3.HEIGHT_VSORRESU.C66770" Name="VSRESU" DataType="text">
+                <CodeListItem CodedValue="cm">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">cm</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="in">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">in</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="m">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">m</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C66770" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_WEIGHT_DENORMALIZED_4.WEIGHT_VSORRESU.C66770" Name="VSRESU" DataType="text">
+                <CodeListItem CodedValue="LB">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">LB</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="g">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">g</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="kg">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">kg</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C66770" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_BMI_DENORMALIZED_5.BMI_VSORRESU.C71620" Name="UNIT" DataType="text">
+                <CodeListItem CodedValue="kg/m2">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">kg/m2</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="psi">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">psi</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C71620" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_PULSE_DENORMALIZED_6.PULSE_VSPOS.C71148" Name="POSITION" DataType="text">
+                <CodeListItem CodedValue="PRONE">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Prone</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="SEMI-RECUMBENT">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Semi-recumbent</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="SITTING">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Sitting</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="STANDING">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Standing</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="SUPINE">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Supine</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C71148" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_PULSE_DENORMALIZED_6.PULSE_VSLOC.C74456" Name="LOC" DataType="text">
+                <CodeListItem CodedValue="BRACHIAL ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Brachial Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="CAROTID ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Carotid Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="DORSALIS PEDIS ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Dorsalis Pedis Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="FEMORAL ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Femoral Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="PERIPHERAL ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Peripheral Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="RADIAL ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Radial Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C74456" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_PULSE_DENORMALIZED_6.PULSE_VSLAT.C99073" Name="LAT" DataType="text">
+                <CodeListItem CodedValue="LEFT">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Left</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="RIGHT">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Right</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C99073" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_PULSE_DENORMALIZED_6.PULSE_VSORRESU.C66770" Name="VSRESU" DataType="text">
+                <CodeListItem CodedValue="beats/min">
+                    <Coding System="https://www.cdisc.org/standards/terminology" Code="C49673"
+                            SystemName="CDISC/NCI CT"/>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C66770" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_RESP_DENORMALIZED_7.RESP_VSORRESU.C66770" Name="VSRESU" DataType="text">
+                <CodeListItem CodedValue="breaths/min">
+                    <Coding System="https://www.cdisc.org/standards/terminology" Code="C49674"
+                            SystemName="CDISC/NCI CT"/>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C66770" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_TEMP_DENORMALIZED_8.TEMP_VSORRESU.C66770" Name="VSRESU" DataType="text">
+                <CodeListItem CodedValue="C">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Celsius</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="F">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Fahrenheit</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C66770" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_TEMP_DENORMALIZED_8.TEMP_VSLOC.C74456" Name="LOC" DataType="text">
+                <CodeListItem CodedValue="AXILLA">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Axilla</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="EAR">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Ear</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="FOREHEAD">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Forehead</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="ORAL CAVITY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Oral Cavity</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="RECTUM">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Rectum</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C74456" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_HR_DENORMALIZED_9.HR_VSPOS.C71148" Name="POSITION" DataType="text">
+                <CodeListItem CodedValue="PRONE">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Prone</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="SEMI-RECUMBENT">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Semi-recumbent</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="SITTING">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Sitting</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="STANDING">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Standing</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="SUPINE">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Supine</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C71148" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_HR_DENORMALIZED_9.HR_VSLOC.C74456" Name="LOC" DataType="text">
+                <CodeListItem CodedValue="BRACHIAL ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Brachial Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="FEMORAL ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Femoral Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="PERIPHERAL ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Peripheral Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="RADIAL ARTERY">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Radial Artery</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C74456" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_HR_DENORMALIZED_9.HR_VSLAT.C99073" Name="LAT" DataType="text">
+                <CodeListItem CodedValue="LEFT">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Left</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <CodeListItem CodedValue="RIGHT">
+                    <Decode>
+                        <TranslatedText Type="text/plain" xml:lang="en">Right</TranslatedText>
+                    </Decode>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C99073" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+            <CodeList OID="CL.VS_02_HR_DENORMALIZED_9.HR_VSORRESU.C66770" Name="VSRESU" DataType="text">
+                <CodeListItem CodedValue="beats/min">
+                    <Coding System="https://www.cdisc.org/standards/terminology" Code="C49673"
+                            SystemName="CDISC/NCI CT"/>
+                </CodeListItem>
+                <Coding System="https://www.cdisc.org/standards/terminology" Code="C66770" SystemName="CDISC/NCI CT"/>
+            </CodeList>
+        </MetaDataVersion>
+    </Study>
+</ODM>

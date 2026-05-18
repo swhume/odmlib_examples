@@ -2,32 +2,28 @@
 __pycache__/
 *.py[cod]
 *$py.class
-define2-1-to-xlsx/venv/
-xlsx2define2-1/venv/
-ct2json/venv/
-ct2odm/venv/
-define2xls/venv/
-get_started/venv/
-merge_odm/venv/
-snippets/venv/
-xls2define/venv/
+
+# Virtual environments (any directory, including the repo root)
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+.gitignore.swp
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Packaging / build
 *.egg-info/
-docs/build/
 odmlib.egg-info/
+docs/build/
+
+# Generated example data
 define2-1-to-xlsx/data/*.csv
 define2xls/data/*.csv
-define2-1-to-xlsx/.idea
-xlsx2define2-1/.idea
 xlsx2define2-1/data/t1d*.*
 xlsx2define2-1/data/T1-Dexi*.xlsx
-ct2json/.idea
-ct2odm/.idea
-define2xls/.idea
-get_started/.idea
-merge_odm/.idea
-snippets/.idea
 snippets/data/ODM*.xml
 snippets/data/t1d-define.xml
-notebooks/.idea
-notebooks/.ipynb_checkpoints
-.gitignore.swp

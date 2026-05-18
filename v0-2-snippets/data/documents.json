@@ -1,11 +1,11 @@
 {
-  "datasetJSONCreationDateTime": "2026-05-04T19:11:16.992760+00:00",
+  "datasetJSONCreationDateTime": "2026-05-17T20:12:06.887232+00:00",
   "datasetJSONVersion": "1.1.0",
-  "fileOID": "www.cdisc.org/StudyCDISC01_1/1/Define-XML_2.1.0",
-  "studyOID": "STDY.www.cdisc.org.CDISC01_1",
-  "metaDataVersionOID": "MDV.CDISC01_1.1.SDTMIG.3.1.2.SDTM.1.2_X",
+  "fileOID": "ODM.DEFINE21.d611c8de-4b6f-44ff-ade2-b82a6aab83d1",
+  "studyOID": "ODM.LZZT - NEW.Version1.Design1",
+  "metaDataVersionOID": "MDV.LZZT---NEW",
   "itemGroupOID": "IG.DEFINE.DOCUMENTS",
-  "records": 3,
+  "records": 1,
   "name": "documents",
   "label": "Document References",
   "columns": [
@@ -34,16 +34,6 @@
       "LF.acrf",
       "acrf.pdf",
       "Annotated CRF"
-    ],
-    [
-      "LF.csdrg",
-      "csdrg.pdf",
-      "Reviewers Guide"
-    ],
-    [
-      "LF.ComplexAlgorithms",
-      "complexalgorithms.pdf",
-      "Complex Algorithms"
     ]
   ]
 }
