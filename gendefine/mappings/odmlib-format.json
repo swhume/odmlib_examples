@@ -1,0 +1,181 @@
+{
+  "mapping_version": "1.0",
+  "mapping_name": "odmlib-format",
+  "description": "Mapping for the odmlib-define-metadata.xlsx format used by xlsx2define2-1",
+  "define_version": "2.1",
+  "global_settings": {
+    "language": "en",
+    "default_purpose": "Tabulation",
+    "annotated_crf_leaf_id": "LF.acrf",
+    "oid_generation_strategy": "column"
+  },
+  "worksheets": {
+    "Study": {
+      "target": "study_metadata",
+      "format": "attribute_value",
+      "column_map": {
+        "StudyName": { "maps_to": "StudyName" },
+        "StudyDescription": { "maps_to": "StudyDescription" },
+        "ProtocolName": { "maps_to": "ProtocolName" },
+        "Language": { "maps_to": "Language" },
+        "Annotated CRF": { "maps_to": "AnnotatedCRF" }
+      }
+    },
+    "Standards": {
+      "target": "Standard",
+      "format": "tabular",
+      "column_map": {
+        "OID": { "maps_to": "_oid", "oid_source": "column" },
+        "Name": { "maps_to": "Name" },
+        "Type": { "maps_to": "Type" },
+        "Publishing Set": { "maps_to": "PublishingSet", "optional": true },
+        "Version": { "maps_to": "Version" },
+        "Status": { "maps_to": "Status" },
+        "Comment": { "maps_to": "CommentOID", "optional": true }
+      }
+    },
+    "Datasets": {
+      "target": "ItemGroupDef",
+      "format": "tabular",
+      "column_map": {
+        "OID": { "maps_to": "_oid", "oid_source": "column" },
+        "Dataset": { "maps_to": "Name", "also": ["Domain", "SASDatasetName"] },
+        "Description": { "maps_to": "Description" },
+        "Class": { "maps_to": "Class", "optional": true },
+        "Structure": { "maps_to": "Structure" },
+        "Purpose": { "maps_to": "Purpose" },
+        "Repeating": { "maps_to": "Repeating" },
+        "Reference Data": { "maps_to": "IsReferenceData" },
+        "Comment": { "maps_to": "CommentOID", "optional": true },
+        "IsNonStandard": { "maps_to": "IsNonStandard", "optional": true },
+        "StandardOID": { "maps_to": "StandardOID", "optional": true },
+        "HasNoData": { "maps_to": "HasNoData", "optional": true }
+      }
+    },
+    "Variables": {
+      "target": ["ItemDef", "ItemRef"],
+      "format": "tabular",
+      "column_map": {
+        "OID": { "maps_to": "_oid", "oid_source": "column" },
+        "Order": { "maps_to": "OrderNumber", "type": "integer", "optional": true },
+        "Dataset": { "maps_to": "_dataset", "oid_role": "parent_lookup" },
+        "Variable": { "maps_to": "Name", "also": "SASFieldName" },
+        "Label": { "maps_to": "Description" },
+        "Data Type": { "maps_to": "DataType" },
+        "Length": { "maps_to": "Length", "optional": true },
+        "Significant Digits": { "maps_to": "SignificantDigits", "optional": true },
+        "Format": { "maps_to": "DisplayFormat", "optional": true },
+        "KeySequence": { "maps_to": "KeySequence", "type": "integer", "optional": true },
+        "Mandatory": { "maps_to": "Mandatory" },
+        "CodeList": { "maps_to": "CodeListOID", "optional": true },
+        "Valuelist": { "maps_to": "ValueListOID", "optional": true },
+        "Origin Type": { "maps_to": "OriginType", "optional": true },
+        "Origin Source": { "maps_to": "OriginSource", "optional": true },
+        "Pages": { "maps_to": "Pages", "optional": true },
+        "Method": { "maps_to": "MethodOID", "optional": true },
+        "Predecessor": { "maps_to": "Predecessor", "optional": true },
+        "Role": { "maps_to": "Role", "optional": true },
+        "Comment": { "maps_to": "CommentOID", "optional": true },
+        "IsNonStandard": { "maps_to": "IsNonStandard", "optional": true },
+        "HasNoData": { "maps_to": "HasNoData", "optional": true }
+      }
+    },
+    "ValueLevel": {
+      "target": ["ValueListDef", "ItemDef", "ItemRef"],
+      "format": "tabular",
+      "column_map": {
+        "OID": { "maps_to": "_vl_oid", "oid_source": "column" },
+        "Order": { "maps_to": "OrderNumber", "type": "integer" },
+        "Dataset": { "maps_to": "_dataset" },
+        "Variable": { "maps_to": "Name" },
+        "ItemOID": { "maps_to": "_item_oid", "oid_source": "column" },
+        "Where Clause": { "maps_to": "WhereClauseOID" },
+        "Data Type": { "maps_to": "DataType" },
+        "Length": { "maps_to": "Length", "optional": true },
+        "Significant Digits": { "maps_to": "SignificantDigits", "optional": true },
+        "Format": { "maps_to": "DisplayFormat", "optional": true },
+        "Mandatory": { "maps_to": "Mandatory" },
+        "Codelist": { "maps_to": "CodeListOID", "optional": true },
+        "Origin Type": { "maps_to": "OriginType", "optional": true },
+        "Origin Source": { "maps_to": "OriginSource", "optional": true },
+        "Pages": { "maps_to": "Pages", "optional": true },
+        "Method": { "maps_to": "MethodOID", "optional": true },
+        "Predecessor": { "maps_to": "Predecessor", "optional": true },
+        "Comment": { "maps_to": "CommentOID", "optional": true }
+      }
+    },
+    "WhereClauses": {
+      "target": "WhereClauseDef",
+      "format": "tabular",
+      "column_map": {
+        "OID": { "maps_to": "_oid", "oid_source": "column" },
+        "Dataset": { "maps_to": "Dataset" },
+        "Variable": { "maps_to": "Variable" },
+        "Comparator": { "maps_to": "Comparator" },
+        "Value": { "maps_to": "Value" },
+        "Comment": { "maps_to": "CommentOID", "optional": true }
+      }
+    },
+    "CodeLists": {
+      "target": "CodeList",
+      "format": "tabular",
+      "column_map": {
+        "OID": { "maps_to": "_oid", "oid_source": "column" },
+        "Name": { "maps_to": "Name" },
+        "NCI Codelist Code": { "maps_to": "NCICodelistCode", "optional": true },
+        "Data Type": { "maps_to": "DataType" },
+        "Order": { "maps_to": "OrderNumber", "optional": true },
+        "Term": { "maps_to": "Term" },
+        "NCI Term Code": { "maps_to": "NCITermCode", "optional": true },
+        "Decoded Value": { "maps_to": "DecodedValue", "optional": true },
+        "Comment": { "maps_to": "CommentOID", "optional": true },
+        "IsNonStandard": { "maps_to": "IsNonStandard", "optional": true },
+        "StandardOID": { "maps_to": "StandardOID", "optional": true }
+      }
+    },
+    "Dictionaries": {
+      "target": "CodeList",
+      "format": "tabular",
+      "column_map": {
+        "OID": { "maps_to": "_oid", "oid_source": "column" },
+        "Name": { "maps_to": "Name" },
+        "Data Type": { "maps_to": "DataType" },
+        "Dictionary": { "maps_to": "Dictionary" },
+        "Version": { "maps_to": "Version", "optional": true }
+      }
+    },
+    "Methods": {
+      "target": "MethodDef",
+      "format": "tabular",
+      "column_map": {
+        "OID": { "maps_to": "_oid", "oid_source": "column" },
+        "Name": { "maps_to": "Name" },
+        "Type": { "maps_to": "Type" },
+        "Description": { "maps_to": "Description" },
+        "Expression Context": { "maps_to": "ExpressionContext", "optional": true },
+        "Expression Code": { "maps_to": "ExpressionCode", "optional": true },
+        "Document": { "maps_to": "Document", "optional": true },
+        "Pages": { "maps_to": "Pages", "optional": true }
+      }
+    },
+    "Comments": {
+      "target": "CommentDef",
+      "format": "tabular",
+      "column_map": {
+        "OID": { "maps_to": "_oid", "oid_source": "column" },
+        "Description": { "maps_to": "Description" },
+        "Document": { "maps_to": "Document", "optional": true },
+        "Pages": { "maps_to": "Pages", "optional": true }
+      }
+    },
+    "Documents": {
+      "target": "leaf",
+      "format": "tabular",
+      "column_map": {
+        "ID": { "maps_to": "_id" },
+        "Title": { "maps_to": "Title" },
+        "Href": { "maps_to": "Href" }
+      }
+    }
+  }
+}

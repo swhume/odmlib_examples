@@ -1,0 +1,3 @@
+OID,Name,Data Type,Dictionary,Version
+CL.MEDDRA_SponsorVD1,MEDDRA,text,Adverse Event Dictionary,20.0
+CL.MEDDRA_SponsorNumVD1,MEDDRA,decimal,Adverse Event Dictionary,20.0

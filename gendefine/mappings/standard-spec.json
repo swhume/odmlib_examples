@@ -1,0 +1,160 @@
+{
+  "mapping_version": "1.0",
+  "mapping_name": "standard-spec",
+  "description": "Mapping for the Standard-Spec.xlsx format with pattern-based OID generation",
+  "define_version": "2.1",
+  "global_settings": {
+    "language": "en",
+    "default_purpose": "Tabulation",
+    "annotated_crf_leaf_id": "LF.acrf",
+    "oid_generation_strategy": "pattern",
+    "where_clause_source": "inline"
+  },
+  "worksheets": {
+    "Standard": {
+      "target": "study_metadata",
+      "format": "attribute_value",
+      "column_map": {
+        "StudyName": { "maps_to": "StudyName" },
+        "StudyDescription": { "maps_to": "StudyDescription" },
+        "ProtocolName": { "maps_to": "ProtocolName" },
+        "StandardName": { "maps_to": "StandardName" },
+        "StandardVersion": { "maps_to": "StandardVersion" }
+      }
+    },
+    "Datasets": {
+      "target": "ItemGroupDef",
+      "format": "tabular",
+      "column_map": {
+        "Dataset": { "maps_to": "Name", "also": ["Domain", "SASDatasetName"] },
+        "Description": { "maps_to": "Description" },
+        "Class": { "maps_to": "Class" },
+        "Subclass": { "maps_to": "SubClass", "optional": true },
+        "Structure": { "maps_to": "Structure" },
+        "Repeating": { "maps_to": "Repeating" },
+        "Reference Data": { "maps_to": "IsReferenceData" },
+        "Key Variables": { "maps_to": "_key_variables", "processing": "parse_key_sequence", "optional": true },
+        "Comment": { "maps_to": "CommentOID", "optional": true },
+        "StandardOID": { "maps_to": "StandardOID", "optional": true }
+      },
+      "oid_pattern": "IG.{Dataset}"
+    },
+    "Variables": {
+      "target": ["ItemDef", "ItemRef"],
+      "format": "tabular",
+      "column_map": {
+        "Order": { "maps_to": "OrderNumber", "type": "integer" },
+        "Dataset": { "maps_to": "_dataset", "oid_role": "parent_lookup" },
+        "Variable": { "maps_to": "Name", "also": "SASFieldName" },
+        "Label": { "maps_to": "Description" },
+        "Data Type": { "maps_to": "DataType" },
+        "Length": { "maps_to": "Length", "optional": true },
+        "Significant Digits": { "maps_to": "SignificantDigits", "optional": true },
+        "Format": { "maps_to": "DisplayFormat", "optional": true },
+        "Core": { "maps_to": "Mandatory", "processing": "core_to_mandatory" },
+        "Codelist": { "maps_to": "CodeListOID", "optional": true },
+        "Valuelist": { "maps_to": "ValueListOID", "optional": true },
+        "Origin Type": { "maps_to": "OriginType", "optional": true },
+        "Origin Source": { "maps_to": "OriginSource", "optional": true },
+        "Pages": { "maps_to": "Pages", "optional": true },
+        "Method": { "maps_to": "MethodOID", "optional": true },
+        "Predecessor": { "maps_to": "Predecessor", "optional": true },
+        "Role": { "maps_to": "Role", "optional": true },
+        "Comment": { "maps_to": "CommentOID", "optional": true },
+        "IsNonStandard": { "maps_to": "IsNonStandard", "optional": true },
+        "HasNoData": { "maps_to": "HasNoData", "optional": true },
+        "Developer Notes": { "ignore_for_define": true },
+        "Variant": { "ignore_for_define": true }
+      },
+      "oid_pattern": "IT.{Dataset}.{Variable}"
+    },
+    "ValueLevel": {
+      "target": ["ValueListDef", "ItemDef", "ItemRef"],
+      "format": "tabular",
+      "column_map": {
+        "Order": { "maps_to": "OrderNumber", "type": "integer" },
+        "Dataset": { "maps_to": "_dataset" },
+        "Variable": { "maps_to": "Name" },
+        "Where Clause": { "maps_to": "_where_clause_expr" },
+        "Data Type": { "maps_to": "DataType" },
+        "Length": { "maps_to": "Length", "optional": true },
+        "Significant Digits": { "maps_to": "SignificantDigits", "optional": true },
+        "Format": { "maps_to": "DisplayFormat", "optional": true },
+        "Core": { "maps_to": "Mandatory", "processing": "core_to_mandatory" },
+        "Codelist": { "maps_to": "CodeListOID", "optional": true },
+        "Origin Type": { "maps_to": "OriginType", "optional": true },
+        "Origin Source": { "maps_to": "OriginSource", "optional": true },
+        "Pages": { "maps_to": "Pages", "optional": true },
+        "Method": { "maps_to": "MethodOID", "optional": true },
+        "Predecessor": { "maps_to": "Predecessor", "optional": true },
+        "Comment": { "maps_to": "CommentOID", "optional": true }
+      },
+      "oid_pattern": "IT.{Dataset}.{Variable}.{WhereClause}"
+    },
+    "Methods": {
+      "target": "MethodDef",
+      "format": "tabular",
+      "column_map": {
+        "Name": { "maps_to": "Name" },
+        "Type": { "maps_to": "Type" },
+        "Description": { "maps_to": "Description" },
+        "Expression Context": { "maps_to": "ExpressionContext", "optional": true },
+        "Expression Code": { "maps_to": "ExpressionCode", "optional": true },
+        "Document": { "maps_to": "Document", "optional": true },
+        "Pages": { "maps_to": "Pages", "optional": true }
+      },
+      "oid_pattern": "MT.{Name}"
+    },
+    "Comments": {
+      "target": "CommentDef",
+      "format": "tabular",
+      "column_map": {
+        "Description": { "maps_to": "Description" },
+        "Document": { "maps_to": "Document", "optional": true },
+        "Pages": { "maps_to": "Pages", "optional": true }
+      },
+      "oid_pattern": "COM.{index}"
+    },
+    "Documents": {
+      "target": "leaf",
+      "format": "tabular",
+      "column_map": {
+        "ID": { "maps_to": "_id" },
+        "Title": { "maps_to": "Title" },
+        "Href": { "maps_to": "Href" }
+      }
+    }
+  },
+  "oid_patterns": {
+    "ItemGroupDef": "IG.{Dataset}",
+    "ItemDef": "IT.{Dataset}.{Variable}",
+    "ValueListDef": "VL.{Dataset}.{Variable}",
+    "WhereClauseDef": "WC.{Dataset}.{Variable}.{Value}",
+    "MethodDef": "MT.{Name}",
+    "CommentDef": "COM.{index}",
+    "CodeList": "CL.{Codelist}",
+    "leaf": "LF.{Dataset}",
+    "Standard": "STD.{index}"
+  },
+  "value_transforms": {
+    "core_to_mandatory": {
+      "type": "lookup",
+      "map": { "Req": "Yes", "Exp": "No", "Perm": "No" },
+      "default": "No"
+    },
+    "parse_key_sequence": {
+      "type": "custom",
+      "handler": "key_variables_to_sequence"
+    }
+  },
+  "defaults": {
+    "Purpose": "Tabulation",
+    "Repeating": "No",
+    "IsReferenceData": "No",
+    "Mandatory": "No",
+    "Language": "en",
+    "DefineVersion": "2.1.0",
+    "StandardType": "IG",
+    "StandardStatus": "Final"
+  }
+}

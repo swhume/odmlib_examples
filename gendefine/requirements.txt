@@ -1,0 +1,3 @@
+odmlib>=0.2.0
+openpyxl>=3.0.9
+jsonschema>=4.0.0

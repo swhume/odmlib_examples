@@ -12,6 +12,13 @@ env/
 .idea/
 .gitignore.swp
 
+# Local tooling
+.claude/
+.pytest_cache/
+
+# Office lock files
+.~lock.*#
+
 # Jupyter
 .ipynb_checkpoints/
 

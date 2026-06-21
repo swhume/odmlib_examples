@@ -1,0 +1,7 @@
+OID,Dataset,Description,Class,Structure,Purpose,Repeating,Reference Data,Comment,IsNonStandard,StandardOID,HasNoData,Date Published,Status
+IG_G_OCCDS_GSKADaMMDES1,G_OCCDS,,,One record per subject per event,Analysis,Yes,,,,,,2025-09-17,Approved
+IG_G_BDS_GSKADaMMDES1,G_BDS,,,One record per subject per parameter per analysis visit,Analysis,Yes,,,,,,2025-09-17,Approved
+IG_ADVS_GSKADaMMDES1,ADVS,,,One record per subject per parameter per analysis visit per timepoint,Analysis,Yes,,,,,,2025-09-17,Approved
+IG_ADSL_GSKADaMMDES1,ADSL,,,One record per subject,Analysis,No,,,,,,2025-09-17,Approved
+IG_ADLB_GSKADaMMDES1,ADLB,,,"One record per subject per parameter per analysis visit, per timepoint and per date",Analysis,Yes,,,,,,2025-09-17,Approved
+IG_ADAE_GSKADaMMDES1,ADAE,,,One record per subject per each adverse event recorded in SDTM AE domain,Analysis,Yes,,,,,,2025-09-17,Approved

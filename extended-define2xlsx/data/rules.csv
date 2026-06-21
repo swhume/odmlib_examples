@@ -1,0 +1,416 @@
+OID,Name,Method
+RULE_TRTP_GSKCOREDRVR1,TRTP,"Study Specific Derivation. Planned treatment attributed to a record for analysis
+                            purposes. If populated, TRTP must match at least one value of the character planned
+                            treatment variables in ADSL (e.g., TRTxxP, TRTSEQP, TRxxPGy).
+                        "
+RULE_TRTA_GSKCOREDRVR1,TRTA,"Study Specific Derivation. Actual treatment attributed to a record for analysis
+                            purposes. If populated, TRTA must match at least one value of the character planned
+                            treatment variables in ADSL (e.g., TRTxxA, TRTSEQA, TRxxAGy).
+                        "
+RULE_TPERIOD_GSKCOREDRVR1,TPERIOD,"Latest value of APERIOD from ADTRT where ADTRT.TRSDT/ADTRT.TRSDTM is on or
+                            before ADT/ADTM/ASTDT/ASTDTM
+                        "
+RULE_APERIOD_GSKCOREDRVR1,APERIOD,"Compare ADT/ASTDT to the series of ADSL.APxxSDT and ADSL.APxxEDT dates to
+                            determine which set of dates it falls between. Set this variable to the corresponding value
+                            of xx from ADSL.TRTxxP variable.
+                        "
+RULE_TPERSTDY_GSKCOREDRVR1,TPERSTDY,"Contains the number of days from the first exposure date in the period that the
+                            spontaneous event occurred (if the exposure date is prior to the spontaneous event date), or
+                            the first exposure date of the previous period (if the exposure date in this period is after
+                            the spontaneous event date) to ASTDT. If value >=0 then add 1.
+                        "
+RULE_TPERENDY_GSKCOREDRVR1,TPERENDY,"Contains the number of days from the first exposure date in the period that the
+                            spontaneous event occurred (if the exposure date is prior to the spontaneous event date), or
+                            the first exposure date of the previous period (if the exposure date in this period is after
+                            the spontaneous event date) to AENDT. If value >=0 then add 1.
+                        "
+RULE_ASTDT_GSKCOREDRVR1,ASTDT,Numeric date part of XX.XXSTDTC
+RULE_ASTTM_GSKCOREDRVR1,ASTTM,Numeric Time part of XX.XXSTDTC
+RULE_ASTDTM_GSKCOREDRVR1,ASTDTM,Numeric Date/time part of XX.XXSTDTC
+RULE_ASTDY_GSKCOREDRVR1,ASTDY,ASTDT - ADSL.TRTSDT. If value >=0 then add 1.
+RULE_AENDT_GSKCOREDRVR1,AENDT,Numeric date part of XX.XXENDTC
+RULE_AENTM_GSKCOREDRVR1,AENTM,Numeric Time part of XX.XXENDTC
+RULE_AENDTM_GSKCOREDRVR1,AENDTM,Numeric Date/time part of XX.XXENDTC
+RULE_AENDY_GSKCOREDRVR1,AENDY,AENDT - ADSL.TRTSDT. If value >=0 then add 1.
+RULE_APHASE_GSKCOREDRVR1,APHASE,Study Specific Definition
+RULE_CHGCA1CD_GSKCOREDRVR1,CHGCA1CD,"[Study specific] See SAP for high and low ranges. If CHG<LOW RANGE VALUE then
+                            set to 'L'. If CHG> HIGH RANGE VALUE then set to 'H'. If LOW RANGE VALUE<=CHG<=
+                            HIGH RANGE VALUE then set to 'I'. If CHG is missing and ""DURING TREATMENT"" (defined per SAP)
+                            then set to 'U'. If ABLFL='Y' then set to 'P'. If ABLFL = 'Y' and ""PRE TREATMENT"" (Defined
+                            per SAP) then set to 'R'. When high/low ranges are not provided then set to 'N'. If
+                            Upper/Lower Increases/Decreases are defined compare CHG to these values to determine if they
+                            meet this criteria and set CHGCA1CD values per controlled term
+                        "
+RULE_APERADY_GSKCOREDRVR1,APERADY,"Contains the number of days from the first exposure date in the period that the
+                            planned event occurred to date in the period that the planned event occurred to ADT. If
+                            value >=0 then add 1.
+                        "
+RULE_ADT_GSKCOREDRVR1,ADT,Numeric Date part of XX.XXDTC
+RULE_ATM_GSKCOREDRVR1,ATM,Numeric Time part of XX.XXDTC
+RULE_ADTM_GSKCOREDRVR1,ADTM,Numeric Datetime part of XX.XXDTC
+RULE_ADY_GSKCOREDRVR1,ADY,"If ADT>=ADSL.TRTSDT then ADT-ADSL.TRTSDT+1, else ADT-ADSL.TRTSDTStudy
+                            Specific Definition. Reference date not necessarily TRTSDT
+                        "
+RULE_CHG_GSKCOREDRVR1,CHG,"Set to blank if AVAL or BASE are missing; If AVAL and BASE are not missing and
+                            ABLFL ne 'Y' then set to AVAL - BASE; Computed for post baseline observations only.
+                        "
+RULE_PCHG_GSKCOREDRVR1,PCHG,((AVAL - BASE) / BASE) * 100
+RULE_ASEQ_GSKCOREDRVR1,ASEQ,"Sort by variables specified in Dataset Key Variables and number ascending within
+                            each subject.
+                        "
+RULE_ASPER_GSKCOREDRVR1,ASPER,"The numeric value characterising a sublevel within APERIOD to which the record
+                            belongs. Within each APERIOD, the first ASPER is 1 (i.e., it resets to 1 when the APERIOD
+                            value changes).
+                        "
+RULE_ADVS_ANRINDCD_GSKCOREDRVR1,ADVS_ANRINDCD,"If AVAL<ANRLO then set to 'L'. If AVAL>ANRHI then set to 'H'. If ANRLO and
+                            ANRHI missing then set to 'N'. If AVAL missing, ANRLO and ANRHI present then set to 'U'. If
+                            ANRLO<=AVAL<=ANRHI then set to 'I'.
+                        "
+RULE_B2IND_GSKCOREDRVR1,B2IND,CHGCAT1 where ABLFL='Y'
+RULE_BASE_GSKCOREDRVR1,BASE,"Equals to ADVS.AVAL when ADVS.ABLFL = ""Y"" retained across all observations
+                            within a given USUBJID/PARAMCD
+                        "
+RULE_ADVS_SHIFT2N_GSKCOREDRVR1,ADVS_SHIFT2N,"Derive for post-baseline ATOXGRN values. If BTOXGRN is missing assume is it 0.
+                            If ATOXGRN = 1 and BTOXGRN < ATOXGRN then SHIFT2N=1 (""Increase to Grade 1""). If ATOXGRN =
+                            2 and BTOXGRN < ATOXGRN then SHIFT2N=2 (""Increase to Grade 2""). If ATOXGRN = 3 and
+                            BTOXGRN < ATOXGRN then SHIFT2N=3 (""Increase to Grade 3"").
+                        "
+RULE_ADVS_SHIFT1N_GSKCOREDRVR1,ADVS_SHIFT1N,"For each post-baseline records, compare A1INDCD to the A1INDCD value at
+                            baseline. If baseline record has A1INDCD in (""I"" or ""H"") and post-baseline record has
+                            A1INDCD=""L"", set SHIFT1N=1. Else if baseline record has A1INDCD in (""L'"" or ""I"") and
+                            post-baseline record has A1INDCD=""H"", set SHIFT1N=3. Else if baseline record has A1INDCD in
+                            (""L'"" or ""H"") and post-baseline record has A1INDCD=""I"" or A1INDCD at baseline equals the
+                            post-baseline A1INDCD value , set SHIFT1N=2
+                        "
+RULE_ADVS_SHIFT3N_GSKCOREDRVR1,ADVS_SHIFT3N,"Derive for post-baseline values.If SHIFT2N contains 1 2 or 3 then SHIFT3N = 1
+                        "
+RULE_ADVS_SHIFT4N_GSKCOREDRVR1,ADVS_SHIFT4N,"Derive for post-baseline values. If SHIFT2N contains 2 or 3 then SHIFT4N = 1
+                        "
+RULE_B1IND_GSKCOREDRVR1,B1IND,A1IND where ABLFL='Y'
+RULE_ABLFL_GSKCOREDRVR1,ABLFL,[Study specific]
+RULE_APBLFL_GSKCOREDRVR1,APBLFL,Flags all post-baseline records
+RULE_ANL61FL_GSKCOREDRVR1,ANL61FL,"Flags worst case post-baseline (absolute shift) for Normal or PCI ranges
+                        "
+RULE_ANL62FL_GSKCOREDRVR1,ANL62FL,"Flags worst case post-baseline (change from baseline) for Normal or PCI ranges
+                        "
+RULE_ANL63FL_GSKCOREDRVR1,ANL63FL,Flags worst case maximum grade post-baseline
+RULE_ANL71FL_GSKCOREDRVR1,ANL71FL,"If CHGCA1CD equal H or L then all subjects records flagged Y else blank.
+                        "
+RULE_ANL72FL_GSKCOREDRVR1,ANL72FL,"If A1INDCD equal H or L then all subjects records flagged Y else blank.
+                        "
+RULE_ANL81FL_GSKCOREDRVR1,ANL81FL,"Flags records with any AVAL or CHG value outside normal range or PCI values
+                        "
+RULE_A1INDCD_GSKCOREDRVR1,A1INDCD,"If AVAL<A1LO then set to 'L'. If AVAL>A1HI then setto 'H', if A1LO and
+                            A1HI missing then set to 'N'. IfAVAL missing, A1LO and A1HI present then set to 'U'.If A1LO<AVAL<A1HI
+                            then set to 'I'.
+                        "
+RULE_ADVS_CHGCA1CD_GSKCOREDRVR1,ADVS_CHGCA1CD,"[Study specific] See SAP for high and low ranges. If CHG<LOW RANGE VALUE then
+                            set to 'L'. If CHG> HIGH RANGE VALUE then set to 'H'. If LOW RANGE VALUE<=CHG<=
+                            HIGH RANGE VALUE then set to 'I'. If CHG is missing and ""DURING TREATMENT"" (defined per SAP)
+                            then set to 'U'. If ABLFL='Y' then set to 'P'. If ABLFL = 'Y' and ""PRE TREATMENT"" (Defined
+                            per SAP) then set to 'R'. When high/low ranges are not provided then set to 'N'. If
+                            Upper/Lower Increases/Decreases are defined compare CHG to these values to determine if they
+                            meet this criteria and set CHGCA1CD values per controlled term
+                        "
+RULE_ADVS_ATOXGR_GSKCOREDRVR1,ADVS_ATOXGR,"[Study specific] Toxicity grade of AVAL for analysis. For example, for Systolic
+                            blood pressure grades may be assigned based on the following AVAL ranges; Grade 0 (<120),
+                            Grade 1 (120-139), Grade 2 (140-159), Grade 3 (>=160). Diastolic blood pressure grades
+                            may be assigned based on the following AVAL ranges; Grade 0 (<80), Grade 1 (80-89), Grade
+                            2 (90-99), Grade 3 (>=100).
+                        "
+RULE_ADVS_BTOXGR_GSKCOREDRVR1,ADVS_BTOXGR,"ATOXGR when ABLFL=""Y"". One value per Subject (SUBJID) and Parameter (PARAMCD).
+                            Populate as a constant across all rows within that Subject and Parameter.
+                        "
+RULE_DTHDTF_GSKCOREDRVR1,DTHDTF,"DTHDTF = Y if the year is imputed. DTHDTF = M if year is present and month is
+                            imputed. DTHDTF = D if only day is imputed.
+                        "
+RULE_ARACEDET_GSKCOREDRVR1,ARACEDET,"If RACE or RACEN = WHITE or ASIAN, ARACEDET=RACEOR or concatenation of RACEORn
+                            (separated by semi-colon) depending on number of detailed categories selected.If
+                            RACE=MULTIPLE then ARACE=concatenation of RACEn variables separated by semi-colons. If RACEn
+                            is either WHITE or ASIAN, replace RACEn in concatenation with RACEORn information.
+                        "
+RULE_HBVBL_GSKANTI-VIRALSDRVR1,HBVBL,Refer to SAP
+RULE_HCVBL_GSKANTI-VIRALSDRVR1,HCVBL,Refer to SAP
+RULE_HBCVBL_GSKANTI-VIRALSDRVR1,HBCVBL,Refer to SAP
+RULE_ASTRATUM_GSKANTI-VIRALSDRVR1,ASTRATUM,Refer to SAP
+RULE_REGION1_GSKCORE-VXDRVR1,REGION1,Study specific definition. Group countries in to regions
+RULE_SITEINV_GSKCORE-VXDRVR1,SITEINV,"Create the site identification in the format 'Site#-Investigator name': Equals
+                            to DM.SITEID concatenated with ""-"" concatenated with DM.INVNAM
+                        "
+RULE_AAGE1U_GSKCOREDRVR1,AAGE1U,"Set equal to ""YEARS"" where AAGE1 is not blank"
+RULE_AAGE2U_GSKCOREDRVR1,AAGE2U,"Set equal to ""YEARS"" where AAGE2 is not blank"
+RULE_VLL10BL_GSKANTI-VIRALSDRVR1,VLL10BL,Log of VLBL
+RULE_VLL10SC_GSKANTI-VIRALSDRVR1,VLL10SC,Log of VLSC
+RULE_CD4L10BL_GSKANTI-VIRALSDRVR1,CD4L10BL,Log of CD4BL
+RULE_CD4PCTBL_GSKANTI-VIRALSDRVR1,CD4PCTBL,Last CD4 Percentage before trt started
+RULE_CD4CD8BL_GSKANTI-VIRALSDRVR1,CD4CD8BL,Last Ratio of CD4 to CD8 before trt started
+RULE_TR01PG1N_GSKCOREDRVR1,TR01PG1N,Study specific definition
+RULE_TR01AG1N_GSKCOREDRVR1,TR01AG1N,Study specific definition
+RULE_TR01SDT_GSKCOREDRVR1,TR01SDT,Numeric date part of the earliest EX.EXSTDTC in period 01
+RULE_TR01STM_GSKCOREDRVR1,TR01STM,Numeric time part of the earliest EX.EXSTDTC in period 01
+RULE_TR01SDTM_GSKCOREDRVR1,TR01SDTM,Numeric datetime part of the earliest EX.EXSTDTC in period 01
+RULE_TR01EDT_GSKCOREDRVR1,TR01EDT,Numeric date part of the latest EX.EXENDTC in period 01
+RULE_TR01ETM_GSKCOREDRVR1,TR01ETM,Numeric time part of the latest EX.EXENDTC in period 01
+RULE_TR01EDTM_GSKCOREDRVR1,TR01EDTM,Numeric datetime part of the latest EX.EXENDTC in period 01
+RULE_AP01SDT_GSKCOREDRVR1,AP01SDT,The starting date of period 01
+RULE_AP01STM_GSKCOREDRVR1,AP01STM,The starting time of period 01
+RULE_AP01SDTM_GSKCOREDRVR1,AP01SDTM,The starting datetime of period 01
+RULE_AP01EDT_GSKCOREDRVR1,AP01EDT,The ending date of period 01
+RULE_AP01ETM_GSKCOREDRVR1,AP01ETM,The ending time of period 01
+RULE_AP01EDTM_GSKCOREDRVR1,AP01EDTM,The ending datetime of period 01
+RULE_PH1SDT_GSKCOREDRVR1,PH1SDT,The starting date of phase 1
+RULE_PH1STM_GSKCOREDRVR1,PH1STM,The starting time of phase 1
+RULE_PH1SDTM_GSKCOREDRVR1,PH1SDTM,The starting datetime of phase 1
+RULE_PH1EDT_GSKCOREDRVR1,PH1EDT,The ending date of phase 1
+RULE_PH1ETM_GSKCOREDRVR1,PH1ETM,The ending time of phase 1
+RULE_PH1EDTM_GSKCOREDRVR1,PH1EDTM,The ending datetime of phase 1
+RULE_RANDDT_GSKCOREDRVR1,RANDDT,Numeric date part of DS.DSSTDTC where DSTERM='Randomised'
+RULE_TRTSDT_GSKCOREDRVR1,TRTSDT,Numeric date part of the earliest EX.EXSTDTC
+RULE_TRTSTM_GSKCOREDRVR1,TRTSTM,Numeric time part of the earliest EX.EXSTDTC
+RULE_TRTSDTM_GSKCOREDRVR1,TRTSDTM,Numeric datetime part of the earliest EX.EXSTDTC
+RULE_TRTEDT_GSKCOREDRVR1,TRTEDT,Numeric date part of the latest EX.EXENDTC
+RULE_TRTETM_GSKCOREDRVR1,TRTETM,Numeric time part of the latest EX.EXENDTC
+RULE_TRTEDTM_GSKCOREDRVR1,TRTEDTM,Numeric datetime part of the latest EX.EXENDTC
+RULE_DTHDT_GSKCOREDRVR1,DTHDT,Numeric date part of DM.DTHDTC
+RULE_SCRDT_GSKCOREDRVR1,SCRDT,"Numeric date part of DS.DSSTDTC where DSTERM='ENTERED INTO TRIAL'
+                        "
+RULE_FSTCTDT_GSKCOREDRVR1,FSTCTDT,"Numeric date part of the first date of the subject participation in the study.
+                        "
+RULE_LSTCTDT_GSKCOREDRVR1,LSTCTDT,"Numeric date part of the last date of the subject participation in the study.
+                            Please refer to study SAP, OPS or TA standards for more information.
+                        "
+RULE_BRTHDT_GSKCOREDRVR1,BRTHDT,Numeric date part of DM.BRTHDTC
+RULE_VLBL_GSKANTI-VIRALSDRVR1,VLBL,Last viral load value before trt started
+RULE_VLSC_GSKANTI-VIRALSDRVR1,VLSC,Last viral load value at screening
+RULE_CD4BL_GSKANTI-VIRALSDRVR1,CD4BL,Last CD4 value before treatment started
+RULE_CD4SC_GSKANTI-VIRALSDRVR1,CD4SC,Last CD4 value at screening
+RULE_HBVDT_GSKANTI-VIRALSDRVR1,HBVDT,Date where HBVBL was collected
+RULE_HBVCODT_GSKANTI-VIRALSDRVR1,HBVCODT,Date where HBV co-infection was collected
+RULE_HCVDT_GSKANTI-VIRALSDRVR1,HCVDT,Date where HCVBL was collected
+RULE_HCVCODT_GSKANTI-VIRALSDRVR1,HCVCODT,Date where HCV co-infection was collected
+RULE_AAGE1_GSKCOREDRVR1,AAGE1,"Calculated age in human years at informed consent (i.e. taking into account leap
+                            years)
+                        "
+RULE_AAGE2_GSKCOREDRVR1,AAGE2,"Calculated age in human years at first treatment/vaccine administration (i.e.
+                            taking into account leap years)
+                        "
+RULE_RFICDT_GSKCORE-VXDRVR1,RFICDT,Numeric date part of DM.RFICDTC
+RULE_RFPENDT_GSKCORE-VXDRVR1,RFPENDT,Numeric date part of DM.RFPENDTC
+RULE_ARACE_GSKCOREDRVR1,ARACE,"If DM.RACE=MULTIPLE then ARACE = ""MULTIPLE RACE CATEGORIES"". If DM.RACE =ASIAN
+                            or WHITE, three cases are possible:1) Multiple RACEOR(n) values are selected in which case
+                            ARACE = ""xxx - MULTIPLE HERITAGE CATEGORIES"", where xxx is the respective RACE.2) No
+                            RACEOR(n) value was selected in which case ARACE = ""xxx - NOT REPORTED/OTHER"", where xxx is
+                            the respective RACE.3) One RACEOR value was selected in which case ARACE = RACEOR.Otherwise
+                            ARACE = RACE.
+                        "
+RULE_AGEGR2_GSKCOREDRVR1,AGEGR2,"Age group classification according to FDA categories. Derived from ADSL.AAGE2.
+                        "
+RULE_TR01SDTF_GSKCOREDRVR1,TR01SDTF,"TR01SDTF = Y if the year is imputed. TR01SDTF = M if year is present and month
+                            is imputed. TR01SDTF = D if only day is imputed.
+                        "
+RULE_TR01EDTF_GSKCOREDRVR1,TR01EDTF,"TR01EDTF = Y if the year is imputed. TR01EDTF = M if year is present and month
+                            is imputed. TR01EDTF = D if only day is imputed.
+                        "
+RULE_AP01SDTF_GSKCOREDRVR1,AP01SDTF,"AP01SDTF = Y if the year is imputed. AP01SDTF = M if year is present and month
+                            is imputed. AP01SDTF = D if only day is imputed.
+                        "
+RULE_AP01EDTF_GSKCOREDRVR1,AP01EDTF,"AP01EDTF = Y if the year is imputed. AP01EDTF = M if year is present and month
+                            is imputed. AP01EDTF = D if only day is imputed.
+                        "
+RULE_TRTSDTF_GSKCOREDRVR1,TRTSDTF,"TRTSDTF = Y if the year is imputed. TRTSDTF = M if year is present and month is
+                            imputed. TRTSDTF = D if only day is imputed.
+                        "
+RULE_TRTEDTF_GSKCOREDRVR1,TRTEDTF,"TRTEDTF = Y if the year is imputed. TRTEDTF = M if year is present and month is
+                            imputed. TRTEDTF = D if only day is imputed.
+                        "
+RULE_BRTHDTF_GSKCOREDRVR1,BRTHDTF,"BRTHDTF = Y if the year is imputed. BRTHDTF = M if year is present and month is
+                            imputed. BRTHDTF = D if only day is imputed.
+                        "
+RULE_RFPENDTF_GSKCORE-VXDRVR1,RFPENDTF,"RFPENDTF = Y if the year is imputed. RFPENDTF = M if year is present and month
+                            is imputed. RFPENDTF = D if only day is imputed.
+                        "
+RULE_DTHWLTF_GSKCOREDRVR1,DTHWLTF,"Set to ""Y"" when ADSL.DTHDT>=ADSL.TRTEDT and 0 <= ADSL.DTHDT- ADSL.TRTEDT
+                            <= 30
+                        "
+RULE_DTHALTF_GSKCOREDRVR1,DTHALTF,ADSL_DTHALTF
+RULE_DTHWFTF_GSKONCOLOGYDRVR1,DTHWFTF,"Set to ""Y"" when ADSL.DTHDT>=ADSL.TRTSDT and 0 <= ADSL.DTHDT- ADSL.TRTSDT
+                            <= 30
+                        "
+RULE_TR01STMF_GSKCOREDRVR1,TR01STMF,"TR01STMF= H if the entire time is imputed. TR01STMF = M if minutes and seconds
+                            are imputed. TR01STMF = S if only seconds are imputed.
+                        "
+RULE_TR01ETMF_GSKCOREDRVR1,TR01ETMF,"TR01ETMF= H if the entire time is imputed. TR01ETMF = M if minutes and seconds
+                            are imputed. TR01ETMF = S if only seconds are imputed.
+                        "
+RULE_AP01STMF_GSKCOREDRVR1,AP01STMF,"AP01STMF= H if the entire time is imputed. AP01STMF= M if minutes and seconds
+                            are imputed. AP01STMF = S if only seconds are imputed.
+                        "
+RULE_AP01ETMF_GSKCOREDRVR1,AP01ETMF,"AP01ETMF= H if the entire time is imputed. AP01ETMF= M if minutes and seconds
+                            are imputed. AP01ETMF = S if only seconds are imputed.
+                        "
+RULE_TRTSTMF_GSKCOREDRVR1,TRTSTMF,"TRTSTMF= H if the entire time is imputed. TRTSTMF = M if minutes and seconds are
+                            imputed. TRTSTMF = S if only seconds are imputed.
+                        "
+RULE_TRTETMF_GSKCOREDRVR1,TRTETMF,"TRTETMF= H if the entire time is imputed. TRTETMF = M if minutes and seconds are
+                            imputed. TRTETMF = S if only seconds are imputed.
+                        "
+RULE_R2ANRLO_GSKCORE-RXDRVR1,R2ANRLO,AVAL/ANRLO
+RULE_R2ANRHI_GSKCORE-RXDRVR1,R2ANRHI,AVAL/ANRHI
+RULE_ADLB_SHIFT1_GSKCORE-RXDRVR1,ADLB_SHIFT1,"SHIFT1=""To Normal or No Change"" if A1IND=B1IND or UPCASE(A1IND)=""NORMAL"" ; else
+                            SHIFT1=""To Low"" ; if UPCASE(A1IND)=""LOW""; else SHIFT1=""To High"" if UPCASE(A1IND)=""HIGH""
+                        "
+RULE_ADLB_SHIFT2_GSKCORE-RXDRVR1,ADLB_SHIFT2,"Derive for post-baseline ATOXGRN values. If BTOXGRN is missing assume is it 0.
+                            If ATOXGRN = 1 and BTOXGRN < ATOXGRN then SHIFT2=""Increase to Grade 1"". If ATOXGRN = 2
+                            and BTOXGRN < ATOXGRN then SHIFT2=""Increase to Grade 2"". If ATOXGRN = 3 and BTOXGRN <
+                            ATOXGRN then SHIFT2=""Increase to Grade 3"". If ATOXGRN = 4 and BTOXGRN < ATOXGRN then
+                            SHIFT2=""Increase to Grade 4"".
+                        "
+RULE_ADLB_SHIFT4_GSKCORE-RXDRVR1,ADLB_SHIFT4,"Derive for post-baseline ATOXGRLN values. If BTOXGRLN is missing assume is it 0.
+                            If ATOXGRLN = 1 and BTOXGRLN < ATOXGRLN then SHIFT2=""Increase to Grade 1"". If ATOXGRLN =
+                            2 and BTOXGRLN < ATOXGRLN then SHIFT2=""Increase to Grade 2"". If ATOXGRLN = 3 and BTOXGRLN
+                            < ATOXGRLN then SHIFT2=""Increase to Grade 3"". If ATOXGRLN = 4 and BTOXGRLN < ATOXGRLN
+                            then SHIFT2=""Increase to Grade 4"".
+                        "
+RULE_ADLB_SHIFT5_GSKCORE-RXDRVR1,ADLB_SHIFT5,"Derive for post-baseline ATOXGRHN values. If BTOXGRHN is missing assume is it 0.
+                            If ATOXGRHN = 1 and BTOXGRHN < ATOXGRHN then SHIFT2=""Increase to Grade 1"". If ATOXGRHN =
+                            2 and BTOXGRHN < ATOXGRHN then SHIFT2=""Increase to Grade 2"". If ATOXGRHN = 3 and BTOXGRHN
+                            < ATOXGRHN then SHIFT2=""Increase to Grade 3"". If ATOXGRHN = 4 and BTOXGRHN < ATOXGRHN
+                            then SHIFT2=""Increase to Grade 4"".
+                        "
+RULE_ADLB_SHIFT3_GSKCORE-RXDRVR1,ADLB_SHIFT3,"SHIFT3=""To Normal or No Change"" if ANRIND=BNRIND or UPCASE(ANRIND)=""NORMAL"" ;
+                            else SHIFT3=""To Low"" ; if UPCASE(ANRIND)=""LOW""; else SHIFT3=""To High"" if
+                            UPCASE(ANRIND)=""HIGH""
+                        "
+RULE_ADLB_ATOXGRN_GSKCOREDRVR1,ADLB_ATOXGRN,"Toxicity grade of AVAL or AVALC for analysis; For RX: may be based on SDTM
+                            --TOXGR or an imputed or assigned value per SAP specification
+                        "
+RULE_ADLB_ANL61FL_GSKCORE-RXDRVR1,ADLB_ANL61FL,"Flags worst case post baseline (absolute shift) for Normal or PCI ranges
+                        "
+RULE_ADLB_ANL62FL_GSKCORE-RXDRVR1,ADLB_ANL62FL,"Flags worst case post baseline (change from baseline) for Normal or PCI ranges
+                            or worst case grade increase post-baseline
+                        "
+RULE_ADLB_ANL63FL_GSKCORE-RXDRVR1,ADLB_ANL63FL,Flags worst case maximum grade post-baseline
+RULE_ADLB_ANL81FL_GSKCORE-RXDRVR1,ADLB_ANL81FL,"Flags records with any AVAL or CHG value outside normal range or PCI values
+                        "
+RULE_ADLB_ATOXGR_GSKCOREDRVR1,ADLB_ATOXGR,"Toxicity grade of AVAL or AVALC for analysis; For Rx :may be based on SDTM
+                            --TOXGR or an imputed or assigned value per SAP specification
+                        "
+RULE_ADAE_AAGE9U_GSKCOREDRVR1,ADAE_AAGE9U,"Set equal to ""YEARS"""
+RULE_ADAE_AESITE_GSKCOREDRVR1,ADAE_AESITE,"SUPPAE.QVAL where SUPPAE.QNAM = ""AESITE"""
+RULE_ADAE_ASITE_GSKCOREDRVR1,ADAE_ASITE,"IF AESITE is not missing then directly copy to ASITE.ELSEassign
+                            ""NON-ADMINISTRATIVE SITE""
+                        "
+RULE_ADAE_AEPCIND_GSKCOREDRVR1,ADAE_AEPCIND,"SUPPAE.QVAL where SUPPAE.QNAM = ""AEPCIND"""
+RULE_ADAE_AERDGCD_GSKCOREDRVR1,ADAE_AERDGCD,"SUPPAE.QVAL where SUPPAE.QNAM = ""AERDGCD"""
+RULE_ADAE_AEPST30M_GSKCOREDRVR1,ADAE_AEPST30M,"SUPPAE.QVAL where SUPPAE.QNAM = ""AEPST30M"""
+RULE_ADAE_AEPIMD_GSKCOREDRVR1,ADAE_AEPIMD,"SUPPAE.QVAL where QNAM = ""AEPIMD"""
+RULE_ADAE_AESI_GSKCOREDRVR1,ADAE_AESI,"SUPPAE.QVAL where QNAM = ""AESI"""
+RULE_ADAE_AEMEDTYP_GSKCOREDRVR1,ADAE_AEMEDTYP,"SUPPAE.QVAL where SUPPAE.QNAM = ""AEMEDTYP"""
+RULE_ADAE_AAEACNOT_GSKCOREDRVR1,ADAE_AAEACNOT,"Check, if there is a related disposition record (DSCAT=""DISPOSITION EVENT"") in
+                            SDTM.DS for a serious adverse event or a non-serious adverse event (see below for logic for
+                            the relation). If additionally the upcased value of ADSL.EOSSTT equals to ""WITHDRAWAL"" then
+                            assign a value of ""WITHDRAWN FROM STUDY"" to AAEACNOT. Otherwise copy value from
+                            AE.AEACNOTH.To check if there is a related record in SDTM.DS use the following logic:1)
+                            Check, if there is a record in SDTM.RELREC, where AE.USUBJID = RELREC.USUBJID and
+                            RELREC.RDOMAIN = ""AE"" and RELREC.RELID begins with ""DS"".For non-serious adverse events note
+                            RELREC.RELID when AE.AESPID equals RELREC.IDVARVAL For serious adverse events note
+                            RELREC.RELID when AE.AEGRPID equals RELREC.IDVARVAL2) Note IDVARVAL for given USUBJID/ RELID
+                            if there is a record in SDTM.RELREC where RDOMAIN equals to ""DS"" 3) Merge on each related
+                            DSTERM where DS.DSSEQ = RELREC.IDVARVAL (onto record identified via the RELREC dataset)4) If
+                            UPCASE(ADSL.EOSSTT) equals ""WITHDRAWAL"" any of the related disposition records
+                            (DSCAT=""DISPOSITION EVEN"") where DS.DSTERM(s) are equal ""SERIOUS ADVERSE EVENT AND/OR PIMD""
+                            or ""NON-SERIOUS ADVERSE EVENT"" are considered to be related to study withdrawal, which
+                            means, that AAEACNOT is set to ""WITHDRAWN FROM STUDY"".
+                        "
+RULE_ADAE_ASPDOSE_GSKCOREDRVR1,ADAE_ASPDOSE,"Assign value 'Dose 1' for ADAE.ASPER = 1, 'Dose 2' for ADAE.ASPER = 2
+                        "
+RULE_ADAE_AAEACN_GSKCOREDRVR1,ADAE_AAEACN,"Combine SDTM.SUPPEC and SDTM.EC by USUBJID and where EC.ECSEQ equals the numeric
+                            version of SUPPEC.IDVARVAL.For non serious AEs:From the combined EC/SUPPEC dataset , extract
+                            SUPPEC.ECREASC and SUPPEC.ECREASCX using following logic:1) if there is a record in RELREC
+                            where AE.USUBJID = RELREC.USUBJID and AE.AESPID = RELREC.IDVARVAL and RELREC.RELID begins
+                            with ""EC"" (WHERE RELREC.RDOMAIN = ""AE"") note the RELID.2) for given USUBJID/ RELID if there
+                            is a record in RELREC where RDOMAIN is ""EC"" (note the IDVARVAL) 3) Merge on SUPPEC. ECREASC
+                            and SUPPEC.ECREASCX where EC.ECSEQ = RELREC.IDVARVAL (onto record identified via the RELREC
+                            dataset)For serious AEs repeat steps 1-3 but use AEGRPID instead of AESPID.If ECREASC is not
+                            missing, then assign the value 'DRUG WITHDRAWN'. Otherwise copy the value from AE.AEACN.
+                        "
+RULE_ADAE_AECREAS_GSKCOREDRVR1,ADAE_AECREAS,"Concatenate the variable values in ECREASC and ECREASCX extracted while deriving
+                            ADAE.AAEACN, by colon separated and assign to AECREAS.
+                        "
+RULE_ADAE_AECREAVS_GSKCOREDRVR1,ADAE_AECREAVS,"1) Merge in the TV.VISIT and TV.VISITDY to the combined EC/SUPPEC dataset by
+                            VISITNUM, and create the variable AECREAVS by concatenating the values in TV.VISIT and
+                            TV.VISITDY by "" DAY "" text separated.2) Follow merging approach outlined in ADAE.AAEACN but
+                            instead merge on AECREAVS variable derived in step 1 above.
+                        "
+RULE_ADAE_AAEACT_GSKCOREDRVR1,ADAE_AAEACT,"Create two temporary variables AAEACTDC and AAEACTEC to derive AAEACT.1)If
+                            UPCASE(ADAE.AAEACN) = ""DRUG WITHDRAWN"" and ADAE.AECREAVS not missing then assign AAEACTEC=
+                            ""DRUG WITHDRAWN DOSE: ""!!STRIP(PUT(ADAE.ASPER+1,BEST.))!!"" AT ""!!STRIP(ADAE.AECREAVS).
+                            Otherwise if UPCASE(ADAE.AAEACN) = ""DRUG WITHDRAWN"" and ADAE.AECREAVS is missing then
+                            AAEACTEC= ""DRUG WITHDRAWN DOSE: ""!!STRIP(PUT(ADAE.ASPER+1,BEST.))!!"", No link with EC
+                            data"".2) If UPCASE(ADAE.AAEACNOT) = ""WITHDRAWN FROM STUDY"" and TV.VISIT not missing THEN
+                            assign AAEACTDC= ""WITHDRAWN FROM STUDY AT: ""!!STRIP(TV.VISIT)!!"" DAY
+                            ""!!STRIP(PUT(TV.VISITDY,BEST.)). Otherwise if ADAE.AAEACNOT = ""WITHDRAWN FROM STUDY"" and
+                            TV.VISIT is missing then assign AAEACTDC= ""WITHDRAWN FROM STUDY, No link with DS data"".If
+                            both the temporary variables derived in the above steps are not missing then concatenate
+                            them by "" / "" separated and assign to AAEACT. Otherwise assign only the non-missing
+                            temporary variable.
+                        "
+RULE_ADAE_APIMD_GSKCOREDRVR1,ADAE_APIMD,"Assign value 'Y' when ADAE.AEPIMD is ""Y"" or if AE.AEPTCD exists in a lookup
+                            table. Otherwise assign 'N'. For the contents of the lookup table see appendix 8.1 in the
+                            ADRG
+                        "
+RULE_ADAE_APIMDSRC_GSKCOREDRVR1,ADAE_APIMDSRC,"Record the source of the derivation of AEPIMD.IF ADAE.AEPIMD IN ('','N') AND
+                            AE.AEPTCD exists in a lookup table. For the contents of the lookup table see appendix 8.1 in
+                            the ADRG THEN apimd_src = 'MedDRA'; ELSE IF ADAE.AEPIMD IN ('NS','S','Y') AND AE.AEPTCD
+                            exists in a lookup table. For the contents of the lookup table see appendix 8.1 in the ADRG
+                            THEN apimd_src = 'MedDRA and investigator'; ELSE IF ADAE.AEPIMD IN ('NS','S','Y') THEN
+                            apimd_src = 'Investigator';
+                        "
+RULE_ADAE_ANL01FL_GSKCOREDRVR1,ADAE_ANL01FL,"Assign to ""Y"" if AE.AECAT not equals ""REACTOGENICITY"" AND AE.AELNKID = """",
+                            means: drop ongoing solicited events from analysis.
+                        "
+RULE_ADAE_AEBODL_GSKCOREDRVR1,ADAE_AEBODL,"Body system concatenated with the MedDRA code: AE.AEBODSYS concatenated with ""(""
+                            concatenated with AEBDSYCD concatenated with "")""
+                        "
+RULE_ADURU_GSKCOREDRVR1,ADURU,"Set equal to ""DAYS"""
+RULE_ADURC_GSKCOREDRVR1,ADURC,ADURN converted to display in days
+RULE_AFTRTSTC_GSKCOREDRVR1,AFTRTSTC,"ASTDT - ADSL.TRTSDT+1 (value should >=1). Can be DateTime for it if needed.
+                        "
+RULE_ALTRTSTC_GSKCOREDRVR1,ALTRTSTC,"ASTDT - most recent dose date (Date component of EX.EXSTDTC for any EX.EXTRT on
+                            or before ASTDT). If ASTDT >= most recent dose date EXSTDTC, then +1 to this calculation.
+                            Can be DateTime for it if needed.
+                        "
+RULE_APFTRSTC_GSKCOREDRVR1,APFTRSTC,"min (ASTDT - ADSL.TR01SDT+1 (value should >=1), ASTDT - ADSL.TR02SDT+1 (value
+                            should >=1) , ... , ASTDT - ADSL.TRXXSDT+1 (value should >=1)). Can be DateTime for it
+                            if needed.
+                        "
+RULE_ADAE_AAGE_GSKCOREDRVR1,ADAE_AAGE,"Calculated age in human years at the start date of the AE (i.e. taking into
+                            account leap years), using SAS function YRDIF applying parameter AGE and taking the integer
+                            value. Derived as the age at the start date of the adverse event:
+                            INT(YRDIF(ADSL.BRTHDT,ADAE.ASTDT,'AGE'));,
+                        "
+RULE_ADAE_ASPDOSEN_GSKCOREDRVR1,ADAE_ASPDOSEN,Derive from ADAE.ASPDOSE using format [EPOCH2I].
+RULE_TPERADY_GSKCOREDRVR1,TPERADY,"Contains the number of days from the first exposure date in the period that the
+                            spontaneous event occurred (if the exposure date is prior to the spontaneous event date), or
+                            the first exposure date of the previous period (if the exposure date in this period is after
+                            the spontaneous event date) to ADT. If value >=0 then add 1.
+                        "
+RULE_ADAE_ASEV_GSKCOREDRVR1,ADAE_ASEV,"The analysis severity is based on the collected severity (AESEV) and if the
+                            collected severity is missing, the severity is imputed from the seriousness (AESER) or if
+                            seriousness is missing, from the action taken or action taken other values:Equals to
+                            ADAE.AESEV if AESEV is not missing; If ADAE.AESEV is missing then if AE.AESER= 'Y' then ASEV
+                            = 'Severe' else if AE.AEACN = 'DOSE NOT CHANGED' and, AEACNOTH = 'NONE' then ASEV = 'Mild'
+                            else ASEV = 'Moderate'
+                        "
+RULE_ADAE_AESEVN_GSKCOREDRVR1,ADAE_AESEVN,Numeric code of ADAE.AESEV
+RULE_ADAE_ASEVN_GSKCOREDRVR1,ADAE_ASEVN,Numeric code of ADAE.ASEV
+RULE_ADAE_TRTEMFL_GSKCOREDRVR1,ADAE_TRTEMFL,"Flag when AE is treatment emergent. Equals to ""Y"" when (ADAE.ASTDT >
+                            ADSL.P01S1SDT or, (ADAE.ASTDT <= ADSL.P01S1SDT and AE.AESTRTPT = ""AFTER"") (ADAE.ASTDT =
+                            ADSL.P01S1SDT and AE.AESTRTPT NE ""BEFORE"" )Equals blank otherwise.
+                        "
+RULE_ADAE_AEOUTN_GSKCOREDRVR1,ADAE_AEOUTN,"Ranking of AE outcome value. Set to numeric value of AEOUT using [AEOUTI]if
+                            AE.AEOUT=""RECOVERED/RESOLVED"" then AEOUTN=1; if AE.AEOUT=""RECOVERING/RESOLVING"" then
+                            AEOUTN=2; if AE.AEOUT=""NOT RECOVERED/NOT RESOLVED"" then AEOUTN=3; if
+                            AE.AEOUT=""RECOVERED/RESOLVED WITH SEQUELAE"" then AEOUTN=4; if AE.AEOUT=""FATAL"" then
+                            AEOUTN=5; if AE.AEOUT = ""UNKNOWN"" then AEOUTN = 6
+                        "
