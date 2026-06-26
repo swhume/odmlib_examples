@@ -30,7 +30,7 @@ EXTRACTORS = {
 define2-1-to-xlsx.py - an example program using odmlib to convert a Define-XML file into a metadata spreadsheet
 ex. cmd-line args: -d ./data/odmlib-roundtrip-define.xml -p ./data/
 ex. cmd-line args: -d ./data/odmlib-roundtrip-define.xml -p ./data/ -v
-    -s "/home/sam/standards/DefineV211/schema/cdisc-define-2.1/define2-1-0.xsd
+    -s /home/sam/standards/define-xml-2-1/schema/cdisc-define-2.1/define2-1-0.xsd
 """
 
 class Define2Xls:
@@ -82,7 +82,7 @@ class DefineValidator:
 
     def validate(self):
         """" execute the schema validation and report the results """
-        validator = P.ODMSchemaValidator(self.schema_file)
+        validator = P.ODMSchemaValidator(self.schema_file, standard="define", version="2.1")
         try:
             validator.validate_file(self.define_file)
             print("define-XML schema validation completed successfully...")

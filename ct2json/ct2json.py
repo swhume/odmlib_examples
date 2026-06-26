@@ -2,7 +2,7 @@ import argparse
 import odmlib.loader as LD
 import odmlib.odm_loader as OL
 import odmlib.odm_parser as P
-import xmlschema as XSD
+from odmlib import OdmlibSchemaValidationError
 import os
 
 CT_SCHEMA = "./schema/controlledterminology1-1-1.xsd"
@@ -12,7 +12,7 @@ ct2json.py - an example program using odmlib to read a CT-XML ODM file and conve
 Command-line examples:
 python ct2json.py -x ./data/sdtm-ct.xml -j ./data/sdtm-ct.json
 python ct2json.py -v -x ./data/sdtm-ct.xml -j ./data/sdtm-ct.json
-python ct2json.py -v -x ./data/sdtm-ct.xml -j ./data/sdtm-ct.json -s "/home/sam/src/ct2json/schema/controlledterminology1-1-1.xsd
+python ct2json.py -v -x ./data/sdtm-ct.xml -j ./data/sdtm-ct.json -s "./schema/controlledterminology1-1-1.xsd
 """
 
 
@@ -42,11 +42,13 @@ class CTValidator:
 
     def validate(self):
         """" execute the schema validation and report the results """
-        validator = P.ODMSchemaValidator(self.schema_file)
+        self._check_file_existence()
+        # CT-XML uses a custom (non-bundled) schema, so pass the XSD path directly.
+        validator = P.ODMSchemaValidator(xsd_file=self.schema_file)
         try:
             validator.validate_file(self.ct_file)
             print("CT-XML schema validation completed successfully...")
-        except XSD.validators.exceptions.XMLSchemaChildrenValidationError as ve:
+        except OdmlibSchemaValidationError as ve:
             print(f"schema validation errors: {ve}")
 
     def _check_file_existence(self):

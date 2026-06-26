@@ -34,7 +34,7 @@ SHEET_LOADERS = {
 Example Cmd-line Args:
     example: -e ./data/odmlib-define-metadata.xlsx -d ./data/odmlib-roundtrip-define.xml
     example: -e ./data/odmlib-define-metadata.xlsx -d ./data/odmlib-roundtrip-define.xml -v
-             -s "/home/sam/standards/DefineV211/schema/cdisc-define-2.1/define2-1-0.xsd
+             -s "/home/sam/standards/define-xml-2-1/schema/cdisc-define-2.1/define2-1-0.xsd
 NOTE: the xlrd library no longer supports .xlsx files and will only work with .xls file
 """
 

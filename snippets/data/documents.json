@@ -1,0 +1,39 @@
+{
+  "datasetJSONCreationDateTime": "2026-05-17T20:12:06.887232+00:00",
+  "datasetJSONVersion": "1.1.0",
+  "fileOID": "ODM.DEFINE21.d611c8de-4b6f-44ff-ade2-b82a6aab83d1",
+  "studyOID": "ODM.LZZT - NEW.Version1.Design1",
+  "metaDataVersionOID": "MDV.LZZT---NEW",
+  "itemGroupOID": "IG.DEFINE.DOCUMENTS",
+  "records": 1,
+  "name": "documents",
+  "label": "Document References",
+  "columns": [
+    {
+      "itemOID": "DEFINE.DOC.ID",
+      "name": "ID",
+      "label": "Document ID",
+      "dataType": "string",
+      "keySequence": 1
+    },
+    {
+      "itemOID": "DEFINE.DOC.HREF",
+      "name": "href",
+      "label": "Document Href",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.DOC.TITLE",
+      "name": "title",
+      "label": "Document Title",
+      "dataType": "string"
+    }
+  ],
+  "rows": [
+    [
+      "LF.acrf",
+      "acrf.pdf",
+      "Annotated CRF"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "datasetJSONCreationDateTime": "2026-05-17T20:12:06.887232+00:00",
+  "datasetJSONVersion": "1.1.0",
+  "fileOID": "ODM.DEFINE21.d611c8de-4b6f-44ff-ade2-b82a6aab83d1",
+  "studyOID": "ODM.LZZT - NEW.Version1.Design1",
+  "metaDataVersionOID": "MDV.LZZT---NEW",
+  "itemGroupOID": "IG.DEFINE.COMMENTS",
+  "records": 0,
+  "name": "comments",
+  "label": "Comment Definitions",
+  "columns": [
+    {
+      "itemOID": "DEFINE.COM.OID",
+      "name": "OID",
+      "label": "Comment OID",
+      "dataType": "string",
+      "keySequence": 1
+    },
+    {
+      "itemOID": "DEFINE.COM.DESCRIPTIONTEXT",
+      "name": "DescriptionText",
+      "label": "Description",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.COM.DOCUMENTREFLEAFIDS",
+      "name": "DocumentRefLeafIDs",
+      "label": "Document Ref Leaf IDs",
+      "dataType": "string"
+    }
+  ]
+}

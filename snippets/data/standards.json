@@ -1,0 +1,76 @@
+{
+  "datasetJSONCreationDateTime": "2026-05-17T20:12:06.887232+00:00",
+  "datasetJSONVersion": "1.1.0",
+  "fileOID": "ODM.DEFINE21.d611c8de-4b6f-44ff-ade2-b82a6aab83d1",
+  "studyOID": "ODM.LZZT - NEW.Version1.Design1",
+  "metaDataVersionOID": "MDV.LZZT---NEW",
+  "itemGroupOID": "IG.DEFINE.STANDARDS",
+  "records": 2,
+  "name": "standards",
+  "label": "Standards",
+  "columns": [
+    {
+      "itemOID": "DEFINE.STD.OID",
+      "name": "OID",
+      "label": "Standard OID",
+      "dataType": "string",
+      "keySequence": 1
+    },
+    {
+      "itemOID": "DEFINE.STD.NAME",
+      "name": "Name",
+      "label": "Standard Name",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STD.TYPE",
+      "name": "Type",
+      "label": "Standard Type",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STD.PUBLISHINGSET",
+      "name": "PublishingSet",
+      "label": "Publishing Set",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STD.VERSION",
+      "name": "Version",
+      "label": "Standard Version",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STD.STATUS",
+      "name": "Status",
+      "label": "Standard Status",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STD.COMMENTOID",
+      "name": "CommentOID",
+      "label": "Comment OID",
+      "dataType": "string"
+    }
+  ],
+  "rows": [
+    [
+      "STD.SDTMIG",
+      "SDTMIG",
+      "IG",
+      null,
+      "3.4",
+      "FINAL",
+      null
+    ],
+    [
+      "STD.SDTMCT",
+      "CDISC/NCI",
+      "CT",
+      "SDTM",
+      "2025-03-28",
+      "FINAL",
+      null
+    ]
+  ]
+}

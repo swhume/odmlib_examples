@@ -1,31 +1,64 @@
 # odmlib examples
 
-## Introduction
-The odmlib examples are small applications that demonstrate the use of the odmlib Python package for creating
-and process ODM files, including extensions like Define-XML. The examples are intended to make it easier
-to get started using the odmlib package.
+A set of runnable examples for the [odmlib](https://github.com/swhume/odmlib) Python package, an object-oriented interface for creating 
+and processing CDISC ODM documents and their extensions, notably **Define-XML v2.1**.
 
-The odmlib package simplifies working with the CDISC ODM data exchange standard and its extensions, such as 
-Define-XML, in Python. The odmlib package provides an object-oriented interface to working with ODM documents
-that simplifies creating and processing them. 
+All examples target **odmlib v0.2.0**. Each example directory has its own `README.md` and
+`requirements.txt`; the repo-root `requirements.txt` aggregates every dependency so the whole repo
+can be set up from one virtual environment.
 
-## Why odmlib?
-The odmlib package satisfies my personal interest in working with ODM using an object-oriented 
-interface in Python.
+## odmlib version
 
-## Getting Started
-See the [odmlib repository](https://github.com/swhume/odmlib) to get the odmlib pacakge. Eventually, it may 
-make its way into PyPi, but for now you'll need to install from the source. The odmlib README provides 
-instructions for getting started.
+Examples pin `odmlib>=0.2.0rc1`. Today, that specifier installs the `0.2.0` release from PyPI and will automatically 
+prefer updated versions once they're published. Install per example, or everything at once from the root:
 
-## Note
-Effort will be made to update the odmlib_examples as odmlib and it's associated models are updated. If 
-an example doesn't run correctly, please update to the latest version of odmlib.
+```bash
+pip install -r requirements.txt
+```
+
+## Catalog
+
+### Getting started
+| Example | What it does |
+|---------|--------------|
+| [`get_started/`](get_started/) | **Start here.** Create an ODM v1.3.2 document, then read it back: schema-validate, load, OID-check, and list metadata. |
+
+### Excel ↔ Define-XML v2.1
+| Example | What it does |
+|---------|--------------|
+| [`xlsx2define2-1/`](xlsx2define2-1/) | Generate Define-XML v2.1 from an Excel metadata workbook. Canonical v0.2.0 example (structured exceptions, dynamic OID checker, collect-all-errors validation). |
+| [`define2-1-to-xlsx/`](define2-1-to-xlsx/) | The reverse: extract Define-XML v2.1 metadata into Excel/CSV. |
+
+### Conversions
+| Example | What it does |
+|---------|--------------|
+| [`ct2json/`](ct2json/) | Convert CDISC Controlled Terminology from CT-XML to JSON (with optional schema validation). |
+| [`ct2odm/`](ct2odm/) | Build CT-XML ODM from a CDISC CT tab-delimited export. |
+| [`merge_odm/`](merge_odm/) | Merge a form (and its dependent metadata) from one ODM file into another. |
+
+### Integration
+| Example | What it does |
+|---------|--------------|
+| [`library_xml/`](library_xml/) | Retrieve a standard from the CDISC Library API as Library-XML and load it with **local extension models**. |
+
+### Snippets & notebooks
+| Location | What it is |
+|----------|------------|
+| [`snippets/`](snippets/) | Focused, single-feature scripts: builders, context managers, validation, element re-ordering, modifying documents, conversions, ARM, and a custom-extension tutorial. |
+| [`notebooks/`](notebooks/) | Jupyter notebooks for v0.2 features. |
+| [`schema/`](schema/) | Reference XSDs (ODM 1.3.2, Define-XML 2.1, ARM 1.0). |
+
+## Related repositories
+
+Some programs that used to live here now have their own repositories:
+
+- **gendefine** — generalized Excel → Define-XML v2.1 with JSON mapping configs:
+  [github.com/swhume/gendefine](https://github.com/swhume/gendefine)
+- **[odmlib_snippets](https://github.com/swhume/odmlib_snippets)** — narrow/vendor-specific snippets
+  (Veeva, OSB), and early notebooks. Also useful as a test
+  corpus and as reference material for generative AI.
 
 ## Limitations
-The odmlib examples are simple programs intended to demonstrate some of the basic capabilities of odmlib.
-The examples are not complete, production ready applications.
 
-The odmlib package is still in development. Although is being actively used on several projects, additional 
-use and testing may trigger updates or bug fixes. Create an issue in GitHub if you need some help getting
-an example to run. Thanks for your patience. 
+These are demonstration programs, not production-ready applications. If an example doesn't run,
+update to the latest odmlib and open an issue on GitHub.

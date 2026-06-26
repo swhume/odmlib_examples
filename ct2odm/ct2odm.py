@@ -1,6 +1,14 @@
+import argparse
 import csv
 from odmlib.ct_1_1_1 import model as CT
 import datetime
+
+"""
+ct2odm.py - an example program using odmlib to convert a CDISC Controlled Terminology
+tab-delimited (TSV) export into a CT-XML ODM file.
+Command-line example:
+python ct2odm.py -c ./data/sdtm-ct.txt -x ./data/sdtm-ct.xml -s SDTM -d 2021-06-25
+"""
 
 
 class CT2ODM:
@@ -118,9 +126,30 @@ class CT2ODM:
 
     def _set_datetime(self):
         """return the current datetime in ISO 8601 format"""
-        return datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat()
+        return datetime.datetime.now(datetime.timezone.utc).isoformat()
+
+
+def set_cmd_line_args():
+    """ get the command-line arguments needed to convert the CT TSV input file into CT-XML ODM """
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-c", "--csv", help="path and file name of the tab-delimited CT input file",
+                        dest="csv_file", default="./data/sdtm-ct.txt")
+    parser.add_argument("-x", "--xml", help="path and file name of the CT-XML ODM file to write",
+                        dest="odm_file", default="./data/sdtm-ct.xml")
+    parser.add_argument("-s", "--standard", help="the standard name (e.g. SDTM)", dest="standard",
+                        default="SDTM")
+    parser.add_argument("-d", "--date", help="the CT package date (YYYY-MM-DD)", dest="package_date",
+                        default="2021-06-25")
+    return parser.parse_args()
+
+
+def main():
+    """ main driver method that generates a CT-XML ODM file from a CDISC CT tab-delimited export """
+    args = set_cmd_line_args()
+    ct2odm = CT2ODM(csv_file=args.csv_file, odm_file=args.odm_file, standard=args.standard,
+                    package_date=args.package_date)
+    ct2odm.create()
 
 
 if __name__ == '__main__':
-    ct2odm = CT2ODM(csv_file="./data/sdtm-ct.txt", odm_file="./data/sdtm-ct.xml", standard="SDTM", package_date="2021-06-25")
-    ct2odm.create()
+    main()

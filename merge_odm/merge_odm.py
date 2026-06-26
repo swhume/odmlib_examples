@@ -1,5 +1,6 @@
 import odmlib.odm_loader as OL
 import odmlib.loader as LD
+from odmlib import OdmlibError
 import os
 
 # An odmlib example application
@@ -16,17 +17,22 @@ class MergeODM:
         self.form_oid = form_oid
 
     def merge(self):
-        source_loader = LD.ODMLoader(OL.XMLODMLoader())
-        source_loader.open_odm_document(self.source_file)
-        source_mdv = source_loader.MetaDataVersion()
-        target_loader = LD.ODMLoader(OL.XMLODMLoader())
-        target_loader.open_odm_document(self.target_file)
-        target_root = target_loader.root()
+        try:
+            source_loader = LD.ODMLoader(OL.XMLODMLoader())
+            source_loader.open_odm_document(self.source_file)
+            source_mdv = source_loader.MetaDataVersion()
+            target_loader = LD.ODMLoader(OL.XMLODMLoader())
+            target_loader.open_odm_document(self.target_file)
+            target_root = target_loader.root()
+        except OdmlibError as e:
+            raise SystemExit(f"Failed to load an ODM document: {e}")
         self._merge_form_def(source_mdv, target_root.Study[0].MetaDataVersion[0])
         self._write_target_odm(target_root)
 
     def _merge_form_def(self, source_mdv, target_mdv):
         vs_form = source_mdv.find("FormDef", "OID", self.form_oid)
+        if vs_form is None:
+            raise SystemExit(f"FormDef '{self.form_oid}' was not found in the source ODM file.")
         if self._element_does_not_exist(target_mdv, vs_form.OID, "FormDef"):
             target_mdv.FormDef.append(vs_form)
             self._merge_item_group_def(source_mdv, target_mdv, vs_form)

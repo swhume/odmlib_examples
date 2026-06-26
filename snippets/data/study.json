@@ -1,0 +1,122 @@
+{
+  "datasetJSONCreationDateTime": "2026-05-17T20:12:06.887232+00:00",
+  "datasetJSONVersion": "1.1.0",
+  "fileOID": "ODM.DEFINE21.d611c8de-4b6f-44ff-ade2-b82a6aab83d1",
+  "studyOID": "ODM.LZZT - NEW.Version1.Design1",
+  "metaDataVersionOID": "MDV.LZZT---NEW",
+  "itemGroupOID": "IG.DEFINE.STUDY",
+  "records": 1,
+  "name": "study",
+  "label": "Study Metadata",
+  "columns": [
+    {
+      "itemOID": "DEFINE.STUDY.FILEOID",
+      "name": "FileOID",
+      "label": "File OID",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.CREATIONDATETIME",
+      "name": "CreationDateTime",
+      "label": "Creation Date/Time",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.ASOFDATETIME",
+      "name": "AsOfDateTime",
+      "label": "As-Of Date/Time",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.ORIGINATOR",
+      "name": "Originator",
+      "label": "Originator",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.SOURCESYSTEM",
+      "name": "SourceSystem",
+      "label": "Source System",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.SOURCESYSTEMVERSION",
+      "name": "SourceSystemVersion",
+      "label": "Source System Version",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.STUDYOID",
+      "name": "StudyOID",
+      "label": "Study OID",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.STUDYNAME",
+      "name": "StudyName",
+      "label": "Study Name",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.STUDYDESCRIPTION",
+      "name": "StudyDescription",
+      "label": "Study Description",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.PROTOCOLNAME",
+      "name": "ProtocolName",
+      "label": "Protocol Name",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.MDVOID",
+      "name": "MetaDataVersionOID",
+      "label": "MetaDataVersion OID",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.MDVNAME",
+      "name": "MetaDataVersionName",
+      "label": "MetaDataVersion Name",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.DEFINEVERSION",
+      "name": "DefineVersion",
+      "label": "Define-XML Version",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.COMMENTOID",
+      "name": "CommentOID",
+      "label": "Comment OID",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.STUDY.CONTEXT",
+      "name": "Context",
+      "label": "Context",
+      "dataType": "string"
+    }
+  ],
+  "rows": [
+    [
+      "ODM.DEFINE21.d611c8de-4b6f-44ff-ade2-b82a6aab83d1",
+      "2026-05-07T11:43:50.402844+00:00",
+      "2026-05-07T11:43:50.402827+00:00",
+      "360i Define-XML Team",
+      "odmlib",
+      "0.2",
+      "ODM.LZZT - NEW.Version1.Design1",
+      "LZZT - NEW",
+      "Safety and Efficacy of the Xanomeline Transdermal Therapeutic System (TTS) in Patients\n                with Mild to Moderate Alzheimer's Disease\n            ",
+      "LZZT - NEW",
+      "MDV.LZZT---NEW",
+      "MDV LZZT - NEW",
+      "2.1.0",
+      null,
+      "Other"
+    ]
+  ]
+}

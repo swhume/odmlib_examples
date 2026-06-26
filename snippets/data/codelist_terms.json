@@ -1,0 +1,3629 @@
+{
+  "datasetJSONCreationDateTime": "2026-05-17T20:12:06.887232+00:00",
+  "datasetJSONVersion": "1.1.0",
+  "fileOID": "ODM.DEFINE21.d611c8de-4b6f-44ff-ade2-b82a6aab83d1",
+  "studyOID": "ODM.LZZT - NEW.Version1.Design1",
+  "metaDataVersionOID": "MDV.LZZT---NEW",
+  "itemGroupOID": "IG.DEFINE.CODELIST_TERMS",
+  "records": 447,
+  "name": "codelist_terms",
+  "label": "CodeList Terms",
+  "columns": [
+    {
+      "itemOID": "DEFINE.CLT.CODELISTOID",
+      "name": "CodeListOID",
+      "label": "CodeList OID",
+      "dataType": "string",
+      "keySequence": 1
+    },
+    {
+      "itemOID": "DEFINE.CLT.CODEDVALUE",
+      "name": "CodedValue",
+      "label": "Coded Value",
+      "dataType": "string",
+      "keySequence": 2
+    },
+    {
+      "itemOID": "DEFINE.CLT.RANK",
+      "name": "Rank",
+      "label": "Rank",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.CLT.ORDERNUMBER",
+      "name": "OrderNumber",
+      "label": "Order Number",
+      "dataType": "integer"
+    },
+    {
+      "itemOID": "DEFINE.CLT.EXTENDEDVALUE",
+      "name": "ExtendedValue",
+      "label": "Extended Value",
+      "dataType": "string"
+    },
+    {
+      "itemOID": "DEFINE.CLT.DECODEDTEXT",
+      "name": "DecodedText",
+      "label": "Decoded Text",
+      "dataType": "string"
+    }
+  ],
+  "rows": [
+    [
+      "CL.ARMCD",
+      "Placebo",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ARMCD",
+      "Xanomeline Low Dose",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ARMCD",
+      "Xanomeline High Dose",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ARM",
+      "Placebo",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ARM",
+      "Xanomeline Low Dose",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ARM",
+      "Xanomeline High Dose",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Age greater than 50",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Diagnosis of Alzheimer's",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "MMSE Score",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Hachinski Ischemic Score",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "CNS imaging comptaible with Alzheimer's",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Informed consent criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Geographic proximity criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Reliable caregiver criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Previous study criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Other Alzheimer's therapy criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Serious illness criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Serious neurolocal conditions criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Depression criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Schizophrenia, Bipolar, Ethanol or psychoactive abuse criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Syncope criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "ECG Criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Cardiovascular criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Gastrointensinal criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Endocrine criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Resporatory criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Genitourinary criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Rheumatologic criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "HIV criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Neurosyphilis, Meningitis,Encephalitis criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Malignant disease criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Ability to participate in study criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Laboratory values criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Central laboratory values criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Syphilia criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Hemoglobin criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETEST",
+      "Medications Criteria",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.IETESTCD",
+      "IN01",
+      null,
+      null,
+      null,
+      "Age greater than 50"
+    ],
+    [
+      "CL.IETESTCD",
+      "IN02",
+      null,
+      null,
+      null,
+      "Diagnosis of Alzheimer's"
+    ],
+    [
+      "CL.IETESTCD",
+      "IN03",
+      null,
+      null,
+      null,
+      "MMSE Score"
+    ],
+    [
+      "CL.IETESTCD",
+      "IN04",
+      null,
+      null,
+      null,
+      "Hachinski Ischemic Score"
+    ],
+    [
+      "CL.IETESTCD",
+      "IN05",
+      null,
+      null,
+      null,
+      "CNS imaging comptaible with Alzheimer's"
+    ],
+    [
+      "CL.IETESTCD",
+      "IN06",
+      null,
+      null,
+      null,
+      "Informed consent criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "IN07",
+      null,
+      null,
+      null,
+      "Geographic proximity criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "IN08",
+      null,
+      null,
+      null,
+      "Reliable caregiver criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX01",
+      null,
+      null,
+      null,
+      "Previous study criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX02",
+      null,
+      null,
+      null,
+      "Other Alzheimer's therapy criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX03",
+      null,
+      null,
+      null,
+      "Serious illness criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX04",
+      null,
+      null,
+      null,
+      "Serious neurolocal conditions criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX05",
+      null,
+      null,
+      null,
+      "Depression criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX06",
+      null,
+      null,
+      null,
+      "Schizophrenia, Bipolar, Ethanol or psychoactive abuse criteria\n                        "
+    ],
+    [
+      "CL.IETESTCD",
+      "EX07",
+      null,
+      null,
+      null,
+      "Syncope criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX08",
+      null,
+      null,
+      null,
+      "ECG Criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX09",
+      null,
+      null,
+      null,
+      "Cardiovascular criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX10",
+      null,
+      null,
+      null,
+      "Gastrointensinal criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX11",
+      null,
+      null,
+      null,
+      "Endocrine criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX12",
+      null,
+      null,
+      null,
+      "Resporatory criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX13",
+      null,
+      null,
+      null,
+      "Genitourinary criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX14",
+      null,
+      null,
+      null,
+      "Rheumatologic criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX15",
+      null,
+      null,
+      null,
+      "HIV criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX16",
+      null,
+      null,
+      null,
+      "Neurosyphilis, Meningitis,Encephalitis criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX17",
+      null,
+      null,
+      null,
+      "Malignant disease criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX18",
+      null,
+      null,
+      null,
+      "Ability to participate in study criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX19",
+      null,
+      null,
+      null,
+      "Laboratory values criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX20",
+      null,
+      null,
+      null,
+      "Central laboratory values criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX21",
+      null,
+      null,
+      null,
+      "Syphilia criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX22",
+      null,
+      null,
+      null,
+      "Hemoglobin criteria"
+    ],
+    [
+      "CL.IETESTCD",
+      "EX23",
+      null,
+      null,
+      null,
+      "Medications Criteria"
+    ],
+    [
+      "CL.ELEMENT",
+      "Screening",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ELEMENT",
+      "Placebo",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ELEMENT",
+      "Follow up",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ELEMENT",
+      "Low",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ELEMENT",
+      "High - Start",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ELEMENT",
+      "High - Middle",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ELEMENT",
+      "High - End",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.ETCD",
+      "EL1",
+      null,
+      null,
+      null,
+      "Screening"
+    ],
+    [
+      "CL.ETCD",
+      "EL2",
+      null,
+      null,
+      null,
+      "Placebo"
+    ],
+    [
+      "CL.ETCD",
+      "EL7",
+      null,
+      null,
+      null,
+      "Follow up"
+    ],
+    [
+      "CL.ETCD",
+      "EL3",
+      null,
+      null,
+      null,
+      "Low"
+    ],
+    [
+      "CL.ETCD",
+      "EL4",
+      null,
+      null,
+      null,
+      "High - Start"
+    ],
+    [
+      "CL.ETCD",
+      "EL5",
+      null,
+      null,
+      null,
+      "High - Middle"
+    ],
+    [
+      "CL.ETCD",
+      "EL6",
+      null,
+      null,
+      null,
+      "High - End"
+    ],
+    [
+      "CL.EPOCH",
+      "Screening",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.EPOCH",
+      "Treatment 1",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.EPOCH",
+      "Treatment 2",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.EPOCH",
+      "Treatment 3",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.EPOCH",
+      "Follow-Up",
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "CL.NCOMPLT",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.DSCAT",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.DSSCAT",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.NY",
+      "N",
+      null,
+      null,
+      null,
+      "No"
+    ],
+    [
+      "CL.NY",
+      "Y",
+      null,
+      null,
+      null,
+      "Yes"
+    ],
+    [
+      "CL.AGEU",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.SEX",
+      "F",
+      null,
+      null,
+      null,
+      "Female"
+    ],
+    [
+      "CL.SEX",
+      "M",
+      null,
+      null,
+      null,
+      "Male"
+    ],
+    [
+      "CL.RACE",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.ETHNIC",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.ARMNULRS",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.SCTESTCD",
+      "EDULEVEL",
+      null,
+      null,
+      null,
+      "Level of Education Attained"
+    ],
+    [
+      "CL.SCTESTCD",
+      "EDUYRNUM",
+      null,
+      null,
+      null,
+      "Number of Years of Education"
+    ],
+    [
+      "CL.SCTEST",
+      "Level of Education Attained",
+      null,
+      null,
+      null,
+      "Level of Education Attained"
+    ],
+    [
+      "CL.SCTEST",
+      "Number of Years of Education",
+      null,
+      null,
+      null,
+      "Number of Years of Education"
+    ],
+    [
+      "CL.UNIT",
+      "%",
+      null,
+      null,
+      null,
+      "Percentage"
+    ],
+    [
+      "CL.UNIT",
+      "10^12/L",
+      null,
+      null,
+      null,
+      "/pL"
+    ],
+    [
+      "CL.UNIT",
+      "10^6/L",
+      null,
+      null,
+      null,
+      "/mm3"
+    ],
+    [
+      "CL.UNIT",
+      "10^9/L",
+      null,
+      null,
+      null,
+      "/nL"
+    ],
+    [
+      "CL.UNIT",
+      "CIGAR",
+      null,
+      null,
+      null,
+      "Cigar Dosing Unit"
+    ],
+    [
+      "CL.UNIT",
+      "CIGARETTE",
+      null,
+      null,
+      null,
+      "Cigarette Dosing Unit"
+    ],
+    [
+      "CL.UNIT",
+      "DRINK",
+      null,
+      null,
+      null,
+      "Drink Dosing Unit"
+    ],
+    [
+      "CL.UNIT",
+      "EU",
+      null,
+      null,
+      null,
+      "Ehrlich Units"
+    ],
+    [
+      "CL.UNIT",
+      "fmol",
+      null,
+      null,
+      null,
+      "Femtomole"
+    ],
+    [
+      "CL.UNIT",
+      "fraction of 1",
+      null,
+      null,
+      null,
+      "Proportion of 1"
+    ],
+    [
+      "CL.UNIT",
+      "g",
+      null,
+      null,
+      null,
+      "Gram"
+    ],
+    [
+      "CL.UNIT",
+      "g/dL",
+      null,
+      null,
+      null,
+      "g%"
+    ],
+    [
+      "CL.UNIT",
+      "g/L",
+      null,
+      null,
+      null,
+      "g/L"
+    ],
+    [
+      "CL.UNIT",
+      "GLASS",
+      null,
+      null,
+      null,
+      "Glass Dosing Unit"
+    ],
+    [
+      "CL.UNIT",
+      "IU/L",
+      null,
+      null,
+      null,
+      "IE/L"
+    ],
+    [
+      "CL.UNIT",
+      "kg/m2",
+      null,
+      null,
+      null,
+      "Kilogram per Square Meter"
+    ],
+    [
+      "CL.UNIT",
+      "L",
+      null,
+      null,
+      null,
+      "Liter"
+    ],
+    [
+      "CL.UNIT",
+      "mEq/dL",
+      null,
+      null,
+      null,
+      "Milliequivalent per Deciliter"
+    ],
+    [
+      "CL.UNIT",
+      "mEq/L",
+      null,
+      null,
+      null,
+      "Milliequivalent Per Liter"
+    ],
+    [
+      "CL.UNIT",
+      "mg",
+      null,
+      null,
+      null,
+      "Milligram"
+    ],
+    [
+      "CL.UNIT",
+      "mg/dL",
+      null,
+      null,
+      null,
+      "mg%"
+    ],
+    [
+      "CL.UNIT",
+      "mg/L",
+      null,
+      null,
+      null,
+      "g/m3"
+    ],
+    [
+      "CL.UNIT",
+      "mIU/L",
+      null,
+      null,
+      null,
+      "mcIU/mL"
+    ],
+    [
+      "CL.UNIT",
+      "mL",
+      null,
+      null,
+      null,
+      "cc"
+    ],
+    [
+      "CL.UNIT",
+      "mmol/L",
+      null,
+      null,
+      null,
+      "mcmol/mL"
+    ],
+    [
+      "CL.UNIT",
+      "ms",
+      null,
+      null,
+      null,
+      "Millisecond"
+    ],
+    [
+      "CL.UNIT",
+      "mU/L",
+      null,
+      null,
+      null,
+      "uU/mL"
+    ],
+    [
+      "CL.UNIT",
+      "ng/dL",
+      null,
+      null,
+      null,
+      "Nanogram per Deciliter"
+    ],
+    [
+      "CL.UNIT",
+      "ng/L",
+      null,
+      null,
+      null,
+      "Microgram per Cubic Meter"
+    ],
+    [
+      "CL.UNIT",
+      "nkat/L",
+      null,
+      null,
+      null,
+      "Nanokatal per Liter"
+    ],
+    [
+      "CL.UNIT",
+      "nmol/L",
+      null,
+      null,
+      null,
+      "Nanomole per Liter"
+    ],
+    [
+      "CL.UNIT",
+      "oz",
+      null,
+      null,
+      null,
+      "Ounce"
+    ],
+    [
+      "CL.UNIT",
+      "PACK",
+      null,
+      null,
+      null,
+      "PACK"
+    ],
+    [
+      "CL.UNIT",
+      "pg",
+      null,
+      null,
+      null,
+      "Picogram"
+    ],
+    [
+      "CL.UNIT",
+      "PIPE",
+      null,
+      null,
+      null,
+      "Pipe Dosing Unit"
+    ],
+    [
+      "CL.UNIT",
+      "pmol/L",
+      null,
+      null,
+      null,
+      "Femtomole per Milliliter"
+    ],
+    [
+      "CL.UNIT",
+      "psi",
+      null,
+      null,
+      null,
+      "Pounds per Square Inch"
+    ],
+    [
+      "CL.UNIT",
+      "s",
+      null,
+      null,
+      null,
+      "sec"
+    ],
+    [
+      "CL.UNIT",
+      "U/L",
+      null,
+      null,
+      null,
+      "mU/mL"
+    ],
+    [
+      "CL.UNIT",
+      "ug/dL",
+      null,
+      null,
+      null,
+      "Microgram per Deciliter"
+    ],
+    [
+      "CL.UNIT",
+      "ug/L",
+      null,
+      null,
+      null,
+      "mcg/L"
+    ],
+    [
+      "CL.UNIT",
+      "ukat/L",
+      null,
+      null,
+      null,
+      "mckat/L"
+    ],
+    [
+      "CL.UNIT",
+      "umol/L",
+      null,
+      null,
+      null,
+      "nmol/mL"
+    ],
+    [
+      "CL.STENRF",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.FREQ",
+      "Q7D",
+      null,
+      null,
+      null,
+      "Every 7 Days"
+    ],
+    [
+      "CL.FREQ",
+      "QD",
+      null,
+      null,
+      null,
+      "/day"
+    ],
+    [
+      "CL.PROCEDUR",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.LOC",
+      "ARM",
+      null,
+      null,
+      null,
+      "Arm"
+    ],
+    [
+      "CL.LOC",
+      "AXILLA",
+      null,
+      null,
+      null,
+      "Armpit"
+    ],
+    [
+      "CL.LOC",
+      "BACK",
+      null,
+      null,
+      null,
+      "Back"
+    ],
+    [
+      "CL.LOC",
+      "BRACHIAL ARTERY",
+      null,
+      null,
+      null,
+      "BRACHIAL ARTERY"
+    ],
+    [
+      "CL.LOC",
+      "BUTTOCK",
+      null,
+      null,
+      null,
+      "Buttock"
+    ],
+    [
+      "CL.LOC",
+      "CAROTID ARTERY",
+      null,
+      null,
+      null,
+      "Common Carotid Artery"
+    ],
+    [
+      "CL.LOC",
+      "CEREBRAL ARTERY",
+      null,
+      null,
+      null,
+      "CEREBRAL ARTERY"
+    ],
+    [
+      "CL.LOC",
+      "CHEST",
+      null,
+      null,
+      null,
+      "Chest"
+    ],
+    [
+      "CL.LOC",
+      "DORSALIS PEDIS ARTERY",
+      null,
+      null,
+      null,
+      "Dorsal Pedal Artery"
+    ],
+    [
+      "CL.LOC",
+      "EAR",
+      null,
+      null,
+      null,
+      "EAR"
+    ],
+    [
+      "CL.LOC",
+      "FEMORAL ARTERY",
+      null,
+      null,
+      null,
+      "FEMORAL ARTERY"
+    ],
+    [
+      "CL.LOC",
+      "FINGER",
+      null,
+      null,
+      null,
+      "Finger"
+    ],
+    [
+      "CL.LOC",
+      "FOREHEAD",
+      null,
+      null,
+      null,
+      "Forehead"
+    ],
+    [
+      "CL.LOC",
+      "ORAL CAVITY",
+      null,
+      null,
+      null,
+      "Buccal cavity"
+    ],
+    [
+      "CL.LOC",
+      "RADIAL ARTERY",
+      null,
+      null,
+      null,
+      "Radial Artery"
+    ],
+    [
+      "CL.LOC",
+      "RECTUM",
+      null,
+      null,
+      null,
+      "RECTUM"
+    ],
+    [
+      "CL.LOC",
+      "THIGH",
+      null,
+      null,
+      null,
+      "Thigh"
+    ],
+    [
+      "CL.VSTESTCD",
+      "BMI",
+      null,
+      null,
+      null,
+      "Body Mass Index"
+    ],
+    [
+      "CL.VSTESTCD",
+      "DIABP",
+      null,
+      null,
+      null,
+      "Diastolic Blood Pressure"
+    ],
+    [
+      "CL.VSTESTCD",
+      "HEIGHT",
+      null,
+      null,
+      null,
+      "Height"
+    ],
+    [
+      "CL.VSTESTCD",
+      "HR",
+      null,
+      null,
+      null,
+      "Heart Rate"
+    ],
+    [
+      "CL.VSTESTCD",
+      "PULSE",
+      null,
+      null,
+      null,
+      "Pulse Rate"
+    ],
+    [
+      "CL.VSTESTCD",
+      "RESP",
+      null,
+      null,
+      null,
+      "Respiratory Rate"
+    ],
+    [
+      "CL.VSTESTCD",
+      "SYSBP",
+      null,
+      null,
+      null,
+      "Systolic Blood Pressure"
+    ],
+    [
+      "CL.VSTESTCD",
+      "TEMP",
+      null,
+      null,
+      null,
+      "Body Temperature"
+    ],
+    [
+      "CL.VSTESTCD",
+      "WEIGHT",
+      null,
+      null,
+      null,
+      "Weight"
+    ],
+    [
+      "CL.VSTEST",
+      "Body Mass Index",
+      null,
+      null,
+      null,
+      "Body Mass Index"
+    ],
+    [
+      "CL.VSTEST",
+      "Diastolic Blood Pressure",
+      null,
+      null,
+      null,
+      "Diastolic Blood Pressure"
+    ],
+    [
+      "CL.VSTEST",
+      "Heart Rate",
+      null,
+      null,
+      null,
+      "Heart Rate"
+    ],
+    [
+      "CL.VSTEST",
+      "Height",
+      null,
+      null,
+      null,
+      "Height"
+    ],
+    [
+      "CL.VSTEST",
+      "Pulse Rate",
+      null,
+      null,
+      null,
+      "Pulse Rate"
+    ],
+    [
+      "CL.VSTEST",
+      "Respiratory Rate",
+      null,
+      null,
+      null,
+      "Respiratory Rate"
+    ],
+    [
+      "CL.VSTEST",
+      "Systolic Blood Pressure",
+      null,
+      null,
+      null,
+      "Systolic Blood Pressure"
+    ],
+    [
+      "CL.VSTEST",
+      "Temperature",
+      null,
+      null,
+      null,
+      "Body Temperature"
+    ],
+    [
+      "CL.VSTEST",
+      "Weight",
+      null,
+      null,
+      null,
+      "Weight"
+    ],
+    [
+      "CL.POSITION",
+      "PRONE",
+      null,
+      null,
+      null,
+      "Prone"
+    ],
+    [
+      "CL.POSITION",
+      "SEMI-RECUMBENT",
+      null,
+      null,
+      null,
+      "Semi-Supine"
+    ],
+    [
+      "CL.POSITION",
+      "SITTING",
+      null,
+      null,
+      null,
+      "Sitting"
+    ],
+    [
+      "CL.POSITION",
+      "STANDING",
+      null,
+      null,
+      null,
+      "Orthostatic"
+    ],
+    [
+      "CL.POSITION",
+      "SUPINE",
+      null,
+      null,
+      null,
+      "Supine"
+    ],
+    [
+      "CL.VSRESU",
+      "C",
+      null,
+      null,
+      null,
+      "Degree Celsius"
+    ],
+    [
+      "CL.VSRESU",
+      "cm",
+      null,
+      null,
+      null,
+      "Centimeter"
+    ],
+    [
+      "CL.VSRESU",
+      "F",
+      null,
+      null,
+      null,
+      "Degree Fahrenheit"
+    ],
+    [
+      "CL.VSRESU",
+      "g",
+      null,
+      null,
+      null,
+      "Gram"
+    ],
+    [
+      "CL.VSRESU",
+      "in",
+      null,
+      null,
+      null,
+      "Inch"
+    ],
+    [
+      "CL.VSRESU",
+      "K",
+      null,
+      null,
+      null,
+      "Kelvin"
+    ],
+    [
+      "CL.VSRESU",
+      "kg",
+      null,
+      null,
+      null,
+      "Kilogram"
+    ],
+    [
+      "CL.VSRESU",
+      "LB",
+      null,
+      null,
+      null,
+      "lb"
+    ],
+    [
+      "CL.VSRESU",
+      "m",
+      null,
+      null,
+      null,
+      "Meter"
+    ],
+    [
+      "CL.VSRESU",
+      "kg/m2",
+      null,
+      null,
+      null,
+      "Kilogram per Square Meter"
+    ],
+    [
+      "CL.LAT",
+      "LEFT",
+      null,
+      null,
+      null,
+      "LEFT"
+    ],
+    [
+      "CL.LAT",
+      "RIGHT",
+      null,
+      null,
+      null,
+      "RIGHT"
+    ],
+    [
+      "CL.EGTESTCD",
+      "AVCOND",
+      null,
+      null,
+      null,
+      "Atrioventricular Conduction"
+    ],
+    [
+      "CL.EGTESTCD",
+      "AXISVOLT",
+      null,
+      null,
+      null,
+      "Axis and Voltage"
+    ],
+    [
+      "CL.EGTESTCD",
+      "CHYPTENL",
+      null,
+      null,
+      null,
+      "Chamber Hypertrophy or Enlargement"
+    ],
+    [
+      "CL.EGTESTCD",
+      "EGHRMN",
+      null,
+      null,
+      null,
+      "ECG Mean Heart Rate"
+    ],
+    [
+      "CL.EGTESTCD",
+      "INTP",
+      null,
+      null,
+      null,
+      "Interpretation"
+    ],
+    [
+      "CL.EGTESTCD",
+      "IVTIACD",
+      null,
+      null,
+      null,
+      "Intraventricular-Intraatrial Conduction"
+    ],
+    [
+      "CL.EGTESTCD",
+      "PACEMAKR",
+      null,
+      null,
+      null,
+      "Pacemaker"
+    ],
+    [
+      "CL.EGTESTCD",
+      "PRAG",
+      null,
+      null,
+      null,
+      "PQ Interval, Aggregate"
+    ],
+    [
+      "CL.EGTESTCD",
+      "QRS_AXIS",
+      null,
+      null,
+      null,
+      "QRS Axis"
+    ],
+    [
+      "CL.EGTESTCD",
+      "QRSAG",
+      null,
+      null,
+      null,
+      "QRS Duration, Aggregate"
+    ],
+    [
+      "CL.EGTESTCD",
+      "QTAG",
+      null,
+      null,
+      null,
+      "QT Interval, Aggregate"
+    ],
+    [
+      "CL.EGTESTCD",
+      "QTCBAG",
+      null,
+      null,
+      null,
+      "QTcB Interval, Aggregate"
+    ],
+    [
+      "CL.EGTESTCD",
+      "QTCFAG",
+      null,
+      null,
+      null,
+      "QTcF Interval, Aggregate"
+    ],
+    [
+      "CL.EGTESTCD",
+      "RHYNOS",
+      null,
+      null,
+      null,
+      "Rhythm Not Otherwise Specified"
+    ],
+    [
+      "CL.EGTESTCD",
+      "RRAG",
+      null,
+      null,
+      null,
+      "RR Interval, Aggregate"
+    ],
+    [
+      "CL.EGTESTCD",
+      "SNRARRY",
+      null,
+      null,
+      null,
+      "Sinus Node Rhythms and Arrhythmias"
+    ],
+    [
+      "CL.EGTESTCD",
+      "SPRARRY",
+      null,
+      null,
+      null,
+      "Supraventricular Arrhythmias"
+    ],
+    [
+      "CL.EGTESTCD",
+      "SPRTARRY",
+      null,
+      null,
+      null,
+      "Supraventricular Tachyarrhythmias"
+    ],
+    [
+      "CL.EGTESTCD",
+      "TECHQUAL",
+      null,
+      null,
+      null,
+      "Technical Quality"
+    ],
+    [
+      "CL.EGTESTCD",
+      "VTARRY",
+      null,
+      null,
+      null,
+      "Ventricular Arrhythmias"
+    ],
+    [
+      "CL.EGTESTCD",
+      "VTTARRY",
+      null,
+      null,
+      null,
+      "Ventricular Tachyarrhythmias"
+    ],
+    [
+      "CL.EGTEST",
+      "Atrioventricular Conduction",
+      null,
+      null,
+      null,
+      "Atrioventricular Conduction"
+    ],
+    [
+      "CL.EGTEST",
+      "Axis and Voltage",
+      null,
+      null,
+      null,
+      "Axis and Voltage"
+    ],
+    [
+      "CL.EGTEST",
+      "Chamber Hypertrophy or Enlargement",
+      null,
+      null,
+      null,
+      "Chamber Hypertrophy or Enlargement"
+    ],
+    [
+      "CL.EGTEST",
+      "ECG Mean Heart Rate",
+      null,
+      null,
+      null,
+      "ECG Mean Heart Rate"
+    ],
+    [
+      "CL.EGTEST",
+      "Interpretation",
+      null,
+      null,
+      null,
+      "Interpretation"
+    ],
+    [
+      "CL.EGTEST",
+      "Intraventricular-Intraatrial Conduction",
+      null,
+      null,
+      null,
+      "Intraventricular-Intraatrial Conduction"
+    ],
+    [
+      "CL.EGTEST",
+      "Pacemaker",
+      null,
+      null,
+      null,
+      "Pacemaker"
+    ],
+    [
+      "CL.EGTEST",
+      "PR Interval, Aggregate",
+      null,
+      null,
+      null,
+      "PQ Interval, Aggregate"
+    ],
+    [
+      "CL.EGTEST",
+      "QRS Axis",
+      null,
+      null,
+      null,
+      "QRS Axis"
+    ],
+    [
+      "CL.EGTEST",
+      "QRS Duration, Aggregate",
+      null,
+      null,
+      null,
+      "QRS Duration, Aggregate"
+    ],
+    [
+      "CL.EGTEST",
+      "QT Interval, Aggregate",
+      null,
+      null,
+      null,
+      "QT Interval, Aggregate"
+    ],
+    [
+      "CL.EGTEST",
+      "QTcB Interval, Aggregate",
+      null,
+      null,
+      null,
+      "QTcB Interval, Aggregate"
+    ],
+    [
+      "CL.EGTEST",
+      "QTcF Interval, Aggregate",
+      null,
+      null,
+      null,
+      "QTcF Interval, Aggregate"
+    ],
+    [
+      "CL.EGTEST",
+      "Rhythm Not Otherwise Specified",
+      null,
+      null,
+      null,
+      "Rhythm Not Otherwise Specified"
+    ],
+    [
+      "CL.EGTEST",
+      "RR Interval, Aggregate",
+      null,
+      null,
+      null,
+      "RR Interval, Aggregate"
+    ],
+    [
+      "CL.EGTEST",
+      "Sinus Node Rhythms and Arrhythmias",
+      null,
+      null,
+      null,
+      "Sinus Node Rhythms and Arrhythmias"
+    ],
+    [
+      "CL.EGTEST",
+      "Supraventricular Arrhythmias",
+      null,
+      null,
+      null,
+      "Supraventricular Arrhythmias"
+    ],
+    [
+      "CL.EGTEST",
+      "Supraventricular Tachyarrhythmias",
+      null,
+      null,
+      null,
+      "Supraventricular Tachyarrhythmias"
+    ],
+    [
+      "CL.EGTEST",
+      "Technical Quality",
+      null,
+      null,
+      null,
+      "Technical Quality"
+    ],
+    [
+      "CL.EGTEST",
+      "Ventricular Arrhythmias",
+      null,
+      null,
+      null,
+      "Ventricular Arrhythmias"
+    ],
+    [
+      "CL.EGTEST",
+      "Ventricular Tachyarrhythmias",
+      null,
+      null,
+      null,
+      "Ventricular Tachyarrhythmias"
+    ],
+    [
+      "CL.EGSTRESC",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.EGMETHOD",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.EVAL",
+      "ADJUDICATION COMMITTEE",
+      null,
+      null,
+      null,
+      "ADJUDICATION COMMITTEE"
+    ],
+    [
+      "CL.EVAL",
+      "INDEPENDENT ASSESSOR",
+      null,
+      null,
+      null,
+      "INDEPENDENT ASSESSOR"
+    ],
+    [
+      "CL.EVAL",
+      "INVESTIGATOR",
+      null,
+      null,
+      null,
+      "INVESTIGATOR"
+    ],
+    [
+      "CL.EVAL",
+      "VENDOR",
+      null,
+      null,
+      null,
+      "VENDOR"
+    ],
+    [
+      "CL.FRM",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.ROUTE",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.LBTESTCD",
+      "ALB",
+      null,
+      null,
+      null,
+      "Albumin"
+    ],
+    [
+      "CL.LBTESTCD",
+      "ALP",
+      null,
+      null,
+      null,
+      "Alkaline Phosphatase"
+    ],
+    [
+      "CL.LBTESTCD",
+      "ALT",
+      null,
+      null,
+      null,
+      "Alanine Aminotransferase"
+    ],
+    [
+      "CL.LBTESTCD",
+      "ANISO",
+      null,
+      null,
+      null,
+      "Anisocytes"
+    ],
+    [
+      "CL.LBTESTCD",
+      "AST",
+      null,
+      null,
+      null,
+      "Aspartate Aminotransferase"
+    ],
+    [
+      "CL.LBTESTCD",
+      "BASO",
+      null,
+      null,
+      null,
+      "Basophils"
+    ],
+    [
+      "CL.LBTESTCD",
+      "BICARB",
+      null,
+      null,
+      null,
+      "Bicarbonate"
+    ],
+    [
+      "CL.LBTESTCD",
+      "BILI",
+      null,
+      null,
+      null,
+      "Bilirubin"
+    ],
+    [
+      "CL.LBTESTCD",
+      "CA",
+      null,
+      null,
+      null,
+      "Calcium"
+    ],
+    [
+      "CL.LBTESTCD",
+      "CHOL",
+      null,
+      null,
+      null,
+      "Cholesterol"
+    ],
+    [
+      "CL.LBTESTCD",
+      "CL",
+      null,
+      null,
+      null,
+      "Chloride"
+    ],
+    [
+      "CL.LBTESTCD",
+      "COLOR",
+      null,
+      null,
+      null,
+      "Color"
+    ],
+    [
+      "CL.LBTESTCD",
+      "CREAT",
+      null,
+      null,
+      null,
+      "Creatinine"
+    ],
+    [
+      "CL.LBTESTCD",
+      "EOS",
+      null,
+      null,
+      null,
+      "Eosinophils"
+    ],
+    [
+      "CL.LBTESTCD",
+      "GGT",
+      null,
+      null,
+      null,
+      "Gamma Glutamyl Transferase"
+    ],
+    [
+      "CL.LBTESTCD",
+      "GLUC",
+      null,
+      null,
+      null,
+      "Glucose"
+    ],
+    [
+      "CL.LBTESTCD",
+      "HBA1C",
+      null,
+      null,
+      null,
+      "HbA1c"
+    ],
+    [
+      "CL.LBTESTCD",
+      "HBA1CHGB",
+      null,
+      null,
+      null,
+      "Hemoglobin A1C/Hemoglobin"
+    ],
+    [
+      "CL.LBTESTCD",
+      "HCT",
+      null,
+      null,
+      null,
+      "Erythrocyte Volume Fraction"
+    ],
+    [
+      "CL.LBTESTCD",
+      "HGB",
+      null,
+      null,
+      null,
+      "Hemoglobin"
+    ],
+    [
+      "CL.LBTESTCD",
+      "K",
+      null,
+      null,
+      null,
+      "Potassium"
+    ],
+    [
+      "CL.LBTESTCD",
+      "KETONES",
+      null,
+      null,
+      null,
+      "Ketones"
+    ],
+    [
+      "CL.LBTESTCD",
+      "MACROCY",
+      null,
+      null,
+      null,
+      "Macrocytes"
+    ],
+    [
+      "CL.LBTESTCD",
+      "MCH",
+      null,
+      null,
+      null,
+      "Ery. Mean Corpuscular Hemoglobin"
+    ],
+    [
+      "CL.LBTESTCD",
+      "MCHC",
+      null,
+      null,
+      null,
+      "Ery. Mean Corpuscular HGB Concentration"
+    ],
+    [
+      "CL.LBTESTCD",
+      "MCV",
+      null,
+      null,
+      null,
+      "Ery. Mean Corpuscular Volume"
+    ],
+    [
+      "CL.LBTESTCD",
+      "MICROCY",
+      null,
+      null,
+      null,
+      "Microcytes"
+    ],
+    [
+      "CL.LBTESTCD",
+      "MONO",
+      null,
+      null,
+      null,
+      "Monocytes"
+    ],
+    [
+      "CL.LBTESTCD",
+      "NEUT",
+      null,
+      null,
+      null,
+      "Neutrophils"
+    ],
+    [
+      "CL.LBTESTCD",
+      "NEUTB",
+      null,
+      null,
+      null,
+      "Neutrophils Band Form"
+    ],
+    [
+      "CL.LBTESTCD",
+      "NEUTSG",
+      null,
+      null,
+      null,
+      "Neutrophils, Segmented"
+    ],
+    [
+      "CL.LBTESTCD",
+      "NITRITE",
+      null,
+      null,
+      null,
+      "Nitrite"
+    ],
+    [
+      "CL.LBTESTCD",
+      "OCCBLD",
+      null,
+      null,
+      null,
+      "Occult Blood"
+    ],
+    [
+      "CL.LBTESTCD",
+      "PHOS",
+      null,
+      null,
+      null,
+      "Inorganic Phosphate"
+    ],
+    [
+      "CL.LBTESTCD",
+      "PLAT",
+      null,
+      null,
+      null,
+      "Platelets"
+    ],
+    [
+      "CL.LBTESTCD",
+      "POIKILO",
+      null,
+      null,
+      null,
+      "Poikilocytes"
+    ],
+    [
+      "CL.LBTESTCD",
+      "POLYCHR",
+      null,
+      null,
+      null,
+      "Polychromasia"
+    ],
+    [
+      "CL.LBTESTCD",
+      "PROT",
+      null,
+      null,
+      null,
+      "Protein"
+    ],
+    [
+      "CL.LBTESTCD",
+      "RBC",
+      null,
+      null,
+      null,
+      "Erythrocytes"
+    ],
+    [
+      "CL.LBTESTCD",
+      "SODIUM",
+      null,
+      null,
+      null,
+      "Sodium"
+    ],
+    [
+      "CL.LBTESTCD",
+      "SPGRAV",
+      null,
+      null,
+      null,
+      "Specific Gravity"
+    ],
+    [
+      "CL.LBTESTCD",
+      "T3",
+      null,
+      null,
+      null,
+      "Total T3"
+    ],
+    [
+      "CL.LBTESTCD",
+      "T3UP",
+      null,
+      null,
+      null,
+      "T3RU"
+    ],
+    [
+      "CL.LBTESTCD",
+      "T4FR",
+      null,
+      null,
+      null,
+      "Free T4"
+    ],
+    [
+      "CL.LBTESTCD",
+      "T4FRIDX",
+      null,
+      null,
+      null,
+      "Thyroxine, Free Index"
+    ],
+    [
+      "CL.LBTESTCD",
+      "TSH",
+      null,
+      null,
+      null,
+      "Thyroid Stimulating Hormone"
+    ],
+    [
+      "CL.LBTESTCD",
+      "URATE",
+      null,
+      null,
+      null,
+      "Urate"
+    ],
+    [
+      "CL.LBTESTCD",
+      "UREAN",
+      null,
+      null,
+      null,
+      "Urea Nitrogen"
+    ],
+    [
+      "CL.LBTESTCD",
+      "UROBIL",
+      null,
+      null,
+      null,
+      "Urobilinogen"
+    ],
+    [
+      "CL.LBTESTCD",
+      "VITB12",
+      null,
+      null,
+      null,
+      "Cobalamin"
+    ],
+    [
+      "CL.LBTESTCD",
+      "VITB9",
+      null,
+      null,
+      null,
+      "Folate"
+    ],
+    [
+      "CL.LBTESTCD",
+      "WBC",
+      null,
+      null,
+      null,
+      "Leukocytes"
+    ],
+    [
+      "CL.LBTEST",
+      "Alanine Aminotransferase",
+      null,
+      null,
+      null,
+      "Alanine Aminotransferase"
+    ],
+    [
+      "CL.LBTEST",
+      "Albumin",
+      null,
+      null,
+      null,
+      "Albumin"
+    ],
+    [
+      "CL.LBTEST",
+      "Alkaline Phosphatase",
+      null,
+      null,
+      null,
+      "Alkaline Phosphatase"
+    ],
+    [
+      "CL.LBTEST",
+      "Anisocytes",
+      null,
+      null,
+      null,
+      "Anisocytes"
+    ],
+    [
+      "CL.LBTEST",
+      "Aspartate Aminotransferase",
+      null,
+      null,
+      null,
+      "Aspartate Aminotransferase"
+    ],
+    [
+      "CL.LBTEST",
+      "Basophils",
+      null,
+      null,
+      null,
+      "Basophils"
+    ],
+    [
+      "CL.LBTEST",
+      "Bicarbonate",
+      null,
+      null,
+      null,
+      "Bicarbonate"
+    ],
+    [
+      "CL.LBTEST",
+      "Bilirubin",
+      null,
+      null,
+      null,
+      "Bilirubin"
+    ],
+    [
+      "CL.LBTEST",
+      "Calcium",
+      null,
+      null,
+      null,
+      "Calcium"
+    ],
+    [
+      "CL.LBTEST",
+      "Chloride",
+      null,
+      null,
+      null,
+      "Chloride"
+    ],
+    [
+      "CL.LBTEST",
+      "Cholesterol",
+      null,
+      null,
+      null,
+      "Cholesterol"
+    ],
+    [
+      "CL.LBTEST",
+      "Color",
+      null,
+      null,
+      null,
+      "Color"
+    ],
+    [
+      "CL.LBTEST",
+      "Creatinine",
+      null,
+      null,
+      null,
+      "Creatinine"
+    ],
+    [
+      "CL.LBTEST",
+      "Eosinophils",
+      null,
+      null,
+      null,
+      "Eosinophils"
+    ],
+    [
+      "CL.LBTEST",
+      "Ery. Mean Corpuscular Hemoglobin",
+      null,
+      null,
+      null,
+      "Ery. Mean Corpuscular Hemoglobin"
+    ],
+    [
+      "CL.LBTEST",
+      "Ery. Mean Corpuscular HGB Concentration",
+      null,
+      null,
+      null,
+      "Ery. Mean Corpuscular HGB Concentration"
+    ],
+    [
+      "CL.LBTEST",
+      "Ery. Mean Corpuscular Volume",
+      null,
+      null,
+      null,
+      "Ery. Mean Corpuscular Volume"
+    ],
+    [
+      "CL.LBTEST",
+      "Erythrocytes",
+      null,
+      null,
+      null,
+      "Erythrocytes"
+    ],
+    [
+      "CL.LBTEST",
+      "Gamma Glutamyl Transferase",
+      null,
+      null,
+      null,
+      "Gamma Glutamyl Transferase"
+    ],
+    [
+      "CL.LBTEST",
+      "Glucose",
+      null,
+      null,
+      null,
+      "Glucose"
+    ],
+    [
+      "CL.LBTEST",
+      "Hematocrit",
+      null,
+      null,
+      null,
+      "Erythrocyte Volume Fraction"
+    ],
+    [
+      "CL.LBTEST",
+      "Hemoglobin A1C",
+      null,
+      null,
+      null,
+      "HbA1c"
+    ],
+    [
+      "CL.LBTEST",
+      "Hemoglobin A1C/Hemoglobin",
+      null,
+      null,
+      null,
+      "Hemoglobin A1C/Hemoglobin"
+    ],
+    [
+      "CL.LBTEST",
+      "Hemoglobin",
+      null,
+      null,
+      null,
+      "Hemoglobin"
+    ],
+    [
+      "CL.LBTEST",
+      "Ketones",
+      null,
+      null,
+      null,
+      "Ketones"
+    ],
+    [
+      "CL.LBTEST",
+      "Leukocytes",
+      null,
+      null,
+      null,
+      "Leukocytes"
+    ],
+    [
+      "CL.LBTEST",
+      "Macrocytes",
+      null,
+      null,
+      null,
+      "Macrocytes"
+    ],
+    [
+      "CL.LBTEST",
+      "Microcytes",
+      null,
+      null,
+      null,
+      "Microcytes"
+    ],
+    [
+      "CL.LBTEST",
+      "Monocytes",
+      null,
+      null,
+      null,
+      "Monocytes"
+    ],
+    [
+      "CL.LBTEST",
+      "Neutrophils Band Form",
+      null,
+      null,
+      null,
+      "Neutrophils Band Form"
+    ],
+    [
+      "CL.LBTEST",
+      "Neutrophils",
+      null,
+      null,
+      null,
+      "Neutrophils"
+    ],
+    [
+      "CL.LBTEST",
+      "Neutrophils, Segmented",
+      null,
+      null,
+      null,
+      "Neutrophils, Segmented"
+    ],
+    [
+      "CL.LBTEST",
+      "Nitrite",
+      null,
+      null,
+      null,
+      "Nitrite"
+    ],
+    [
+      "CL.LBTEST",
+      "Occult Blood",
+      null,
+      null,
+      null,
+      "Occult Blood"
+    ],
+    [
+      "CL.LBTEST",
+      "Phosphate",
+      null,
+      null,
+      null,
+      "Inorganic Phosphate"
+    ],
+    [
+      "CL.LBTEST",
+      "Platelets",
+      null,
+      null,
+      null,
+      "Platelets"
+    ],
+    [
+      "CL.LBTEST",
+      "Poikilocytes",
+      null,
+      null,
+      null,
+      "Poikilocytes"
+    ],
+    [
+      "CL.LBTEST",
+      "Polychromasia",
+      null,
+      null,
+      null,
+      "Polychromasia"
+    ],
+    [
+      "CL.LBTEST",
+      "Potassium",
+      null,
+      null,
+      null,
+      "Potassium"
+    ],
+    [
+      "CL.LBTEST",
+      "Protein",
+      null,
+      null,
+      null,
+      "Protein"
+    ],
+    [
+      "CL.LBTEST",
+      "Sodium",
+      null,
+      null,
+      null,
+      "Sodium"
+    ],
+    [
+      "CL.LBTEST",
+      "Specific Gravity",
+      null,
+      null,
+      null,
+      "Specific Gravity"
+    ],
+    [
+      "CL.LBTEST",
+      "Thyrotropin",
+      null,
+      null,
+      null,
+      "Thyroid Stimulating Hormone"
+    ],
+    [
+      "CL.LBTEST",
+      "Thyroxine, Free Index",
+      null,
+      null,
+      null,
+      "Thyroxine, Free Index"
+    ],
+    [
+      "CL.LBTEST",
+      "Thyroxine, Free",
+      null,
+      null,
+      null,
+      "Free T4"
+    ],
+    [
+      "CL.LBTEST",
+      "Triiodothyronine Uptake",
+      null,
+      null,
+      null,
+      "T3RU"
+    ],
+    [
+      "CL.LBTEST",
+      "Triiodothyronine",
+      null,
+      null,
+      null,
+      "Total T3"
+    ],
+    [
+      "CL.LBTEST",
+      "Urate",
+      null,
+      null,
+      null,
+      "Urate"
+    ],
+    [
+      "CL.LBTEST",
+      "Urea Nitrogen",
+      null,
+      null,
+      null,
+      "Urea Nitrogen"
+    ],
+    [
+      "CL.LBTEST",
+      "Urobilinogen",
+      null,
+      null,
+      null,
+      "Urobilinogen"
+    ],
+    [
+      "CL.LBTEST",
+      "Vitamin B12",
+      null,
+      null,
+      null,
+      "Cobalamin"
+    ],
+    [
+      "CL.LBTEST",
+      "Vitamin B9",
+      null,
+      null,
+      null,
+      "Folate"
+    ],
+    [
+      "CL.LBSTRESC",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.NRIND",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.SPECTYPE",
+      "BLOOD",
+      null,
+      null,
+      null,
+      "Peripheral Blood"
+    ],
+    [
+      "CL.SPECTYPE",
+      "ERYTHROCYTES",
+      null,
+      null,
+      null,
+      "RBC"
+    ],
+    [
+      "CL.SPECTYPE",
+      "SERUM OR PLASMA",
+      null,
+      null,
+      null,
+      "Ser/Plas"
+    ],
+    [
+      "CL.SPECTYPE",
+      "STOOL",
+      null,
+      null,
+      null,
+      "Feces"
+    ],
+    [
+      "CL.SPECTYPE",
+      "URINE SEDIMENT",
+      null,
+      null,
+      null,
+      "URINE SEDIMENT"
+    ],
+    [
+      "CL.SPECTYPE",
+      "URINE",
+      null,
+      null,
+      null,
+      "URINE"
+    ],
+    [
+      "CL.SPECTYPE",
+      "CEREBROSPINAL FLUID",
+      null,
+      null,
+      null,
+      "CSF"
+    ],
+    [
+      "CL.SPECTYPE",
+      "FLUID",
+      null,
+      null,
+      null,
+      "FLUID"
+    ],
+    [
+      "CL.SPECTYPE",
+      "SERUM",
+      null,
+      null,
+      null,
+      "Sera"
+    ],
+    [
+      "CL.SPECTYPE",
+      "SWABBED MATERIAL",
+      null,
+      null,
+      null,
+      "SWABBED MATERIAL"
+    ],
+    [
+      "CL.METHOD",
+      "DIPSTICK MEASUREMENT METHOD",
+      null,
+      null,
+      null,
+      "DIPSTICK MEASUREMENT METHOD"
+    ],
+    [
+      "CL.METHOD",
+      "CHEMILUMINESCENT MICROPARTICLE IMMUNOASSAY",
+      null,
+      null,
+      null,
+      "Chemiluminescent Magnetic Microparticle Immunoassay\n                        "
+    ],
+    [
+      "CL.METHOD",
+      "FLUORESCENT IMMUNOASSAY",
+      null,
+      null,
+      null,
+      "Fluorescent Antibody Assay"
+    ],
+    [
+      "CL.METHOD",
+      "HEMAGGLUTINATION ASSAY",
+      null,
+      null,
+      null,
+      "HEMAGGLUTINATION ASSAY"
+    ],
+    [
+      "CL.METHOD",
+      "IMMUNOBLOT",
+      null,
+      null,
+      null,
+      "IMMUNOBLOT"
+    ],
+    [
+      "CL.METHOD",
+      "LINE PROBE ASSAY",
+      null,
+      null,
+      null,
+      "LiPA"
+    ],
+    [
+      "CL.METHOD",
+      "POLYMERASE CHAIN REACTION",
+      null,
+      null,
+      null,
+      "PCR"
+    ],
+    [
+      "CL.METHOD",
+      "RAPID IMMUNOASSAY",
+      null,
+      null,
+      null,
+      "RAPID IMMUNOASSAY"
+    ],
+    [
+      "CL.MBTESTCD",
+      "TPADNA",
+      null,
+      null,
+      null,
+      "Treponema pallidum DNA"
+    ],
+    [
+      "CL.MBTESTCD",
+      "TPLAB",
+      null,
+      null,
+      null,
+      "TPLAB"
+    ],
+    [
+      "CL.MBTEST",
+      "Treponema pallidum DNA",
+      null,
+      null,
+      null,
+      "Treponema pallidum DNA"
+    ],
+    [
+      "CL.MBFTSDTL",
+      "DETECTION",
+      null,
+      null,
+      null,
+      "DETECTION"
+    ],
+    [
+      "CL.DIR",
+      "LOWER",
+      null,
+      null,
+      null,
+      "LOWER"
+    ],
+    [
+      "CL.DIR",
+      "MIDLINE",
+      null,
+      null,
+      null,
+      "MIDLINE"
+    ],
+    [
+      "CL.DIR",
+      "UPPER",
+      null,
+      null,
+      null,
+      "UPPER"
+    ],
+    [
+      "CL.AESEV",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.ACN",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.OUT",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.TSPARMCD",
+      "ADAPT",
+      null,
+      null,
+      null,
+      "Adaptive Design"
+    ],
+    [
+      "CL.TSPARMCD",
+      "AGEMAX",
+      null,
+      null,
+      null,
+      "Planned Maximum Age of Subjects"
+    ],
+    [
+      "CL.TSPARMCD",
+      "AGEMIN",
+      null,
+      null,
+      null,
+      "Planned Minimum Age of Subjects"
+    ],
+    [
+      "CL.TSPARMCD",
+      "COMPTRT",
+      null,
+      null,
+      null,
+      "Comparative Treatment Name"
+    ],
+    [
+      "CL.TSPARMCD",
+      "CRMDUR",
+      null,
+      null,
+      null,
+      "Confirmed Response Minimum Duration"
+    ],
+    [
+      "CL.TSPARMCD",
+      "DOSE",
+      null,
+      null,
+      null,
+      "Dose Level"
+    ],
+    [
+      "CL.TSPARMCD",
+      "DOSFRQ",
+      null,
+      null,
+      null,
+      "Dosing Frequency"
+    ],
+    [
+      "CL.TSPARMCD",
+      "DOSU",
+      null,
+      null,
+      null,
+      "Dose Units"
+    ],
+    [
+      "CL.TSPARMCD",
+      "INDIC",
+      null,
+      null,
+      null,
+      "Indication for Use"
+    ],
+    [
+      "CL.TSPARMCD",
+      "INTMODEL",
+      null,
+      null,
+      null,
+      "Intervention Model"
+    ],
+    [
+      "CL.TSPARMCD",
+      "INTTYPE",
+      null,
+      null,
+      null,
+      "Intervention Type"
+    ],
+    [
+      "CL.TSPARMCD",
+      "NARMS",
+      null,
+      null,
+      null,
+      "Planned Number of Arms"
+    ],
+    [
+      "CL.TSPARMCD",
+      "OBJPRIM",
+      null,
+      null,
+      null,
+      "Study Primary Objective"
+    ],
+    [
+      "CL.TSPARMCD",
+      "OBJSEC",
+      null,
+      null,
+      null,
+      "Study Secondary Objective"
+    ],
+    [
+      "CL.TSPARMCD",
+      "OUTMSPRI",
+      null,
+      null,
+      null,
+      "Primary Outcome Measure"
+    ],
+    [
+      "CL.TSPARMCD",
+      "OUTMSSEC",
+      null,
+      null,
+      null,
+      "Secondary Outcome Measure"
+    ],
+    [
+      "CL.TSPARMCD",
+      "PLANSUB",
+      null,
+      null,
+      null,
+      "Anticipated Enrollment"
+    ],
+    [
+      "CL.TSPARMCD",
+      "PTRTDUR",
+      null,
+      null,
+      null,
+      "Planned Treatment Duration"
+    ],
+    [
+      "CL.TSPARMCD",
+      "ROUTE",
+      null,
+      null,
+      null,
+      "Route of Administration"
+    ],
+    [
+      "CL.TSPARMCD",
+      "SEXPOP",
+      null,
+      null,
+      null,
+      "Sex of Participants"
+    ],
+    [
+      "CL.TSPARMCD",
+      "SPONSOR",
+      null,
+      null,
+      null,
+      "Clinical Study Sponsor"
+    ],
+    [
+      "CL.TSPARMCD",
+      "STYPE",
+      null,
+      null,
+      null,
+      "Study Type"
+    ],
+    [
+      "CL.TSPARMCD",
+      "TBLIND",
+      null,
+      null,
+      null,
+      "Study Blinding Design"
+    ],
+    [
+      "CL.TSPARMCD",
+      "THERAREA",
+      null,
+      null,
+      null,
+      "Therapeutic Area"
+    ],
+    [
+      "CL.TSPARMCD",
+      "TINDTP",
+      null,
+      null,
+      null,
+      "Trial Intent Type"
+    ],
+    [
+      "CL.TSPARMCD",
+      "TITLE",
+      null,
+      null,
+      null,
+      "Official Study Title"
+    ],
+    [
+      "CL.TSPARMCD",
+      "TPHASE",
+      null,
+      null,
+      null,
+      "Trial Phase"
+    ],
+    [
+      "CL.TSPARMCD",
+      "TRT",
+      null,
+      null,
+      null,
+      "Investigational Interventional"
+    ],
+    [
+      "CL.TSPARMCD",
+      "TTYPE",
+      null,
+      null,
+      null,
+      "Trial Scope"
+    ],
+    [
+      "CL.TSPARM",
+      "Adaptive Design",
+      null,
+      null,
+      null,
+      "Adaptive Design"
+    ],
+    [
+      "CL.TSPARM",
+      "Clinical Study Sponsor",
+      null,
+      null,
+      null,
+      "Clinical Study Sponsor"
+    ],
+    [
+      "CL.TSPARM",
+      "Comparative Treatment Name",
+      null,
+      null,
+      null,
+      "Comparative Treatment Name"
+    ],
+    [
+      "CL.TSPARM",
+      "Confirmed Response Minimum Duration",
+      null,
+      null,
+      null,
+      "Confirmed Response Minimum Duration"
+    ],
+    [
+      "CL.TSPARM",
+      "Dose per Administration",
+      null,
+      null,
+      null,
+      "Dose Level"
+    ],
+    [
+      "CL.TSPARM",
+      "Dose Units",
+      null,
+      null,
+      null,
+      "Dose Units"
+    ],
+    [
+      "CL.TSPARM",
+      "Dosing Frequency",
+      null,
+      null,
+      null,
+      "Dosing Frequency"
+    ],
+    [
+      "CL.TSPARM",
+      "Intervention Model",
+      null,
+      null,
+      null,
+      "Intervention Model"
+    ],
+    [
+      "CL.TSPARM",
+      "Intervention Type",
+      null,
+      null,
+      null,
+      "Intervention Type"
+    ],
+    [
+      "CL.TSPARM",
+      "Investigational Therapy or Treatment",
+      null,
+      null,
+      null,
+      "Investigational Interventional"
+    ],
+    [
+      "CL.TSPARM",
+      "Planned Maximum Age of Subjects",
+      null,
+      null,
+      null,
+      "Planned Maximum Age of Subjects"
+    ],
+    [
+      "CL.TSPARM",
+      "Planned Minimum Age of Subjects",
+      null,
+      null,
+      null,
+      "Planned Minimum Age of Subjects"
+    ],
+    [
+      "CL.TSPARM",
+      "Planned Number of Arms",
+      null,
+      null,
+      null,
+      "Planned Number of Arms"
+    ],
+    [
+      "CL.TSPARM",
+      "Planned Number of Subjects",
+      null,
+      null,
+      null,
+      "Anticipated Enrollment"
+    ],
+    [
+      "CL.TSPARM",
+      "Planned Treatment Duration",
+      null,
+      null,
+      null,
+      "Planned Treatment Duration"
+    ],
+    [
+      "CL.TSPARM",
+      "Primary Outcome Measure",
+      null,
+      null,
+      null,
+      "Primary Outcome Measure"
+    ],
+    [
+      "CL.TSPARM",
+      "Route of Administration",
+      null,
+      null,
+      null,
+      "Route of Administration"
+    ],
+    [
+      "CL.TSPARM",
+      "Secondary Outcome Measure",
+      null,
+      null,
+      null,
+      "Secondary Outcome Measure"
+    ],
+    [
+      "CL.TSPARM",
+      "Sex of Participants",
+      null,
+      null,
+      null,
+      "Sex of Participants"
+    ],
+    [
+      "CL.TSPARM",
+      "Study Type",
+      null,
+      null,
+      null,
+      "Study Type"
+    ],
+    [
+      "CL.TSPARM",
+      "Therapeutic Area",
+      null,
+      null,
+      null,
+      "Therapeutic Area"
+    ],
+    [
+      "CL.TSPARM",
+      "Trial Blinding Schema",
+      null,
+      null,
+      null,
+      "Study Blinding Design"
+    ],
+    [
+      "CL.TSPARM",
+      "Trial Disease/Condition Indication",
+      null,
+      null,
+      null,
+      "Indication for Use"
+    ],
+    [
+      "CL.TSPARM",
+      "Trial Intent Type",
+      null,
+      null,
+      null,
+      "Trial Intent Type"
+    ],
+    [
+      "CL.TSPARM",
+      "Trial Phase Classification",
+      null,
+      null,
+      null,
+      "Trial Phase"
+    ],
+    [
+      "CL.TSPARM",
+      "Trial Primary Objective",
+      null,
+      null,
+      null,
+      "Study Primary Objective"
+    ],
+    [
+      "CL.TSPARM",
+      "Trial Secondary Objective",
+      null,
+      null,
+      null,
+      "Study Secondary Objective"
+    ],
+    [
+      "CL.TSPARM",
+      "Trial Title",
+      null,
+      null,
+      null,
+      "Official Study Title"
+    ],
+    [
+      "CL.TSPARM",
+      "Trial Type",
+      null,
+      null,
+      null,
+      "Trial Scope"
+    ],
+    [
+      "CL.DICTNAM",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.IECAT",
+      "__PLACEHOLDER__",
+      null,
+      null,
+      null,
+      "__PLACEHOLDER__"
+    ],
+    [
+      "CL.CNTMODE",
+      "IN PERSON",
+      null,
+      null,
+      null,
+      "In-Person"
+    ],
+    [
+      "CL.CNTMODE",
+      "TELEPHONE CALL",
+      null,
+      null,
+      null,
+      "TELEPHONE CALL"
+    ]
+  ]
+}
