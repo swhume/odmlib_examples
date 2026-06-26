@@ -34,3 +34,5 @@ xlsx2define2-1/data/t1d*.*
 xlsx2define2-1/data/T1-Dexi*.xlsx
 snippets/data/ODM*.xml
 snippets/data/t1d-define.xml
+snippets/data/modified-define.xml
+get_started/data/odm_demo.xml

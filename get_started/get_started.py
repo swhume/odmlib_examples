@@ -1,23 +1,18 @@
 from odmlib import odm_loader as OL, loader as LO
 import odmlib.odm_1_3_2.model as ODM
-import odmlib.odm_1_3_2.rules.oid_ref as OID
 import xml.etree.ElementTree as ET
 import odmlib.odm_parser as P
 from odmlib import (
     OdmlibOIDError,
     create_oid_checker,
 )
-import os
 import datetime
 
-# update this path to point to your ODM1-3-2 schema file
-SCHEMA_FILE = os.path.join(os.sep, 'home', 'sam', 'standards', 'odm1_3_2', 'ODM1-3-2.xsd')
 
 class ODMProcessor:
     def __init__(self, odm_file):
         """ odmlib example that demonstrates how to read and process a basic ODM file """
         self.odm_file = odm_file
-        self.schema_file = SCHEMA_FILE
         self._validate_metadata()
         loader = LO.ODMLoader(OL.XMLODMLoader())
         loader.open_odm_document(odm_file)
@@ -25,13 +20,16 @@ class ODMProcessor:
         self._oid_check()
 
     def _validate_metadata(self):
-        self.validator = P.ODMSchemaValidator(self.schema_file)
+        # odmlib v0.2.0 bundles the ODM 1.3.2 schema; resolve it by (standard, version)
+        # instead of hard-coding a local path.
+        self.validator = P.ODMSchemaValidator(standard="odm", version="1.3.2")
         self.parser = P.ODMParser(self.odm_file)
         tree = self.parser.parse_tree()
         print(f"Is ODM valid: {self.validator.validate_tree(tree)}")
 
     def _oid_check(self):
-        self.oid_checker = create_oid_checker("define_2_1")
+        # the OID checker is model-aware; this is an ODM 1.3.2 document
+        self.oid_checker = create_oid_checker("odm_1_3_2")
         try:
             self.mdv.verify_oids(self.oid_checker)
         except OdmlibOIDError as ve:
@@ -78,7 +76,7 @@ class ODMCreator:
     def create_document(self):
         root = ODM.ODM(FileOID="ODM.DEMO.001", Granularity="Metadata", AsOfDateTime=self._set_datetime(),
                        CreationDateTime=self._set_datetime(), ODMVersion="1.3.2", FileType="Snapshot",
-                       Originator="swhume", SourceSystem="odmlib", SourceSystemVersion="0.1")
+                       Originator="swhume", SourceSystem="odmlib", SourceSystemVersion="0.2")
         root.Study = self._add_study()
         root.Study[0].MetaDataVersion.append(ODM.MetaDataVersion(OID="MDV.DEMO-ODM-01", Name="Get Started MDV", Description="Get Started Demo"))
         self._add_mdv_elements(root.Study[0].MetaDataVersion[0])
@@ -182,7 +180,6 @@ class ODMCreator:
 
     def _set_datetime(self):
         """return the current datetime in ISO 8601 format"""
-        # return datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat()
         return datetime.datetime.now(datetime.timezone.utc).isoformat()
 
 

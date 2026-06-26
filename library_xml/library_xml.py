@@ -31,7 +31,7 @@ def load_odmlib(endpoint, filename, model_package, ns, api_key):
         odm = loader.load_odm()
         write_odm_as_json(odm, filename)
     else:
-        if r.status_code == "406":
+        if r.status_code == 406:
             print(f"{endpoint} is not available from CDISC Library as odm+xml")
         else:
             print(f"HTTPError {r.status_code} for url {base_url + endpoint}")

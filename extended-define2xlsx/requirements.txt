@@ -1,3 +1,0 @@
-odmlib>=0.2.0
-xmlschema>=1.10.0
-XlsxWriter>=3.0.3

@@ -7,9 +7,6 @@ spreadsheet containing the study metadata. The spreadsheet format makes it easie
 metadata content. The companion [xlsx2define2-1](../xlsx2define2-1) program performs the reverse conversion, taking
 the metadata spreadsheet and generating a Define-XML v2.1 file.
 
-This example demonstrates odmlib v0.2.0 features including the `ODMLoader`/`XMLDefineLoader` parsing API,
-`MetaDataVersion.find()` for cross-reference lookups, and structured exceptions.
-
 ## Prerequisites
 
 - Python 3.9+
