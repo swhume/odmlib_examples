@@ -114,6 +114,10 @@ base model and registers a custom namespace, loaded with `local_model=True`):
 - The structured exception hierarchy: `OdmlibValidationError`, `OdmlibOIDError`,
   `OdmlibConformanceError`, `OdmlibElementOrderError`, `OdmlibSchemaValidationError`
 
+## For Planning and Research
+
+For research and codebase exploration, use parallel Explore subagents by default.
+
 ## Notes
 
 - XSD schema file paths in examples may need adjustment for your environment
