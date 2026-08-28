@@ -22,6 +22,8 @@ What is different in ODM 2.0 (see data/vital_signs_odmv2-0.xml for the shape):
     ``MethodSignature``.
   * ``CodeList`` has only ``CodeListItem`` (no ``EnumeratedItem``); a value
     without a decode is a ``CodeListItem`` carrying only ``Coding``.
+  * ``MetaDataVersion.Standards`` is a single container (``maxOccurs=1``);
+    the repeating list is ``Standards.Standard``.
 
 Honest scope note -- where odmlib's odm_2_0 model and the published ODM 2.0
 XSD disagree, this example keeps the document *schema-valid* and documents
@@ -319,7 +321,7 @@ print(f"  FileOID:           {odm.FileOID}")
 print(f"  Study:             {odm.Study[0].OID} "
       f"(StudyName={odm.Study[0].StudyName})")
 print(f"  MetaDataVersions:  {len(odm.Study[0].MetaDataVersion)}")
-print(f"  Standards:         {len(m.Standards)}")
+print(f"  Standards:         {len(m.Standards.Standard)}")
 print(f"  Protocol:          {'present' if m.Protocol else 'absent'} "
       f"(arms={len(m.Protocol.StudyStructure.Arm)}, "
       f"epochs={len(m.Protocol.StudyStructure.Epoch)})")

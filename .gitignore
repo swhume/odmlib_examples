@@ -16,6 +16,9 @@ env/
 .claude/
 .pytest_cache/
 
+# Skill-evaluation captures (raw transcripts; deliberately not committed)
+snippets/.skill-eval/
+
 # Office lock files
 .~lock.*#
 
@@ -35,4 +38,6 @@ xlsx2define2-1/data/T1-Dexi*.xlsx
 snippets/data/ODM*.xml
 snippets/data/t1d-define.xml
 snippets/data/modified-define.xml
+snippets/data/string-serialization-odm.xml
+snippets/data/string-serialization-define.xml
 get_started/data/odm_demo.xml

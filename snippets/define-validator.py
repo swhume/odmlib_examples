@@ -16,6 +16,9 @@ from odmlib.mode import permissive
 
 # this 360i define.xml contains placeholders making it a template that is non-conformant to Define-XML v2.1
 define_file = "data/define-360i.xml"
+# define_file = "/home/sam/temp/tests/define-360i.xml"
+# define_file = "/home/sam/temp/tests/odmlib-roundtrip-define.xml"
+
 output_file = "data/intermediate.xml"
 # create the needed odmlib objects
 checker = create_oid_checker("define_2_1")
@@ -48,6 +51,6 @@ try:
         for i, err in enumerate(oid_errors, 1):
             print(f"  {i}. [{type(err).__name__}] {err}")
     else:
-        print("No validation errors found.")
+        print("No OID Checker validation errors found.")
 except OdmlibValidationError as e:
     print(f"Validation failed with {type(e).__name__}: {e}")

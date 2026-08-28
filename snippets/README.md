@@ -27,6 +27,7 @@ python context-managers.py
 | `context-managers.py` | `open_odm` / `open_define` context managers (auto-write, in-place, JSON, error handling). |
 | `modify-existing-document.py` | **(new)** Read → update / add / remove → write round-trip on a Define-XML document. |
 | `element-reordering.py` | **(new)** Detect out-of-order children with `verify_order()` and fix them with `reorder_object()`. |
+| `string-serialization.py` | **(new)** Self-testing proof that `to_xml_string()` is re-loadable, declares exactly the namespaces it uses, is schema valid on its own, and is byte-identical to `write_xml()` output apart from the XML declaration. Also shows why `ET.tostring(obj.to_xml())` loses data silently, and that nested elements inherit their document's namespaces. Exits non-zero if not. |
 
 ## Validation & error handling
 
